@@ -1,0 +1,54 @@
+:root {
+    --cubic-ease: cubic-bezier(0.165, 0.840, 0.440, 1.000);
+
+
+    --gutter: 16px;
+
+    --spacing-00: 2px;
+    --spacing-01: 4px;
+    --spacing-02: 8px;
+    --spacing-03: 16px;
+    --spacing-04: 24px;
+    --spacing-05: 32px;
+    --spacing-06: 48px;
+    --spacing-07: 64px;
+    --spacing-08: 80px;
+    --spacing-09: 96px;
+    --spacing-10: 128px;
+    --spacing-11: 192px;
+    --spacing-12: 256px;
+
+    --border-radius--small: 1px;
+    --border-radius--medium: 3px;
+    --border-radius--large: 6px;
+
+
+    --color-accent--on-dark--red--opaque: #ea475d;
+    --color-accent--on-dark--magenta--opaque: #ea47ae;
+    --color-accent--on-dark--blue--opaque: #42b0ef;
+    --color-accent--on-dark--blue--transparent: rgba(66, 176, 240, 0.3);
+    --color-accent--on-dark--teal--opaque: #48e9d4;
+    --color-accent--on-dark--volt--opaque: #b8f947;
+    --color-accent--on-dark--volt--transparent: rgba(184, 249, 72, 0.3);
+    --color-accent--on-dark--yellow--opaque: #f6e15a;
+    --color-accent--on-dark--red--transparent: rgba(235, 71, 93, 0.3);
+    --color-accent--on-light--red--opaque: #ce162f;
+    --color-accent--on-light--magenta--opaque: #da0b8e;
+    --color-accent--on-light--blue--opaque: #0b8eda;
+    --color-accent--on-light--blue--transparent: rgba(11, 142, 218, 0.07);
+    --color-accent--on-light--teal--opaque: #12d3b9;
+    --color-accent--on-light--volt--opaque: #9af103;
+    --color-accent--on-light--yellow--opaque: #e5ca19;
+
+    --color-neutral--100: #fcfbf7;
+    --color-neutral--200: #f0f0ec;
+    --color-neutral--300: #bec2c1;
+    --color-neutral--400: #9fa5a6;
+    --color-neutral--500: #80888a;
+    --color-neutral--600: #606b6f;
+    --color-neutral--700: #414e54;
+    --color-neutral--800: #223039;
+    --color-neutral--900: #01131c;
+
+    
+}

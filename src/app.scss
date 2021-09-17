@@ -1,13 +1,43 @@
-// @import './lib/scss/code-highlights.scss';
+@import './lib/scss/variables.scss';
 
 body {
-    
-  scroll-behavior: smooth;
 
-  /* safari viewport bug fix */
-  min-height: -webkit-fill-available;
+    scroll-behavior: smooth;
+
+    /* safari viewport bug fix */
+min-height: -webkit-fill-available;
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
+
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    quotes: "“" "”";
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+::selection { 
+    // background: var(--color-accent--on-dark--blue--transparent);
+    // color: var(--color-accent--on-dark--blue--opaque); 
+}
+
+.no-select{
+    user-select: none;
+    /* cursor: default; */
+}
+
+.blur {
+    background-color: var(--color-background-blurred);
+    backdrop-filter: saturate(180%) blur(20px);
 }
