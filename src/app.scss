@@ -1,0 +1,13 @@
+// @import './lib/scss/code-highlights.scss';
+
+body {
+    
+  scroll-behavior: smooth;
+
+  /* safari viewport bug fix */
+  min-height: -webkit-fill-available;
+}
+
+html {
+  scroll-behavior: smooth;
+}
