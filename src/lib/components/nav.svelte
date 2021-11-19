@@ -1,15 +1,25 @@
+<div class="navigation__background" />
 <nav>
 	<a href="/">Portfolio • Janos Pauer</a>
 	<button>Message Janos</button>
 </nav>
 
 <style lang="scss">
-	nav {
+	nav,
+	.navigation__background {
 		position: fixed;
 		top: 0;
 		width: 100%;
 		height: var(--spacing-10);
-		background-color: hsla(0, 0%, 100%, 0.9);
+	}
+	nav {
+		padding: var(--spacing-05);
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	.navigation__background {
+		background-color: var(--color-glass);
 		mask: linear-gradient(
 			to bottom,
 			hsla(0, 0%, 0%, 1) 0%,
@@ -19,22 +29,9 @@
 	}
 
 	@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
-		nav {
+		.navigation__background {
 			background-color: transparent;
-			backdrop-filter: brightness(90%) saturate(150%) blur(4px);
+			backdrop-filter: brightness(66%) saturate(150%) blur(var(--blur-radius));
 		}
-	}
-
-	main {
-		max-width: 500px;
-		font-family: sans-serif;
-		margin: 640px auto;
-		border: 1px solid black;
-		padding: 32px;
-		line-height: 1.5rem;
-	}
-
-	main img {
-		max-width: 100%;
 	}
 </style>
