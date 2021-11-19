@@ -1,7 +1,11 @@
+<script>
+	import Button from './button.svelte';
+</script>
+
 <div class="navigation__background" />
 <nav>
 	<a href="/">Portfolio • Janos Pauer</a>
-	<button>Message Janos</button>
+	<Button>Send a message</Button>
 </nav>
 
 <style lang="scss">
