@@ -5,7 +5,8 @@ body {
     scroll-behavior: smooth;
 
     /* safari viewport bug fix */
-min-height: -webkit-fill-available;
+    min-height: -webkit-fill-available;
+    background-color: var(--color-neutral--900);
 }
 
 html {
