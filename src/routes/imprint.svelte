@@ -1,5 +1,5 @@
 <svelte:head>
-	<title>Janos Pauer • Portfolio</title>
+	<title>Janos Pauer • Imprint</title>
 	<meta name="description" content="A description of the page" />
 
 	<meta itemprop="name" content="Content Title" />
@@ -14,4 +14,4 @@
 	<meta property="og:url" content="//www.example.com/URL of the article" />
 </svelte:head>
 
-<h1>Welcome to SvelteKit</h1>
+<p>This is the about page</p>
