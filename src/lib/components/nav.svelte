@@ -1,11 +1,15 @@
 <script>
 	import Button from './button.svelte';
+	import PaperPlane from '../icons/paperplane.svelte';
 </script>
 
 <div class="navigation__background" />
 <nav>
 	<a href="/">Portfolio • Janos Pauer</a>
-	<Button icon="true">Send a message</Button>
+	<Button>
+		<PaperPlane slot="icon" />
+		<span slot="label">Send a message</span>
+	</Button>
 </nav>
 
 <style lang="scss">
