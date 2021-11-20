@@ -13,19 +13,21 @@
 </nav>
 
 <style lang="scss">
-	nav,
 	.navigation__background {
 		position: fixed;
 		top: 0;
 		width: 100%;
 		height: var(--spacing-10);
-		padding: var(--spacing-05);
 	}
-	nav {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: center;
+	nav :global(.button) {
+		position: fixed;
+		top: var(--spacing-05);
+		right: var(--spacing-05);
+	}
+	nav h2 {
+		position: fixed;
+		top: var(--spacing-05);
+		left: var(--spacing-05);
 	}
 	.navigation__background {
 		background-color: var(--color-glass);
@@ -44,17 +46,20 @@
 		}
 	}
 	@media (max-width: 667px) {
+		nav :global(.button) {
+			left: var(--spacing-04);
+			bottom: var(--spacing-04);
+			top: auto;
+		}
 		nav {
-			align-items: flex-end;
-			& :global(.button) {
-				width: 100%;
+			padding: var(--spacing-04);
+			& h2 {
+				position: static;
 			}
 		}
-		nav,
 		.navigation__background {
 			bottom: 0;
 			top: auto;
-			padding: var(--spacing-04);
 		}
 		.navigation__background {
 			mask: linear-gradient(
@@ -63,9 +68,6 @@
 				hsla(0, 0%, 0%, 1) 20%,
 				hsla(0, 0%, 0%, 0) 100%
 			);
-		}
-		a {
-			display: none;
 		}
 	}
 </style>

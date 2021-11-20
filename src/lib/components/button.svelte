@@ -47,7 +47,6 @@
 		line-height: 1;
 		text-align: center;
 		padding: var(--spacing-02) var(--spacing-02-plus);
-		height: fit-content;
 		transition: all var(--transition--100);
 		cursor: pointer;
 		font-family: inherit;
