@@ -40,7 +40,7 @@
 	@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
 		.navigation__background {
 			background-color: transparent;
-			backdrop-filter: brightness(66%) saturate(150%) blur(var(--blur-radius));
+			backdrop-filter: brightness(66%) saturate(150%) blur(var(--blur-radius--medium));
 		}
 	}
 	@media (max-width: 667px) {

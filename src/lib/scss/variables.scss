@@ -28,6 +28,7 @@
     --color-accent--on-dark--magenta--opaque: #ea47ae;
     --color-accent--on-dark--blue--opaque: #42b0ef;
     --color-accent--on-dark--blue--transparent: rgba(66, 176, 240, 0.3);
+    --color-accent--on-dark--blue--pseudo-transparent: #0C2B3D;
     --color-accent--on-dark--teal--opaque: #48e9d4;
     --color-accent--on-dark--volt--opaque: #b8f947;
     --color-accent--on-dark--volt--transparent: rgba(184, 249, 72, 0.3);
@@ -53,7 +54,8 @@
 
     --color-glass: hsla(0, 0%, 0%, 0.9);
 
-    --blur-radius: 5px;
+    --blur-radius--medium: 5px;
+    --blur-radius--large: 16px;
 
     --transition--100: .2s ease;
 

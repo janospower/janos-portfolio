@@ -40,6 +40,7 @@
 		color: var(--color-accent--on-dark--blue--opaque);
 	}
 	button {
+		backdrop-filter: brightness(66%) saturate(50%) blur(var(--blur-radius--large));
 		font-size: var(--font-size--normal);
 		white-space: nowrap;
 		border: 0px solid transparent;
