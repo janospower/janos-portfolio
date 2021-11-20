@@ -1,13 +1,21 @@
 <script>
 	export let variant = 'primary';
-	export let icon = 'false';
+	export let icon = false;
+	export let label = true;
 	export let iconPosition = 'leading';
 </script>
 
 <button class="button {variant}">
-	{#if icon} <span class="icon" />{/if}
-	<slot />
-	{#if icon && iconPosition === 'trailing'} <span class="icon right" />{/if}
+	{#if label}
+		{#if icon && iconPosition != 'trailing'} <span class="icon leading" />{/if}
+
+		<slot />
+
+		{#if icon && iconPosition === 'trailing'} <span class="icon trailing" />{/if}{/if}
+
+	{#if !label}
+		<span class="icon" />
+	{/if}
 </button>
 
 <style lang="scss">

@@ -5,7 +5,7 @@
 <div class="navigation__background" />
 <nav>
 	<a href="/">Portfolio • Janos Pauer</a>
-	<Button>Send a message</Button>
+	<Button icon="true">Send a message</Button>
 </nav>
 
 <style lang="scss">
