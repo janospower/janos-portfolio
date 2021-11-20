@@ -42,6 +42,8 @@
 		border: 0px solid transparent;
 		line-height: 1;
 		text-align: center;
+		padding: var(--spacing-03);
+		height: fit-content;
 		transition: all var(--transition--100);
 		cursor: pointer;
 		font-family: inherit;

@@ -25,6 +25,7 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
+		align-items: center;
 	}
 	.navigation__background {
 		background-color: var(--color-glass);
@@ -43,6 +44,12 @@
 		}
 	}
 	@media (max-width: 667px) {
+		nav {
+			align-items: flex-end;
+			&:global(.button) {
+				width: 100%;
+			}
+		}
 		nav,
 		.navigation__background {
 			bottom: 0;
@@ -59,9 +66,6 @@
 		}
 		a {
 			display: none;
-		}
-		:global(.button) {
-			width: 100%;
 		}
 	}
 </style>
