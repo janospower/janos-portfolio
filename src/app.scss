@@ -10,7 +10,11 @@ body {
     background-color: var(--color-neutral--900);
     color: var(--color-neutral--100);
     font-family: 'Texta', sans-serif;
-    font-weight: var(--font-weight--normal);
+    font-weight: normal;
+}
+
+h2 {
+    font-size: var(--font-size--normal);
 }
 
 html {

@@ -40,16 +40,22 @@
 		color: var(--color-accent--on-dark--blue--opaque);
 	}
 	button {
+		font-size: var(--font-size--normal);
 		white-space: nowrap;
 		border: 0px solid transparent;
 		line-height: 1;
 		text-align: center;
-		padding: var(--spacing-03);
+		padding: var(--spacing-02) var(--spacing-02-plus);
 		height: fit-content;
 		transition: all var(--transition--100);
 		cursor: pointer;
 		font-family: inherit;
-		font-weight: var(--font-weight--emphasis);
+		font-weight: bold;
 		clip-path: var(--squircle);
+	}
+	@media (max-width: 667px) {
+		button {
+			padding: var(--spacing-03) var(--spacing-04);
+		}
 	}
 </style>

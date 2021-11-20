@@ -1,6 +1,4 @@
 <script>
-	import Button from '../lib/components/button.svelte';
-	import PaperPlane from '../lib/icons/paperplane.svelte';
 </script>
 
 <svelte:head>
@@ -18,11 +16,6 @@
 	<meta property="og:description" content="Description that will show in the preview" />
 	<meta property="og:url" content="//www.example.com/URL of the article" />
 </svelte:head>
-
-<Button>
-	<PaperPlane slot="icon" size="medium" circle />
-	<span slot="label">Send a message</span>
-</Button>
 
 <h1>Welcome to SvelteKit</h1>
 <h1>Welcome to SvelteKit</h1>

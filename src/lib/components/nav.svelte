@@ -5,9 +5,9 @@
 
 <div class="navigation__background" />
 <nav>
-	<a href="/">Portfolio • Janos Pauer</a>
+	<h2><a href="/">Portfolio • Janos Pauer</a></h2>
 	<Button>
-		<PaperPlane slot="icon" size="medium" circle />
+		<PaperPlane slot="icon" size="small" circle />
 		<span slot="label">Send a message</span>
 	</Button>
 </nav>
@@ -46,7 +46,7 @@
 	@media (max-width: 667px) {
 		nav {
 			align-items: flex-end;
-			&:global(.button) {
+			& :global(.button) {
 				width: 100%;
 			}
 		}
