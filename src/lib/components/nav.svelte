@@ -15,9 +15,9 @@
 		top: 0;
 		width: 100%;
 		height: var(--spacing-10);
+		padding: var(--spacing-05);
 	}
 	nav {
-		padding: var(--spacing-05);
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
@@ -36,6 +36,28 @@
 		.navigation__background {
 			background-color: transparent;
 			backdrop-filter: brightness(66%) saturate(150%) blur(var(--blur-radius));
+		}
+	}
+	@media (max-width: 667px) {
+		nav,
+		.navigation__background {
+			bottom: 0;
+			top: auto;
+			padding: var(--spacing-04);
+		}
+		.navigation__background {
+			mask: linear-gradient(
+				to top,
+				hsla(0, 0%, 0%, 1) 0%,
+				hsla(0, 0%, 0%, 1) 20%,
+				hsla(0, 0%, 0%, 0) 100%
+			);
+		}
+		a {
+			display: none;
+		}
+		:global(.button) {
+			width: 100%;
 		}
 	}
 </style>
