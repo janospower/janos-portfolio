@@ -49,6 +49,7 @@
 		transition: all var(--transition--100);
 		cursor: pointer;
 		font-family: inherit;
+		font-weight: var(--font-weight--emphasis);
 		clip-path: var(--squircle);
 	}
 </style>

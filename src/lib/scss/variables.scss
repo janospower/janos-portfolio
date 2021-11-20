@@ -58,6 +58,9 @@
 
     $screen-size--small: 667px;
 
+    --font-weight--normal: 400;
+    --font-weight--emphasis: 800;
+
     --squircle: polygon(
 			100% calc(100% - 8px * 2),
 			100% calc(100% - 6.512px * 2),

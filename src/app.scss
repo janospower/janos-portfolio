@@ -1,4 +1,5 @@
 @import './lib/scss/variables.scss';
+@import './lib/scss/fonts.scss';
 
 body {
 
@@ -8,11 +9,12 @@ body {
     min-height: -webkit-fill-available;
     background-color: var(--color-neutral--900);
     color: var(--color-neutral--100);
+    font-family: 'Texta', sans-serif;
+    font-weight: var(--font-weight--normal);
 }
 
 html {
     scroll-behavior: smooth;
-
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
     -moz-osx-font-smoothing: grayscale;
@@ -24,6 +26,7 @@ html {
 
 a {
     color: inherit;
+    text-decoration: none;
 }
 
 *,
