@@ -7,7 +7,7 @@
 <nav>
 	<a href="/">Portfolio • Janos Pauer</a>
 	<Button>
-		<PaperPlane slot="icon" />
+		<PaperPlane slot="icon" size="medium" circle />
 		<span slot="label">Send a message</span>
 	</Button>
 </nav>
