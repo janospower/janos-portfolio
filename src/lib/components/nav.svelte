@@ -23,11 +23,29 @@
 		position: fixed;
 		top: var(--spacing-05);
 		right: var(--spacing-05);
+		animation-name: message;
+		animation-delay: 10s;
+		animation-duration: 10s;
+		animation-iteration-count: infinite;
+		animation-timing-function: var(--easing--out-back);
+	}
+
+	@keyframes message {
+		0% {
+			transform: scale(1);
+		}
+		5% {
+			transform: scale(1.1);
+		}
+		7% {
+			transform: scale(1);
+		}
 	}
 	nav h2 {
 		position: fixed;
 		top: var(--spacing-05);
 		left: var(--spacing-05);
+		padding-top: var(--spacing-02);
 	}
 	.navigation__background {
 		background-color: var(--color-glass);
@@ -50,11 +68,13 @@
 			left: var(--spacing-04);
 			bottom: var(--spacing-04);
 			top: auto;
+			animation: none;
 		}
 		nav {
 			padding: var(--spacing-04);
 			& h2 {
 				position: static;
+				padding: 0;
 			}
 		}
 		.navigation__background {

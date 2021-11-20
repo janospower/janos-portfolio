@@ -57,7 +57,10 @@
     --blur-radius--medium: 5px;
     --blur-radius--large: 16px;
 
-    --transition--100: .2s ease;
+    --easing--out-back: cubic-bezier(0.34, 1.56, 0.64, 1)
+
+    --transition--100: .1s cubic-bezier(0.34, 1.56, 0.64, 1);
+    --transition--200: .2s cubic-bezier(0.34, 1.56, 0.64, 1);
 
     $screen-size--small: 667px;
 

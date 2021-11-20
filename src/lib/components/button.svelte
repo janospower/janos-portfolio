@@ -47,15 +47,31 @@
 		line-height: 1;
 		text-align: center;
 		padding: var(--spacing-02) var(--spacing-02-plus);
-		transition: all var(--transition--100);
+		transition: all var(--transition--200);
 		cursor: pointer;
 		font-family: inherit;
 		font-weight: bold;
 		clip-path: var(--squircle);
+		will-change: transform;
+		backface-visibility: hidden;
+		transform: translateZ(0);
+		-webkit-font-smoothing: subpixel-antialiased;
+		font-smoothing: subpixel-antialiased;
+	}
+	button:hover {
+		transform: scale(1.1);
+	}
+	button:active {
+		transform: scale(1);
+		transition: all var(--transition--100);
 	}
 	@media (max-width: 667px) {
 		button {
 			padding: var(--spacing-03) var(--spacing-04);
+		}
+		button:active,
+		button:hover {
+			transform: scale(1.05);
 		}
 	}
 </style>
