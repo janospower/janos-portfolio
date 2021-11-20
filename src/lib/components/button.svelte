@@ -26,12 +26,14 @@
 
 <style lang="scss">
 	.icon {
-		display: -webkit-inline-box;
-		display: -ms-inline-flexbox;
 		display: inline-flex;
-		-webkit-box-align: center;
-		-ms-flex-align: center;
-		align-items: center;
+		vertical-align: middle;
+	}
+	.leading {
+		margin-right: var(--spacing-02);
+	}
+	.trailing {
+		margin-left: var(--spacing-02);
 	}
 	.primary {
 		background-color: var(--color-accent--on-dark--blue--transparent);
