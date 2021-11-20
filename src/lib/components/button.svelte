@@ -1,8 +1,22 @@
 <script>
+	import { spring } from 'svelte/motion';
 	export let variant = 'primary';
+	let scale = spring(1, {
+		stiffness: 0.7,
+		damping: 0.4
+	});
 </script>
 
-<button class="button {variant}">
+<button
+	class="button {variant}"
+	on:mouseenter={() => scale.set(1.1)}
+	on:mouseleave={() => scale.set(1)}
+	on:mouseup={() => scale.set(1.1)}
+	on:mousedown={() => scale.set(1)}
+	on:touchstart={() => scale.set(1.05)}
+	on:touchend={() => scale.set(1)}
+	style="transform: scale({$scale})"
+>
 	{#if $$slots.label}
 		{#if $$slots.icon}
 			<span class="icon leading">
@@ -60,18 +74,17 @@
 	}
 	button:hover {
 		transform: scale(1.1);
+		animation: none;
+		animation-play-state: paused;
 	}
 	button:active {
 		transform: scale(1);
 		transition: all var(--transition--100);
+		animation: none;
 	}
 	@media (max-width: 667px) {
 		button {
 			padding: var(--spacing-03) var(--spacing-04);
-		}
-		button:active,
-		button:hover {
-			transform: scale(1.05);
 		}
 	}
 </style>

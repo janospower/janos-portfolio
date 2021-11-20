@@ -23,8 +23,8 @@
 		position: fixed;
 		top: var(--spacing-05);
 		right: var(--spacing-05);
-		animation-name: message;
-		animation-delay: 10s;
+		// animation-name: message;
+		// animation-delay: 10s;
 		animation-duration: 10s;
 		animation-iteration-count: infinite;
 		animation-timing-function: var(--easing--out-back);
