@@ -6,7 +6,7 @@
 <div class="navigation__background" />
 <nav>
 	<h2><a href="/">Portfolio • Janos Pauer</a></h2>
-	<Button>
+	<Button cta={true}>
 		<PaperPlane slot="icon" size="small" circle />
 		<span slot="label">Send a message</span>
 	</Button>
@@ -23,24 +23,8 @@
 		position: fixed;
 		top: var(--spacing-05);
 		right: var(--spacing-05);
-		// animation-name: message;
-		// animation-delay: 10s;
-		animation-duration: 10s;
-		animation-iteration-count: infinite;
-		animation-timing-function: var(--easing--out-back);
 	}
 
-	@keyframes message {
-		0% {
-			transform: scale(1);
-		}
-		5% {
-			transform: scale(1.1);
-		}
-		7% {
-			transform: scale(1);
-		}
-	}
 	nav h2 {
 		position: fixed;
 		top: var(--spacing-05);
@@ -68,7 +52,7 @@
 			left: var(--spacing-04);
 			bottom: var(--spacing-04);
 			top: auto;
-			animation: none;
+			width: calc(100% - var(--spacing-04) * 2);
 		}
 		nav {
 			padding: var(--spacing-04);

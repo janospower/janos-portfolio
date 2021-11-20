@@ -1,19 +1,49 @@
 <script>
 	import { spring } from 'svelte/motion';
+	import MediaQuery from './mediaquery.svelte';
+
+	export let cta = false;
 	export let variant = 'primary';
+
+	let query = '(max-width: 667px)';
+
+	let deviceIsMobile = false;
+
 	let scale = spring(1, {
 		stiffness: 0.7,
 		damping: 0.4
 	});
+
+	function onQueryResult(event) {
+		deviceIsMobile = event.detail.queryresult;
+	}
+
+	$: if (cta && !deviceIsMobile) {
+		setInterval(flashCTA, 10000);
+	}
+	function flashCTA() {
+		scale.set(1.1);
+		setTimeout(() => scale.set(1), 200);
+	}
 </script>
+
+<MediaQuery on:queryresult={onQueryResult} {query} />
 
 <button
 	class="button {variant}"
-	on:mouseenter={() => scale.set(1.1)}
+	on:mouseenter={() => {
+		if (!deviceIsMobile) {
+			scale.set(1.1);
+		}
+	}}
 	on:mouseleave={() => scale.set(1)}
-	on:mouseup={() => scale.set(1.1)}
+	on:mouseup={() => {
+		if (!deviceIsMobile) {
+			scale.set(1.1);
+		}
+	}}
 	on:mousedown={() => scale.set(1)}
-	on:touchstart={() => scale.set(1.05)}
+	on:touchstart={() => scale.set(0.95)}
 	on:touchend={() => scale.set(1)}
 	style="transform: scale({$scale})"
 >
