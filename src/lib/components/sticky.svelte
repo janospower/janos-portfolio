@@ -2,6 +2,9 @@
     export let gridColumnStart = "1"
     export let gridColumnEnd = "9"
     export let sticky = true;
+    export let verticalScroll = 0;
+
+    $: console.log(verticalScroll);
 </script>
 
 <div 

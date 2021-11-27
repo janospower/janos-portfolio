@@ -1,6 +1,8 @@
 <script>
 	import Sticky from '../lib/components/sticky.svelte';
 	import Hero from '../lib/components/hero.svelte';
+
+	let verticalScroll;
 </script>
 
 <svelte:head>
@@ -19,21 +21,24 @@
 	<meta property="og:url" content="//www.example.com/URL of the article" />
 </svelte:head>
 
-<Sticky gridColumnStart="3" gridColumnEnd="7" sticky={false}>
+<svelte:window bind:scrollY={verticalScroll} />
+
+<Sticky gridColumnStart="3" gridColumnEnd="7" sticky={false} verticalScroll={verticalScroll}>
 	<Hero />
 </Sticky>
 
-<Sticky gridColumnStart="3" gridColumnEnd="7">
+<Sticky gridColumnStart="3" gridColumnEnd="7" verticalScroll={verticalScroll}>
 	<div class="text--huge">
 		<p>Hi.</p>
 		<p>My name is Janos.</p>
 	</div>
 </Sticky>
 
-<Sticky gridColumnStart="3" gridColumnEnd="7">
+<Sticky gridColumnStart="3" gridColumnEnd="7" verticalScroll={verticalScroll}>
 	Hi.
 </Sticky>
 
-<Sticky gridColumnStart="3" gridColumnEnd="7">
+<Sticky gridColumnStart="3" gridColumnEnd="7" verticalScroll={verticalScroll}>
 	Hi.
 </Sticky>
+
