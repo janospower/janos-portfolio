@@ -5,7 +5,9 @@
 
 <Nav />
 
-<slot />
+<div class="page">
+	<slot />
+</div>
 
 <Footer />
 

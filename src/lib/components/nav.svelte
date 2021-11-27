@@ -4,12 +4,14 @@
 </script>
 
 <div class="navigation__background" />
-<nav>
+<nav class="main-navigation" aria-label="Main">
 	<h2><a href="/">Portfolio • Janos Pauer</a></h2>
-	<Button cta={true}>
-		<PaperPlane slot="icon" size="small" circle />
-		<span slot="label">Send a message</span>
-	</Button>
+	<div class="cta">
+		<Button cta={true}>
+			<PaperPlane slot="icon" size="small" circle />
+			<span slot="label">Send a message</span>
+		</Button>
+	</div>
 </nav>
 
 <style lang="scss">
@@ -19,17 +21,22 @@
 		width: 100%;
 		height: var(--spacing-10);
 	}
-	nav :global(.button) {
+
+	nav {
 		position: fixed;
+		left: 0;
+		right: 0;
+		width: 100vw;
 		top: var(--spacing-05);
-		right: var(--spacing-05);
+	}
+
+	.cta {
+		grid-column: 7/9;
 	}
 
 	nav h2 {
-		position: fixed;
-		top: var(--spacing-05);
-		left: var(--spacing-05);
 		padding-top: var(--spacing-02);
+		grid-column: 1/3;
 	}
 	.navigation__background {
 		background-color: var(--color-glass);
@@ -49,15 +56,17 @@
 	}
 	@media (max-width: 667px) {
 		nav :global(.button) {
+			position: fixed;
 			left: var(--spacing-04);
 			bottom: var(--spacing-04);
 			top: auto;
 			width: calc(100% - var(--spacing-04) * 2);
 		}
 		nav {
+
+			position: static;
 			padding: var(--spacing-04);
 			& h2 {
-				position: static;
 				padding: 0;
 			}
 		}

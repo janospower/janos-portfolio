@@ -2,7 +2,6 @@
 @import './lib/scss/fonts.scss';
 
 body {
-
     scroll-behavior: smooth;
 
     /* safari viewport bug fix */
@@ -12,6 +11,21 @@ body {
     font-family: 'Texta', sans-serif;
     font-weight: normal;
 }
+
+.page, .footer nav, nav.main-navigation {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    max-width: var(--page-width);
+    width: 100vw;
+    margin: 0 auto;
+} 
+
+@media (max-width: 667px) {
+    .page, .footer nav, nav.main-navigation {
+    grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 
 h2 {
     font-size: var(--font-size--normal);
