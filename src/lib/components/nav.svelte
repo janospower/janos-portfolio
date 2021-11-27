@@ -20,6 +20,7 @@
 		top: 0;
 		width: 100%;
 		height: var(--spacing-10);
+		z-index: 100;
 	}
 
 	nav {
@@ -28,6 +29,7 @@
 		right: 0;
 		width: 100vw;
 		top: var(--spacing-05);
+		z-index: 101;
 	}
 
 	.cta {

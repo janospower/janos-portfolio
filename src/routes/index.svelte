@@ -1,6 +1,6 @@
 <script>
 	import Sticky from '../lib/components/sticky.svelte';
-import Stiky from '../lib/components/sticky.svelte';
+	import Hero from '../lib/components/hero.svelte';
 </script>
 
 <svelte:head>
@@ -18,6 +18,25 @@ import Stiky from '../lib/components/sticky.svelte';
 	<meta property="og:description" content="Description that will show in the preview" />
 	<meta property="og:url" content="//www.example.com/URL of the article" />
 </svelte:head>
+
+<Sticky gridColumnStart="3" gridColumnEnd="7" sticky={false}>
+	<Hero />
+</Sticky>
+
+<Sticky gridColumnStart="3" gridColumnEnd="7">
+	<div class="text--huge">
+		<p>Hi.</p>
+		<p>My name is Janos.</p>
+	</div>
+</Sticky>
+
+<Sticky gridColumnStart="3" gridColumnEnd="7">
+	Hi.
+</Sticky>
+
+<Sticky gridColumnStart="3" gridColumnEnd="7">
+	Hi.
+</Sticky>
 
 <Sticky gridColumnStart="3" gridColumnEnd="7">
 	Hi.

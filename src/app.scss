@@ -8,7 +8,7 @@ body {
     min-height: -webkit-fill-available;
     background-color: var(--color-neutral--900);
     color: var(--color-neutral--100);
-    font-family: 'Texta', sans-serif;
+    font-family: var(--font-family);
     font-weight: normal;
 }
 
@@ -28,7 +28,6 @@ main, .footer nav, nav.main-navigation {
 
 main {
     margin-top: var(--spacing-10);
-    height: 500vh;
 }
 
 h2 {
@@ -71,4 +70,10 @@ a {
 .blur {
     background-color: var(--color-background-blurred);
     backdrop-filter: saturate(180%) blur(20px);
+}
+
+.text--huge {
+    font-weight: bold;
+    font-size: var(--font-size--huge);
+    line-height: var(--font-size--huge);
 }
