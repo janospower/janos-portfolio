@@ -33,6 +33,9 @@
 	.cta {
 		grid-column: 7/9;
 	}
+	.cta :global(.button) {
+		margin-left: auto;
+	}
 
 	nav h2 {
 		padding-top: var(--spacing-02);

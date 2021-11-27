@@ -5,9 +5,9 @@
 
 <Nav />
 
-<div class="page">
+<main>
 	<slot />
-</div>
+</main>
 
 <Footer />
 

@@ -1,4 +1,6 @@
 <script>
+	import Sticky from '../lib/components/sticky.svelte';
+import Stiky from '../lib/components/sticky.svelte';
 </script>
 
 <svelte:head>
@@ -17,69 +19,6 @@
 	<meta property="og:url" content="//www.example.com/URL of the article" />
 </svelte:head>
 
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
-<h1>Welcome to SvelteKit</h1>
+<Sticky gridColumnStart="3" gridColumnEnd="7">
+	Hi.
+</Sticky>

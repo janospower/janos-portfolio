@@ -12,7 +12,7 @@ body {
     font-weight: normal;
 }
 
-.page, .footer nav, nav.main-navigation {
+main, .footer nav, nav.main-navigation {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     max-width: var(--page-width);
@@ -21,11 +21,15 @@ body {
 } 
 
 @media (max-width: 667px) {
-    .page, .footer nav, nav.main-navigation {
+    main, .footer nav, nav.main-navigation {
     grid-template-columns: repeat(2, 1fr);
     }
 }
 
+main {
+    margin-top: var(--spacing-10);
+    height: 500vh;
+}
 
 h2 {
     font-size: var(--font-size--normal);
