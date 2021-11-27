@@ -34,6 +34,7 @@
 
 	.cta {
 		grid-column: 7/9;
+		z-index: 101;
 	}
 	.cta :global(.button) {
 		margin-left: auto;
