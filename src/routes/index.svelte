@@ -37,7 +37,3 @@
 <Sticky gridColumnStart="3" gridColumnEnd="7">
 	Hi.
 </Sticky>
-
-<Sticky gridColumnStart="3" gridColumnEnd="7">
-	Hi.
-</Sticky>
