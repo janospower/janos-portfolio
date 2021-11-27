@@ -1,5 +1,17 @@
+<script>
+    import { onMount } from 'svelte';
+    import { createScene } from "../js/scene";
+    let el;
+    onMount(() => {
+        createScene(el)
+    });
+</script>
 
-<div class="hero" id="hero"></div>
+<canvas bind:this={el}></canvas>
+
+<div class="hero" id="hero">
+
+</div>
 
 <style lang="scss">
     .hero {

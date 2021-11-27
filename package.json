@@ -24,6 +24,7 @@
   },
   "type": "module",
   "dependencies": {
+    "three": "^0.135.0",
     "throttle-debounce": "^3.0.1"
   }
 }
