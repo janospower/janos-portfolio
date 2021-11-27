@@ -74,7 +74,7 @@
 	on:mouseenter={() => {
 		hovering = true;
 		if (!deviceIsMobile) {
-			scale.set(1.1);
+			scale.set(1.15);
 		}
 	}}
 	on:mousemove={elasticButton}
@@ -85,7 +85,7 @@
 	}}
 	on:mouseup={() => {
 		if (!deviceIsMobile) {
-			scale.set(1.1);
+			scale.set(1.15);
 		}
 	}}
 	on:mousedown={() => scale.set(1)}
@@ -95,7 +95,7 @@
 >
 <a href="/"
 	bind:this={buttonLink}
-	class="button-link {variant}"
+	class="button-link {variant} no-select"
 	style="transform: translate({$translate.x}px, {$translate.y}px)"
 >
 <span class="button__inner"
@@ -127,7 +127,7 @@
 <style lang="scss">
 	.icon {
 		display: inline-flex;
-		vertical-align: middle;
+		vertical-align: top;
 	}
 	.leading {
 		margin-right: var(--spacing-02);
