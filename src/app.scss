@@ -83,3 +83,18 @@ a {
 	font-size: var(--font-size--huge);
 	line-height: var(--font-size--huge);
 }
+
+.fading.hidden {
+	opacity: 0;
+	filter: blur(var(--blur-radius--medium));
+	transform: translateY(64px);
+	transition: opacity 1200ms var(--easing--quint), transform 1200ms var(--easing--in-quint),
+		filter 800ms var(--easing--quint);
+}
+.fading {
+	opacity: 1;
+	filter: blur(0px);
+	transform: none;
+	transition: opacity 800ms var(--easing--quint), transform 1200ms var(--easing--out-quint),
+		filter 1200ms var(--easing--quint);
+}

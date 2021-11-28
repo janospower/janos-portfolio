@@ -1,253 +1,254 @@
 :root {
-    --cubic-ease: cubic-bezier(0.165, 0.840, 0.440, 1.000);
+	--cubic-ease: cubic-bezier(0.165, 0.84, 0.44, 1);
 
+	--gutter: 16px;
 
-    --gutter: 16px;
+	--spacing-00: 2px;
+	--spacing-01: 4px;
+	--spacing-02: 8px;
+	--spacing-02-plus: 12px;
+	--spacing-03: 16px;
+	--spacing-04: 24px;
+	--spacing-05: 32px;
+	--spacing-06: 48px;
+	--spacing-07: 64px;
+	--spacing-08: 80px;
+	--spacing-09: 96px;
+	--spacing-10: 128px;
+	--spacing-11: 192px;
+	--spacing-12: 256px;
 
-    --spacing-00: 2px;
-    --spacing-01: 4px;
-    --spacing-02: 8px;
-    --spacing-02-plus: 12px;
-    --spacing-03: 16px;
-    --spacing-04: 24px;
-    --spacing-05: 32px;
-    --spacing-06: 48px;
-    --spacing-07: 64px;
-    --spacing-08: 80px;
-    --spacing-09: 96px;
-    --spacing-10: 128px;
-    --spacing-11: 192px;
-    --spacing-12: 256px;
+	--border-radius--small: 1px;
+	--border-radius--medium: 3px;
+	--border-radius--large: 6px;
 
-    --border-radius--small: 1px;
-    --border-radius--medium: 3px;
-    --border-radius--large: 6px;
+	--color-accent--on-dark--red--opaque: #ea475d;
+	--color-accent--on-dark--magenta--opaque: #ea47ae;
+	--color-accent--on-dark--blue--opaque: #42b0ef;
+	--color-accent--on-dark--blue--transparent: rgba(66, 176, 240, 0.3);
+	--color-accent--on-dark--blue--pseudo-transparent: #0c2b3d;
+	--color-accent--on-dark--teal--opaque: #48e9d4;
+	--color-accent--on-dark--volt--opaque: #b8f947;
+	--color-accent--on-dark--volt--transparent: rgba(184, 249, 72, 0.3);
+	--color-accent--on-dark--yellow--opaque: #f6e15a;
+	--color-accent--on-dark--red--transparent: rgba(235, 71, 93, 0.3);
+	--color-accent--on-light--red--opaque: #ce162f;
+	--color-accent--on-light--magenta--opaque: #da0b8e;
+	--color-accent--on-light--blue--opaque: #0b8eda;
+	--color-accent--on-light--blue--transparent: rgba(11, 142, 218, 0.07);
+	--color-accent--on-light--teal--opaque: #12d3b9;
+	--color-accent--on-light--volt--opaque: #9af103;
+	--color-accent--on-light--yellow--opaque: #e5ca19;
 
+	--color-neutral--100: #fcfbf7;
+	--color-neutral--200: #f0f0ec;
+	--color-neutral--300: #bec2c1;
+	--color-neutral--400: #9fa5a6;
+	--color-neutral--500: #80888a;
+	--color-neutral--600: #606b6f;
+	--color-neutral--700: #414e54;
+	--color-neutral--800: #223039;
+	--color-neutral--900: #01131c;
 
-    --color-accent--on-dark--red--opaque: #ea475d;
-    --color-accent--on-dark--magenta--opaque: #ea47ae;
-    --color-accent--on-dark--blue--opaque: #42b0ef;
-    --color-accent--on-dark--blue--transparent: rgba(66, 176, 240, 0.3);
-    --color-accent--on-dark--blue--pseudo-transparent: #0C2B3D;
-    --color-accent--on-dark--teal--opaque: #48e9d4;
-    --color-accent--on-dark--volt--opaque: #b8f947;
-    --color-accent--on-dark--volt--transparent: rgba(184, 249, 72, 0.3);
-    --color-accent--on-dark--yellow--opaque: #f6e15a;
-    --color-accent--on-dark--red--transparent: rgba(235, 71, 93, 0.3);
-    --color-accent--on-light--red--opaque: #ce162f;
-    --color-accent--on-light--magenta--opaque: #da0b8e;
-    --color-accent--on-light--blue--opaque: #0b8eda;
-    --color-accent--on-light--blue--transparent: rgba(11, 142, 218, 0.07);
-    --color-accent--on-light--teal--opaque: #12d3b9;
-    --color-accent--on-light--volt--opaque: #9af103;
-    --color-accent--on-light--yellow--opaque: #e5ca19;
+	--color-glass: hsla(0, 0%, 0%, 0.9);
 
-    --color-neutral--100: #fcfbf7;
-    --color-neutral--200: #f0f0ec;
-    --color-neutral--300: #bec2c1;
-    --color-neutral--400: #9fa5a6;
-    --color-neutral--500: #80888a;
-    --color-neutral--600: #606b6f;
-    --color-neutral--700: #414e54;
-    --color-neutral--800: #223039;
-    --color-neutral--900: #01131c;
+	--blur-radius--medium: 8px;
+	--blur-radius--large: 24px;
 
-    --color-glass: hsla(0, 0%, 0%, 0.9);
+	--easing--out-back: cubic-bezier(0.34, 1.56, 0.64, 1);
+	--easing--quint: cubic-bezier(0.83, 0, 0.17, 1);
+	--easing--in-quint: cubic-bezier(0.64, 0, 0.78, 0);
+	--easing--out-quint: cubic-bezier(0.22, 1, 0.36, 1);
 
-    --blur-radius--medium: 5px;
-    --blur-radius--large: 24px;
+	--transition--100: 0.1s cubic-bezier(0.34, 1.56, 0.64, 1);
+	--transition--200: 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
 
-    --easing--out-back: cubic-bezier(0.34, 1.56, 0.64, 1)
-
-    --transition--100: .1s cubic-bezier(0.34, 1.56, 0.64, 1);
-    --transition--200: .2s cubic-bezier(0.34, 1.56, 0.64, 1);
-
-    $screen-size--small: 667px;
+	$screen-size--small: 667px;
 
 	--page-width: 1024px;
 
-    --squircle: polygon(
-			100% calc(100% - 8px * 3),
-			100% calc(100% - 6.512px * 3),
-			calc(100% - 0.016px * 3) calc(100% - 5.888px * 3),
-			calc(100% - 0.016px * 3) calc(100% - 5.408px * 3),
-			calc(100% - 0.032px * 3) calc(100% - 5.008px * 3),
-			calc(100% - 0.064px * 3) calc(100% - 4.672px * 3),
-			calc(100% - 0.08px * 3) calc(100% - 4.352px * 3),
-			calc(100% - 0.112px * 3) calc(100% - 4.064px * 3),
-			calc(100% - 0.16px * 3) calc(100% - 3.792px * 3),
-			calc(100% - 0.192px * 3) calc(100% - 3.552px * 3),
-			calc(100% - 0.24px * 3) calc(100% - 3.328px * 3),
-			calc(100% - 0.304px * 3) calc(100% - 3.104px * 3),
-			calc(100% - 0.352px * 3) calc(100% - 2.896px * 3),
-			calc(100% - 0.416px * 3) calc(100% - 2.704px * 3),
-			calc(100% - 0.48px * 3) calc(100% - 2.512px * 3),
-			calc(100% - 0.56px * 3) calc(100% - 2.336px * 3),
-			calc(100% - 0.64px * 3) calc(100% - 2.176px * 3),
-			calc(100% - 0.72px * 3) calc(100% - 2.016px * 3),
-			calc(100% - 0.8px * 3) calc(100% - 1.872px * 3),
-			calc(100% - 0.896px * 3) calc(100% - 1.728px * 3),
-			calc(100% - 0.992px * 3) calc(100% - 1.584px * 3),
-			calc(100% - 1.104px * 3) calc(100% - 1.456px * 3),
-			calc(100% - 1.216px * 3) calc(100% - 1.328px * 3),
-			calc(100% - 1.328px * 3) calc(100% - 1.216px * 3),
-			calc(100% - 1.456px * 3) calc(100% - 1.104px * 3),
-			calc(100% - 1.584px * 3) calc(100% - 0.992px * 3),
-			calc(100% - 1.728px * 3) calc(100% - 0.896px * 3),
-			calc(100% - 1.872px * 3) calc(100% - 0.8px * 3),
-			calc(100% - 2.016px * 3) calc(100% - 0.72px * 3),
-			calc(100% - 2.176px * 3) calc(100% - 0.64px * 3),
-			calc(100% - 2.336px * 3) calc(100% - 0.56px * 3),
-			calc(100% - 2.512px * 3) calc(100% - 0.48px * 3),
-			calc(100% - 2.704px * 3) calc(100% - 0.416px * 3),
-			calc(100% - 2.896px * 3) calc(100% - 0.352px * 3),
-			calc(100% - 3.104px * 3) calc(100% - 0.304px * 3),
-			calc(100% - 3.328px * 3) calc(100% - 0.24px * 3),
-			calc(100% - 3.552px * 3) calc(100% - 0.192px * 3),
-			calc(100% - 3.792px * 3) calc(100% - 0.16px * 3),
-			calc(100% - 4.064px * 3) calc(100% - 0.112px * 3),
-			calc(100% - 4.352px * 3) calc(100% - 0.08px * 3),
-			calc(100% - 4.672px * 3) calc(100% - 0.064px * 3),
-			calc(100% - 5.008px * 3) calc(100% - 0.032px * 3),
-			calc(100% - 5.408px * 3) calc(100% - 0.016px * 3),
-			calc(100% - 5.888px * 3) calc(100% - 0.016px * 3),
-			calc(100% - 6.512px * 3) 100%,
-			calc(100% - 8px * 3) 100%,
-			calc(6.944px * 3) calc(100% - 0px * 3),
-			calc(6.176px * 3) calc(100% - 0px * 3),
-			calc(5.632px * 3) calc(100% - 0.016px * 3),
-			calc(5.2px * 3) calc(100% - 0.032px * 3),
-			calc(4.832px * 3) calc(100% - 0.048px * 3),
-			calc(4.512px * 3) calc(100% - 0.08px * 3),
-			calc(4.208px * 3) calc(100% - 0.096px * 3),
-			calc(3.936px * 3) calc(100% - 0.144px * 3),
-			calc(3.68px * 3) calc(100% - 0.176px * 3),
-			calc(3.44px * 3) calc(100% - 0.224px * 3),
-			calc(3.216px * 3) calc(100% - 0.272px * 3),
-			calc(2.992px * 3) calc(100% - 0.32px * 3),
-			calc(2.8px * 3) calc(100% - 0.384px * 3),
-			calc(2.608px * 3) calc(100% - 0.448px * 3),
-			calc(2.432px * 3) calc(100% - 0.512px * 3),
-			calc(2.256px * 3) calc(100% - 0.592px * 3),
-			calc(2.096px * 3) calc(100% - 0.672px * 3),
-			calc(1.936px * 3) calc(100% - 0.752px * 3),
-			calc(1.792px * 3) calc(100% - 0.848px * 3),
-			calc(1.648px * 3) calc(100% - 0.944px * 3),
-			calc(1.52px * 3) calc(100% - 1.056px * 3),
-			calc(1.392px * 3) calc(100% - 1.152px * 3),
-			calc(1.28px * 3) calc(100% - 1.28px * 3),
-			calc(1.152px * 3) calc(100% - 1.392px * 3),
-			calc(1.056px * 3) calc(100% - 1.52px * 3),
-			calc(0.944px * 3) calc(100% - 1.648px * 3),
-			calc(0.848px * 3) calc(100% - 1.792px * 3),
-			calc(0.752px * 3) calc(100% - 1.936px * 3),
-			calc(0.672px * 3) calc(100% - 2.096px * 3),
-			calc(0.592px * 3) calc(100% - 2.256px * 3),
-			calc(0.512px * 3) calc(100% - 2.432px * 3),
-			calc(0.448px * 3) calc(100% - 2.608px * 3),
-			calc(0.384px * 3) calc(100% - 2.8px * 3),
-			calc(0.32px * 3) calc(100% - 2.992px * 3),
-			calc(0.272px * 3) calc(100% - 3.216px * 3),
-			calc(0.224px * 3) calc(100% - 3.44px * 3),
-			calc(0.176px * 3) calc(100% - 3.68px * 3),
-			calc(0.144px * 3) calc(100% - 3.936px * 3),
-			calc(0.096px * 3) calc(100% - 4.208px * 3),
-			calc(0.08px * 3) calc(100% - 4.512px * 3),
-			calc(0.048px * 3) calc(100% - 4.832px * 3),
-			calc(0.032px * 3) calc(100% - 5.2px * 3),
-			calc(0.016px * 3) calc(100% - 5.632px * 3),
-			calc(0px * 3) calc(100% - 6.176px * 3),
-			calc(0px * 3) calc(100% - 6.944px * 3),
-			calc(0px * 3) calc(8px * 3),
-			calc(0px * 3) calc(6.512px * 3),
-			calc(0.016px * 3) calc(5.888px * 3),
-			calc(0.016px * 3) calc(5.408px * 3),
-			calc(0.032px * 3) calc(5.008px * 3),
-			calc(0.064px * 3) calc(4.672px * 3),
-			calc(0.08px * 3) calc(4.352px * 3),
-			calc(0.112px * 3) calc(4.064px * 3),
-			calc(0.16px * 3) calc(3.792px * 3),
-			calc(0.192px * 3) calc(3.552px * 3),
-			calc(0.24px * 3) calc(3.328px * 3),
-			calc(0.304px * 3) calc(3.104px * 3),
-			calc(0.352px * 3) calc(2.896px * 3),
-			calc(0.416px * 3) calc(2.704px * 3),
-			calc(0.48px * 3) calc(2.512px * 3),
-			calc(0.56px * 3) calc(2.336px * 3),
-			calc(0.64px * 3) calc(2.176px * 3),
-			calc(0.72px * 3) calc(2.016px * 3),
-			calc(0.8px * 3) calc(1.872px * 3),
-			calc(0.896px * 3) calc(1.728px * 3),
-			calc(0.992px * 3) calc(1.584px * 3),
-			calc(1.104px * 3) calc(1.456px * 3),
-			calc(1.216px * 3) calc(1.328px * 3),
-			calc(1.328px * 3) calc(1.216px * 3),
-			calc(1.456px * 3) calc(1.104px * 3),
-			calc(1.584px * 3) calc(0.992px * 3),
-			calc(1.728px * 3) calc(0.896px * 3),
-			calc(1.872px * 3) calc(0.8px * 3),
-			calc(2.016px * 3) calc(0.72px * 3),
-			calc(2.176px * 3) calc(0.64px * 3),
-			calc(2.336px * 3) calc(0.56px * 3),
-			calc(2.512px * 3) calc(0.48px * 3),
-			calc(2.704px * 3) calc(0.416px * 3),
-			calc(2.896px * 3) calc(0.352px * 3),
-			calc(3.104px * 3) calc(0.304px * 3),
-			calc(3.328px * 3) calc(0.24px * 3),
-			calc(3.552px * 3) calc(0.192px * 3),
-			calc(3.792px * 3) calc(0.16px * 3),
-			calc(4.064px * 3) calc(0.112px * 3),
-			calc(4.352px * 3) calc(0.08px * 3),
-			calc(4.672px * 3) calc(0.064px * 3),
-			calc(5.008px * 3) calc(0.032px * 3),
-			calc(5.408px * 3) calc(0.016px * 3),
-			calc(5.888px * 3) calc(0.016px * 3),
-			calc(6.512px * 3) calc(0px * 3),
-			calc(8px * 3) calc(0px * 3),
-			calc(100% - 6.944px * 3) calc(0px * 3),
-			calc(100% - 6.176px * 3) calc(0px * 3),
-			calc(100% - 5.632px * 3) calc(0.016px * 3),
-			calc(100% - 5.2px * 3) calc(0.032px * 3),
-			calc(100% - 4.832px * 3) calc(0.048px * 3),
-			calc(100% - 4.512px * 3) calc(0.08px * 3),
-			calc(100% - 4.208px * 3) calc(0.096px * 3),
-			calc(100% - 3.936px * 3) calc(0.144px * 3),
-			calc(100% - 3.68px * 3) calc(0.176px * 3),
-			calc(100% - 3.44px * 3) calc(0.224px * 3),
-			calc(100% - 3.216px * 3) calc(0.272px * 3),
-			calc(100% - 2.992px * 3) calc(0.32px * 3),
-			calc(100% - 2.8px * 3) calc(0.384px * 3),
-			calc(100% - 2.608px * 3) calc(0.448px * 3),
-			calc(100% - 2.432px * 3) calc(0.512px * 3),
-			calc(100% - 2.256px * 3) calc(0.592px * 3),
-			calc(100% - 2.096px * 3) calc(0.672px * 3),
-			calc(100% - 1.936px * 3) calc(0.752px * 3),
-			calc(100% - 1.792px * 3) calc(0.848px * 3),
-			calc(100% - 1.648px * 3) calc(0.944px * 3),
-			calc(100% - 1.52px * 3) calc(1.056px * 3),
-			calc(100% - 1.392px * 3) calc(1.152px * 3),
-			calc(100% - 1.28px * 3) calc(1.28px * 3),
-			calc(100% - 1.152px * 3) calc(1.392px * 3),
-			calc(100% - 1.056px * 3) calc(1.52px * 3),
-			calc(100% - 0.944px * 3) calc(1.648px * 3),
-			calc(100% - 0.848px * 3) calc(1.792px * 3),
-			calc(100% - 0.752px * 3) calc(1.936px * 3),
-			calc(100% - 0.672px * 3) calc(2.096px * 3),
-			calc(100% - 0.592px * 3) calc(2.256px * 3),
-			calc(100% - 0.512px * 3) calc(2.432px * 3),
-			calc(100% - 0.448px * 3) calc(2.608px * 3),
-			calc(100% - 0.384px * 3) calc(2.8px * 3),
-			calc(100% - 0.32px * 3) calc(2.992px * 3),
-			calc(100% - 0.272px * 3) calc(3.216px * 3),
-			calc(100% - 0.224px * 3) calc(3.44px * 3),
-			calc(100% - 0.176px * 3) calc(3.68px * 3),
-			calc(100% - 0.144px * 3) calc(3.936px * 3),
-			calc(100% - 0.096px * 3) calc(4.208px * 3),
-			calc(100% - 0.08px * 3) calc(4.512px * 3),
-			calc(100% - 0.048px * 3) calc(4.832px * 3),
-			calc(100% - 0.032px * 3) calc(5.2px * 3),
-			calc(100% - 0.016px * 3) calc(5.632px * 3),
-			calc(100% - 0px * 3) calc(6.176px * 3),
-			calc(100% - 0px * 3) calc(6.944px * 3)
-		);
+	--squircle: polygon(
+		100% calc(100% - 8px * 3),
+		100% calc(100% - 6.512px * 3),
+		calc(100% - 0.016px * 3) calc(100% - 5.888px * 3),
+		calc(100% - 0.016px * 3) calc(100% - 5.408px * 3),
+		calc(100% - 0.032px * 3) calc(100% - 5.008px * 3),
+		calc(100% - 0.064px * 3) calc(100% - 4.672px * 3),
+		calc(100% - 0.08px * 3) calc(100% - 4.352px * 3),
+		calc(100% - 0.112px * 3) calc(100% - 4.064px * 3),
+		calc(100% - 0.16px * 3) calc(100% - 3.792px * 3),
+		calc(100% - 0.192px * 3) calc(100% - 3.552px * 3),
+		calc(100% - 0.24px * 3) calc(100% - 3.328px * 3),
+		calc(100% - 0.304px * 3) calc(100% - 3.104px * 3),
+		calc(100% - 0.352px * 3) calc(100% - 2.896px * 3),
+		calc(100% - 0.416px * 3) calc(100% - 2.704px * 3),
+		calc(100% - 0.48px * 3) calc(100% - 2.512px * 3),
+		calc(100% - 0.56px * 3) calc(100% - 2.336px * 3),
+		calc(100% - 0.64px * 3) calc(100% - 2.176px * 3),
+		calc(100% - 0.72px * 3) calc(100% - 2.016px * 3),
+		calc(100% - 0.8px * 3) calc(100% - 1.872px * 3),
+		calc(100% - 0.896px * 3) calc(100% - 1.728px * 3),
+		calc(100% - 0.992px * 3) calc(100% - 1.584px * 3),
+		calc(100% - 1.104px * 3) calc(100% - 1.456px * 3),
+		calc(100% - 1.216px * 3) calc(100% - 1.328px * 3),
+		calc(100% - 1.328px * 3) calc(100% - 1.216px * 3),
+		calc(100% - 1.456px * 3) calc(100% - 1.104px * 3),
+		calc(100% - 1.584px * 3) calc(100% - 0.992px * 3),
+		calc(100% - 1.728px * 3) calc(100% - 0.896px * 3),
+		calc(100% - 1.872px * 3) calc(100% - 0.8px * 3),
+		calc(100% - 2.016px * 3) calc(100% - 0.72px * 3),
+		calc(100% - 2.176px * 3) calc(100% - 0.64px * 3),
+		calc(100% - 2.336px * 3) calc(100% - 0.56px * 3),
+		calc(100% - 2.512px * 3) calc(100% - 0.48px * 3),
+		calc(100% - 2.704px * 3) calc(100% - 0.416px * 3),
+		calc(100% - 2.896px * 3) calc(100% - 0.352px * 3),
+		calc(100% - 3.104px * 3) calc(100% - 0.304px * 3),
+		calc(100% - 3.328px * 3) calc(100% - 0.24px * 3),
+		calc(100% - 3.552px * 3) calc(100% - 0.192px * 3),
+		calc(100% - 3.792px * 3) calc(100% - 0.16px * 3),
+		calc(100% - 4.064px * 3) calc(100% - 0.112px * 3),
+		calc(100% - 4.352px * 3) calc(100% - 0.08px * 3),
+		calc(100% - 4.672px * 3) calc(100% - 0.064px * 3),
+		calc(100% - 5.008px * 3) calc(100% - 0.032px * 3),
+		calc(100% - 5.408px * 3) calc(100% - 0.016px * 3),
+		calc(100% - 5.888px * 3) calc(100% - 0.016px * 3),
+		calc(100% - 6.512px * 3) 100%,
+		calc(100% - 8px * 3) 100%,
+		calc(6.944px * 3) calc(100% - 0px * 3),
+		calc(6.176px * 3) calc(100% - 0px * 3),
+		calc(5.632px * 3) calc(100% - 0.016px * 3),
+		calc(5.2px * 3) calc(100% - 0.032px * 3),
+		calc(4.832px * 3) calc(100% - 0.048px * 3),
+		calc(4.512px * 3) calc(100% - 0.08px * 3),
+		calc(4.208px * 3) calc(100% - 0.096px * 3),
+		calc(3.936px * 3) calc(100% - 0.144px * 3),
+		calc(3.68px * 3) calc(100% - 0.176px * 3),
+		calc(3.44px * 3) calc(100% - 0.224px * 3),
+		calc(3.216px * 3) calc(100% - 0.272px * 3),
+		calc(2.992px * 3) calc(100% - 0.32px * 3),
+		calc(2.8px * 3) calc(100% - 0.384px * 3),
+		calc(2.608px * 3) calc(100% - 0.448px * 3),
+		calc(2.432px * 3) calc(100% - 0.512px * 3),
+		calc(2.256px * 3) calc(100% - 0.592px * 3),
+		calc(2.096px * 3) calc(100% - 0.672px * 3),
+		calc(1.936px * 3) calc(100% - 0.752px * 3),
+		calc(1.792px * 3) calc(100% - 0.848px * 3),
+		calc(1.648px * 3) calc(100% - 0.944px * 3),
+		calc(1.52px * 3) calc(100% - 1.056px * 3),
+		calc(1.392px * 3) calc(100% - 1.152px * 3),
+		calc(1.28px * 3) calc(100% - 1.28px * 3),
+		calc(1.152px * 3) calc(100% - 1.392px * 3),
+		calc(1.056px * 3) calc(100% - 1.52px * 3),
+		calc(0.944px * 3) calc(100% - 1.648px * 3),
+		calc(0.848px * 3) calc(100% - 1.792px * 3),
+		calc(0.752px * 3) calc(100% - 1.936px * 3),
+		calc(0.672px * 3) calc(100% - 2.096px * 3),
+		calc(0.592px * 3) calc(100% - 2.256px * 3),
+		calc(0.512px * 3) calc(100% - 2.432px * 3),
+		calc(0.448px * 3) calc(100% - 2.608px * 3),
+		calc(0.384px * 3) calc(100% - 2.8px * 3),
+		calc(0.32px * 3) calc(100% - 2.992px * 3),
+		calc(0.272px * 3) calc(100% - 3.216px * 3),
+		calc(0.224px * 3) calc(100% - 3.44px * 3),
+		calc(0.176px * 3) calc(100% - 3.68px * 3),
+		calc(0.144px * 3) calc(100% - 3.936px * 3),
+		calc(0.096px * 3) calc(100% - 4.208px * 3),
+		calc(0.08px * 3) calc(100% - 4.512px * 3),
+		calc(0.048px * 3) calc(100% - 4.832px * 3),
+		calc(0.032px * 3) calc(100% - 5.2px * 3),
+		calc(0.016px * 3) calc(100% - 5.632px * 3),
+		calc(0px * 3) calc(100% - 6.176px * 3),
+		calc(0px * 3) calc(100% - 6.944px * 3),
+		calc(0px * 3) calc(8px * 3),
+		calc(0px * 3) calc(6.512px * 3),
+		calc(0.016px * 3) calc(5.888px * 3),
+		calc(0.016px * 3) calc(5.408px * 3),
+		calc(0.032px * 3) calc(5.008px * 3),
+		calc(0.064px * 3) calc(4.672px * 3),
+		calc(0.08px * 3) calc(4.352px * 3),
+		calc(0.112px * 3) calc(4.064px * 3),
+		calc(0.16px * 3) calc(3.792px * 3),
+		calc(0.192px * 3) calc(3.552px * 3),
+		calc(0.24px * 3) calc(3.328px * 3),
+		calc(0.304px * 3) calc(3.104px * 3),
+		calc(0.352px * 3) calc(2.896px * 3),
+		calc(0.416px * 3) calc(2.704px * 3),
+		calc(0.48px * 3) calc(2.512px * 3),
+		calc(0.56px * 3) calc(2.336px * 3),
+		calc(0.64px * 3) calc(2.176px * 3),
+		calc(0.72px * 3) calc(2.016px * 3),
+		calc(0.8px * 3) calc(1.872px * 3),
+		calc(0.896px * 3) calc(1.728px * 3),
+		calc(0.992px * 3) calc(1.584px * 3),
+		calc(1.104px * 3) calc(1.456px * 3),
+		calc(1.216px * 3) calc(1.328px * 3),
+		calc(1.328px * 3) calc(1.216px * 3),
+		calc(1.456px * 3) calc(1.104px * 3),
+		calc(1.584px * 3) calc(0.992px * 3),
+		calc(1.728px * 3) calc(0.896px * 3),
+		calc(1.872px * 3) calc(0.8px * 3),
+		calc(2.016px * 3) calc(0.72px * 3),
+		calc(2.176px * 3) calc(0.64px * 3),
+		calc(2.336px * 3) calc(0.56px * 3),
+		calc(2.512px * 3) calc(0.48px * 3),
+		calc(2.704px * 3) calc(0.416px * 3),
+		calc(2.896px * 3) calc(0.352px * 3),
+		calc(3.104px * 3) calc(0.304px * 3),
+		calc(3.328px * 3) calc(0.24px * 3),
+		calc(3.552px * 3) calc(0.192px * 3),
+		calc(3.792px * 3) calc(0.16px * 3),
+		calc(4.064px * 3) calc(0.112px * 3),
+		calc(4.352px * 3) calc(0.08px * 3),
+		calc(4.672px * 3) calc(0.064px * 3),
+		calc(5.008px * 3) calc(0.032px * 3),
+		calc(5.408px * 3) calc(0.016px * 3),
+		calc(5.888px * 3) calc(0.016px * 3),
+		calc(6.512px * 3) calc(0px * 3),
+		calc(8px * 3) calc(0px * 3),
+		calc(100% - 6.944px * 3) calc(0px * 3),
+		calc(100% - 6.176px * 3) calc(0px * 3),
+		calc(100% - 5.632px * 3) calc(0.016px * 3),
+		calc(100% - 5.2px * 3) calc(0.032px * 3),
+		calc(100% - 4.832px * 3) calc(0.048px * 3),
+		calc(100% - 4.512px * 3) calc(0.08px * 3),
+		calc(100% - 4.208px * 3) calc(0.096px * 3),
+		calc(100% - 3.936px * 3) calc(0.144px * 3),
+		calc(100% - 3.68px * 3) calc(0.176px * 3),
+		calc(100% - 3.44px * 3) calc(0.224px * 3),
+		calc(100% - 3.216px * 3) calc(0.272px * 3),
+		calc(100% - 2.992px * 3) calc(0.32px * 3),
+		calc(100% - 2.8px * 3) calc(0.384px * 3),
+		calc(100% - 2.608px * 3) calc(0.448px * 3),
+		calc(100% - 2.432px * 3) calc(0.512px * 3),
+		calc(100% - 2.256px * 3) calc(0.592px * 3),
+		calc(100% - 2.096px * 3) calc(0.672px * 3),
+		calc(100% - 1.936px * 3) calc(0.752px * 3),
+		calc(100% - 1.792px * 3) calc(0.848px * 3),
+		calc(100% - 1.648px * 3) calc(0.944px * 3),
+		calc(100% - 1.52px * 3) calc(1.056px * 3),
+		calc(100% - 1.392px * 3) calc(1.152px * 3),
+		calc(100% - 1.28px * 3) calc(1.28px * 3),
+		calc(100% - 1.152px * 3) calc(1.392px * 3),
+		calc(100% - 1.056px * 3) calc(1.52px * 3),
+		calc(100% - 0.944px * 3) calc(1.648px * 3),
+		calc(100% - 0.848px * 3) calc(1.792px * 3),
+		calc(100% - 0.752px * 3) calc(1.936px * 3),
+		calc(100% - 0.672px * 3) calc(2.096px * 3),
+		calc(100% - 0.592px * 3) calc(2.256px * 3),
+		calc(100% - 0.512px * 3) calc(2.432px * 3),
+		calc(100% - 0.448px * 3) calc(2.608px * 3),
+		calc(100% - 0.384px * 3) calc(2.8px * 3),
+		calc(100% - 0.32px * 3) calc(2.992px * 3),
+		calc(100% - 0.272px * 3) calc(3.216px * 3),
+		calc(100% - 0.224px * 3) calc(3.44px * 3),
+		calc(100% - 0.176px * 3) calc(3.68px * 3),
+		calc(100% - 0.144px * 3) calc(3.936px * 3),
+		calc(100% - 0.096px * 3) calc(4.208px * 3),
+		calc(100% - 0.08px * 3) calc(4.512px * 3),
+		calc(100% - 0.048px * 3) calc(4.832px * 3),
+		calc(100% - 0.032px * 3) calc(5.2px * 3),
+		calc(100% - 0.016px * 3) calc(5.632px * 3),
+		calc(100% - 0px * 3) calc(6.176px * 3),
+		calc(100% - 0px * 3) calc(6.944px * 3)
+	);
 }
