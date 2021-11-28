@@ -3,7 +3,7 @@ import * as THREE from 'three';
 import { FlakesTexture } from './FlakesTexture.js';
 import { RGBELoader } from './RGBELoader.js';
 
-let scene, camera, renderer, pointlight;
+let scene, camera, renderer, pointlight, ballMesh;
 
 export const createScene = (el, wrapper) => {
 	THREE.DefaultLoadingManager.onLoad = function () {
@@ -47,11 +47,19 @@ export const createScene = (el, wrapper) => {
 			envMap: envmap.texture
 		};
 
-		let ballGeo = new THREE.SphereGeometry(100, 32, 32);
+		let ballGeo = new THREE.SphereGeometry(100, 40, 40);
 		let ballMat = new THREE.MeshPhysicalMaterial(ballMaterial);
-		let ballMesh = new THREE.Mesh(ballGeo, ballMat);
+		ballMesh = new THREE.Mesh(ballGeo, ballMat);
 		scene.add(ballMesh);
 
 		renderer.render(scene, camera);
+		animate();
 	});
+
+	function animate() {
+		let increment = 0.0005;
+		ballMesh.rotation.y -= increment;
+		renderer.render(scene, camera);
+		requestAnimationFrame(animate);
+	}
 };
