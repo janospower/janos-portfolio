@@ -19,7 +19,7 @@
 		position: fixed;
 		top: 0;
 		width: 100%;
-		height: var(--spacing-10);
+		height: var(--spacing-12);
 		z-index: 100;
 	}
 

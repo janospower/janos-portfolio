@@ -1,32 +1,59 @@
 
 import * as THREE from 'three';
 
-const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-const geometry = new THREE.BoxGeometry();
-const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-const cube = new THREE.Mesh(geometry, material);
-let renderer;
-scene.add(cube);
-camera.position.z = 5;
+import { FlakesTexture } from './FlakesTexture.js';
+import { RGBELoader } from './RGBELoader.js';
 
-const animate = () => {
-  requestAnimationFrame(animate);
-  cube.rotation.x += 0.01;
-  cube.rotation.y += 0.01;
-  renderer.render(scene, camera);
-};
+let scene, camera, renderer, pointlight;
 
-const resize = () => {
-  renderer.setSize(window.innerWidth, window.innerHeight)
-  camera.aspect = window.innerWidth / window.innerHeight;
-  camera.updateProjectionMatrix();
-};
+
 
 export const createScene = (el) => {
-  renderer = new THREE.WebGLRenderer({ antialias: true, canvas: el });
-  resize();
-  animate();
-}
+    scene = new THREE.Scene();
+  
+    renderer = new THREE.WebGLRenderer({ alpha:true, antialias: true, canvas: el });
+    renderer.setSize(410, 410)
+  
+    renderer.outputEncoding = THREE.sRGBEncoding;
+    renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    renderer.toneMappingExposure = 1.25;
+  
+    camera = new THREE.PerspectiveCamera(50, 410 / 410, 1, 1000);
+    camera.position.set(0,0,239);
+  
+    pointlight = new THREE.PointLight(0xCA0060,1);
+    pointlight.position.set(200,200,200);
+    scene.add(pointlight);
+  
+    let envmaploader = new THREE.PMREMGenerator(renderer);
+  
+    new RGBELoader().setPath('textures/').load('studio_small_08_4k.hdr', function(hdrmap) {
+  
+      let envmap = envmaploader.fromCubemap(hdrmap);
+      let texture = new THREE.CanvasTexture(new FlakesTexture());
+      texture.wrapS = THREE.RepeatWrapping;
+      texture.wrapT = THREE.RepeatWrapping;
+      texture.repeat.x = 10;
+      texture.repeat.y = 6;
+  
+      const ballMaterial = {
+        clearcoat: 1.0,
+        clearcoatRoughness:0.1,
+        metalness: 0.9,
+        roughness:0.5,
+        color: 0x8418ca,
+        normalMap: texture,
+        normalScale: new THREE.Vector2(0.15,0.15),
+        envMap: envmap.texture
+      };
+  
+      let ballGeo = new THREE.SphereGeometry(100,32,32);
+      let ballMat = new THREE.MeshPhysicalMaterial(ballMaterial);
+      let ballMesh = new THREE.Mesh(ballGeo,ballMat);
+      scene.add(ballMesh);
 
-window.addEventListener('resize', resize);
+      renderer.render(scene, camera);
+  
+    });
+    
+}
