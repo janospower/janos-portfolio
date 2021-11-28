@@ -12,8 +12,6 @@
 	let mouseOffsetX = 0;
 	let mouseOffsetY = 0;
 
-
-
 	export let cta = false;
 	export let variant = 'primary';
 
@@ -28,10 +26,13 @@
 		damping: 0.3
 	});
 
-	let translate = spring({ x: 0, y: 0 }, {
-		stiffness: 0.1,
-		damping: 0.8
-	});
+	let translate = spring(
+		{ x: 0, y: 0 },
+		{
+			stiffness: 0.1,
+			damping: 0.8
+		}
+	);
 
 	function onQueryResult(event) {
 		deviceIsMobile = event.detail.queryresult;
@@ -58,15 +59,13 @@
 			mouseOffsetY = event.y - buttonY - buttonHeight / 2;
 
 			if (hovering) {
-				translate.set({ x: (mouseOffsetX * .5), y: (mouseOffsetY * .5) });
+				translate.set({ x: mouseOffsetX * 0.5, y: mouseOffsetY * 0.5 });
 			}
-			
 		}
 	});
 </script>
 
 <MediaQuery on:queryresult={onQueryResult} {query} />
-
 
 <div
 	class="button"
@@ -79,7 +78,7 @@
 	}}
 	on:mousemove={elasticButton}
 	on:mouseleave={() => {
-		scale.set(1)
+		scale.set(1);
 		hovering = false;
 		translate.set({ x: 0, y: 0 });
 	}}
@@ -93,36 +92,38 @@
 	on:touchend={() => scale.set(1)}
 	style="transform: scale({$scale})"
 >
-<a href="/"
-	bind:this={buttonLink}
-	class="button-link {variant} no-select"
-	style="transform: translate({$translate.x}px, {$translate.y}px)"
->
-<span class="button__inner"
-	style="transform: translate({$translate.x * .2}px, {$translate.y * .2}px)"
->
-	{#if $$slots.label}
-		{#if $$slots.icon}
-			<span class="icon leading">
-				<slot name="icon" />
-			</span>
-		{/if}
+	<a
+		href="/"
+		bind:this={buttonLink}
+		class="button-link {variant} no-select"
+		style="transform: translate({$translate.x}px, {$translate.y}px)"
+	>
+		<span
+			class="button__inner"
+			style="transform: translate({$translate.x * 0.2}px, {$translate.y * 0.2}px)"
+		>
+			{#if $$slots.label}
+				{#if $$slots.icon}
+					<span class="icon leading">
+						<slot name="icon" />
+					</span>
+				{/if}
 
-		<slot name="label" />
+				<slot name="label" />
 
-		{#if $$slots.iconTrailing}
-			<span class="icon trailing">
-				<slot name="iconTrailing" />
-			</span>
-		{/if}
-	{:else}
-		<span class="icon">
-			<slot name="icon" />
+				{#if $$slots.iconTrailing}
+					<span class="icon trailing">
+						<slot name="iconTrailing" />
+					</span>
+				{/if}
+			{:else}
+				<span class="icon">
+					<slot name="icon" />
+				</span>
+			{/if}
 		</span>
-	{/if}
-</span>
-</a>
-	</div>
+	</a>
+</div>
 
 <style lang="scss">
 	.icon {

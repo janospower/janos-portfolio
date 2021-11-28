@@ -69,7 +69,6 @@
 			width: calc(100% - var(--spacing-04) * 2);
 		}
 		nav {
-
 			position: static;
 			padding: var(--spacing-04);
 			& h2 {

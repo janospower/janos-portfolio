@@ -23,22 +23,17 @@
 
 <svelte:window bind:scrollY={verticalScroll} />
 
-<Sticky gridColumnStart="3" gridColumnEnd="7" sticky={false} verticalScroll={verticalScroll}>
+<Sticky gridColumnStart="3" gridColumnEnd="7" sticky={false} {verticalScroll}>
 	<Hero />
 </Sticky>
 
-<Sticky gridColumnStart="3" gridColumnEnd="7" verticalScroll={verticalScroll}>
+<Sticky gridColumnStart="3" gridColumnEnd="7" {verticalScroll}>
 	<div class="text--huge">
 		<p>Hi.</p>
 		<p>My name is Janos.</p>
 	</div>
 </Sticky>
 
-<Sticky gridColumnStart="3" gridColumnEnd="7" verticalScroll={verticalScroll}>
-	Hi.
-</Sticky>
+<Sticky gridColumnStart="3" gridColumnEnd="7" {verticalScroll}>Hi.</Sticky>
 
-<Sticky gridColumnStart="3" gridColumnEnd="7" verticalScroll={verticalScroll}>
-	Hi.
-</Sticky>
-
+<Sticky gridColumnStart="3" gridColumnEnd="7" {verticalScroll}>Hi.</Sticky>
