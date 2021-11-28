@@ -41,7 +41,7 @@ export const createScene = (el) => {
         clearcoatRoughness:0.1,
         metalness: 0.9,
         roughness:0.5,
-        color: 0x8418ca,
+        color: 0xB8147C,
         normalMap: texture,
         normalScale: new THREE.Vector2(0.15,0.15),
         envMap: envmap.texture
