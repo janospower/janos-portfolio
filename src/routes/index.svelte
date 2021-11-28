@@ -27,7 +27,7 @@
 	<Hero />
 </Sticky>
 
-<Sticky gridColumnStart="3" gridColumnEnd="7" {verticalScroll}>
+<Sticky gridColumnStart="3" gridColumnEnd="7" {verticalScroll} scrollTrigger={20}>
 	<div class="text--huge">
 		<p>Hi.</p>
 		<p>My name is Janos.</p>

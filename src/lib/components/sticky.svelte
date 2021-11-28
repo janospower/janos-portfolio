@@ -4,12 +4,18 @@
 	export let gridColumnEnd = '9';
 	export let sticky = true;
 	export let verticalScroll = 0;
+	export let scrollTrigger = -500;
 	let hidden = true;
+	let mounted = false;
 
-	$: console.log(verticalScroll);
+	$: if (verticalScroll >= scrollTrigger && mounted) {
+		hidden = false;
+	} else {
+		hidden = true;
+	}
 
 	onMount(() => {
-		hidden = false;
+		mounted = true;
 	});
 </script>
 
@@ -18,11 +24,6 @@
 	class:sticky-wrapper={sticky}
 	style="grid-column-start:{gridColumnStart}; grid-column-end:{gridColumnEnd};"
 >
-	<button
-		on:click={() => {
-			hidden = !hidden;
-		}}>clicky</button
-	>
 	<section class="fading" class:sticky class:hidden>
 		<slot />
 	</section>
