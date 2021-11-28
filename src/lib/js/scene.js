@@ -5,7 +5,11 @@ import { RGBELoader } from './RGBELoader.js';
 
 let scene, camera, renderer, pointlight;
 
-export const createScene = (el) => {
+export const createScene = (el, wrapper) => {
+	THREE.DefaultLoadingManager.onLoad = function () {
+		wrapper.classList.add('loaded');
+	};
+
 	scene = new THREE.Scene();
 
 	renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true, canvas: el });

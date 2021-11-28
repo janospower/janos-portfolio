@@ -1,15 +1,17 @@
 <script>
 	import { onMount } from 'svelte';
 	import { createScene } from '../js/scene';
-	let el;
+	let canvas;
+	let wrapper;
+
 	onMount(() => {
-		createScene(el);
+		createScene(canvas, wrapper);
 	});
 </script>
 
 <div class="hero-wrapper">
-	<div class="hero" id="hero">
-		<canvas bind:this={el}>
+	<div class="hero" id="hero" bind:this={wrapper}>
+		<canvas bind:this={canvas}>
 			<div class="placeholder" />
 		</canvas>
 	</div>
@@ -23,6 +25,8 @@
 		flex-direction: column;
 	}
 	.hero {
+		opacity: 0;
+		transition: opacity 1s ease-out;
 		$bloom-radius: 500px;
 		width: calc(410px + $bloom-radius * 2);
 		height: calc(410px + $bloom-radius * 2);
@@ -38,10 +42,7 @@
 		padding: $bloom-radius;
 		margin: calc($bloom-radius * -1);
 	}
-	.placeholder {
-		width: 410px;
-		height: 410px;
-		background-color: black;
-		border-radius: 50%;
+	:global(.hero.loaded) {
+		opacity: 1;
 	}
 </style>
