@@ -5,17 +5,29 @@
 	export let sticky = true;
 	export let verticalScroll = 0;
 	export let scrollTrigger = -500;
+	export let delay = 0;
 	let hidden = true;
 	let mounted = false;
 
+	let firstRowHidden = true;
+	let secondRowHidden = true;
+
 	$: if (verticalScroll >= scrollTrigger && mounted) {
-		hidden = false;
+		firstRowHidden = false;
 	} else {
-		hidden = true;
+		firstRowHidden = true;
+	}
+
+	$: if (verticalScroll >= scrollTrigger + 100 && mounted) {
+		secondRowHidden = false;
+	} else {
+		secondRowHidden = true;
 	}
 
 	onMount(() => {
-		mounted = true;
+		setTimeout(() => {
+			mounted = true;
+		}, delay);
 	});
 </script>
 
@@ -24,8 +36,16 @@
 	class:sticky-wrapper={sticky}
 	style="grid-column-start:{gridColumnStart}; grid-column-end:{gridColumnEnd};"
 >
-	<section class="fading" class:sticky class:hidden>
-		<slot />
+	<section class:sticky>
+		<div class="fading" class:hidden={firstRowHidden}>
+			<slot name="firstLine" />
+		</div>
+
+		{#if $$slots.secondLine}
+			<div class="fading" class:hidden={secondRowHidden}>
+				<slot name="secondLine" />
+			</div>
+		{/if}
 	</section>
 </div>
 

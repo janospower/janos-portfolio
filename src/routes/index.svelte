@@ -24,16 +24,10 @@
 <svelte:window bind:scrollY={verticalScroll} />
 
 <Sticky gridColumnStart="3" gridColumnEnd="7" sticky={false} {verticalScroll}>
-	<Hero />
+	<Hero slot="firstLine" />
 </Sticky>
 
-<Sticky gridColumnStart="3" gridColumnEnd="7" {verticalScroll} scrollTrigger={20}>
-	<div class="text--huge">
-		<p>Hi.</p>
-		<p>My name is Janos.</p>
-	</div>
+<Sticky gridColumnStart="3" gridColumnEnd="7" {verticalScroll} scrollTrigger={-20} delay={2000}>
+	<p class="text--huge" slot="firstLine">Hi.</p>
+	<p class="text--huge" slot="secondLine">My name is Janos</p>
 </Sticky>
-
-<Sticky gridColumnStart="3" gridColumnEnd="7" {verticalScroll}>Hi.</Sticky>
-
-<Sticky gridColumnStart="3" gridColumnEnd="7" {verticalScroll}>Hi.</Sticky>
