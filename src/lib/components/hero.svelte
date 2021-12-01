@@ -5,12 +5,12 @@
 	let wrapper;
 
 	onMount(() => {
-		createScene(canvas, wrapper);
+		createScene(canvas);
 	});
 </script>
 
 <div class="hero-wrapper">
-	<div class="hero" id="hero" bind:this={wrapper}>
+	<div class="hero" id="hero">
 		<canvas bind:this={canvas}>
 			<div class="placeholder" />
 		</canvas>
@@ -25,8 +25,6 @@
 		flex-direction: column;
 	}
 	.hero {
-		opacity: 0;
-		transition: opacity 1s ease-out;
 		$bloom-radius: 500px;
 		width: calc(410px + $bloom-radius * 2);
 		height: calc(410px + $bloom-radius * 2);
@@ -41,8 +39,5 @@
 		);
 		padding: $bloom-radius;
 		margin: calc($bloom-radius * -1);
-	}
-	:global(.hero.loaded) {
-		opacity: 1;
 	}
 </style>
