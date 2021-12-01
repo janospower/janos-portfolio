@@ -84,7 +84,8 @@ a {
 	line-height: var(--font-size--huge);
 }
 
-.fading.hidden {
+.fading.hidden,
+.hidden {
 	opacity: 0;
 	filter: blur(var(--blur-radius--medium));
 	transform: translateY(var(--spacing-11));

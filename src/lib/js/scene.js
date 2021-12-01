@@ -59,6 +59,7 @@ export const createScene = (el, wrapper) => {
 	function animate() {
 		let increment = 0.0005;
 		ballMesh.rotation.y -= increment;
+
 		renderer.render(scene, camera);
 		requestAnimationFrame(animate);
 	}

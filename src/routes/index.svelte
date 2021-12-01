@@ -1,6 +1,7 @@
 <script>
 	import Sticky from '../lib/components/sticky.svelte';
 	import Hero from '../lib/components/hero.svelte';
+	import JanosSignature from '../lib/components/janos-signature.svelte';
 
 	let verticalScroll;
 </script>
@@ -29,5 +30,14 @@
 
 <Sticky gridColumnStart="3" gridColumnEnd="7" {verticalScroll} scrollTrigger={-20} delay={2000}>
 	<p class="text--huge" slot="firstLine">Hi.</p>
-	<p class="text--huge" slot="secondLine">My name is Janos</p>
+	<div class="text--huge signature-line" slot="secondLine">
+		<p>My name is&nbsp;</p>
+		<JanosSignature />
+	</div>
 </Sticky>
+
+<style lang="scss">
+	.signature-line {
+		display: flex;
+	}
+</style>
