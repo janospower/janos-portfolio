@@ -17,6 +17,8 @@ export const createScene = (el) => {
 	controls.autoRotate = true;
 	controls.autoRotateSpeed = 0.5;
 	controls.enableDamping = true;
+	controls.enableZoom = false;
+	controls.enablePan = false;
 
 	let ballGeo = new THREE.SphereGeometry(100, 32, 32);
 	let ballMat = new THREE.MeshNormalMaterial({ flatShading: true });
