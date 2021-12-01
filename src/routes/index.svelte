@@ -32,7 +32,7 @@
 	<p class="text--huge" slot="firstLine">Hi.</p>
 	<div class="text--huge signature-line" slot="secondLine">
 		<p>My name is&nbsp;</p>
-		<JanosSignature {verticalScroll} scrollTrigger={100} />
+		<JanosSignature {verticalScroll} scrollTrigger={250} />
 	</div>
 </Sticky>
 

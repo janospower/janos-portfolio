@@ -5,20 +5,36 @@
 	export let scrollTrigger = -500;
 	let letterJ, letterA, letterN, letterO, letterS;
 	let letters = [];
+	const drawingSpeed = 0.006;
 
 	onMount(() => {
 		letters = [letterJ, letterA, letterN, letterO, letterS];
-		letters.forEach((letter) => {
-			letter.dashLength = letter.getTotalLength();
+		for (let index = 0; index < letters.length; index++) {
+			const letter = letters[index];
+			letter.letterDelay = index * 100;
+			letter.dashLength = letter.getTotalLength() + 8;
 			letter.style.strokeDashoffset = letter.dashLength;
-			letter.style.strokeDasharray = letter.dashLength + 10;
-		});
+			letter.style.strokeDasharray = letter.dashLength;
+		}
 	});
 
 	$: letters.forEach((letter) => {
-		if (letter.dashLength - letter.dashLength * (verticalScroll - scrollTrigger) * 0.001 >= 0) {
+		if (
+			letter.dashLength -
+				letter.dashLength * (verticalScroll - scrollTrigger - letter.letterDelay) * drawingSpeed <
+			0
+		) {
+			letter.style.strokeDashoffset = 0;
+		} else if (
+			letter.dashLength -
+				letter.dashLength * (verticalScroll - scrollTrigger - letter.letterDelay) * drawingSpeed >
+			letter.dashLength
+		) {
+			letter.style.strokeDashoffset = letter.dashLength;
+		} else {
 			letter.style.strokeDashoffset =
-				letter.dashLength - letter.dashLength * (verticalScroll - scrollTrigger) * 0.001;
+				letter.dashLength -
+				letter.dashLength * (verticalScroll - scrollTrigger - letter.letterDelay) * drawingSpeed;
 		}
 	});
 </script>
