@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import { OrbitControls } from './OrbitControls.js';
+import TrackballControls from 'three-trackballcontrols';
 
 let scene, camera, renderer, ballMesh, controls;
 
@@ -12,13 +12,13 @@ export const createScene = (el) => {
 	camera = new THREE.PerspectiveCamera(50, 410 / 410, 1, 1000);
 	camera.position.set(0, 0, 239);
 
-	controls = new OrbitControls(camera, renderer.domElement);
+	controls = new TrackballControls(camera, renderer.domElement);
 
-	controls.autoRotate = true;
-	controls.autoRotateSpeed = 0.5;
-	controls.enableDamping = true;
-	controls.enableZoom = false;
-	controls.enablePan = false;
+	// controls.autoRotate = true;
+	// controls.autoRotateSpeed = .5;
+	// controls.enableDamping = true;
+	controls.noZoom = true;
+	controls.noPan = true;
 
 	let ballGeo = new THREE.SphereGeometry(100, 64, 32);
 	let ballMat = new THREE.MeshNormalMaterial({

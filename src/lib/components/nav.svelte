@@ -3,7 +3,7 @@
 	import PaperPlane from '../icons/paperplane.svelte';
 </script>
 
-<div class="navigation__background" />
+<div class="navigation__background no-select" />
 <nav class="main-navigation" aria-label="Main">
 	<h2><a href="/">Portfolio • Janos Pauer</a></h2>
 	<div class="cta">
