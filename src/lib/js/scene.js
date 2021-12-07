@@ -20,8 +20,18 @@ export const createScene = (el) => {
 	controls.enableZoom = false;
 	controls.enablePan = false;
 
-	let ballGeo = new THREE.SphereGeometry(100, 32, 32);
-	let ballMat = new THREE.MeshNormalMaterial({ flatShading: true });
+	let ballGeo = new THREE.SphereGeometry(100, 64, 32);
+	let ballMat = new THREE.MeshNormalMaterial({
+		flatShading: false
+	});
+	ballMat.onBeforeCompile = (shader) => {
+		const token = '#include <defaultnormal_vertex>';
+		const customTransform = THREE.ShaderChunk['defaultnormal_vertex'].replace(
+			'transformedNormal = normalMatrix * transformedNormal;',
+			'transformedNormal =  mat3(modelMatrix) * transformedNormal;'
+		);
+		shader.vertexShader = shader.vertexShader.replace(token, customTransform);
+	};
 	ballMesh = new THREE.Mesh(ballGeo, ballMat);
 	scene.add(ballMesh);
 
