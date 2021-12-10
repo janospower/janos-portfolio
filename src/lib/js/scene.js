@@ -4,7 +4,8 @@ import {
 	PerspectiveCamera,
 	SphereGeometry,
 	MeshNormalMaterial,
-	Mesh
+	Mesh,
+	ShaderChunk
 } from 'three';
 // import TrackballControls from 'three-trackballcontrols';
 
