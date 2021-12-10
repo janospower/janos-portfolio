@@ -3,6 +3,7 @@
 	import Hero from '../lib/components/hero.svelte';
 	import JanosSignature from '../lib/components/janos-signature.svelte';
 	import SelectedLayer from '../lib/components/selected-layer.svelte';
+	import ActiveCode from '../lib/components/active-code.svelte';
 
 	let verticalScroll;
 </script>
@@ -38,7 +39,9 @@
 </Sticky>
 
 <Sticky gridColumnStart="2" gridColumnEnd="8" observeIntersection={true} delay={2000}>
-	<p class="text--huge" slot="firstLine">I <SelectedLayer>design</SelectedLayer> and build</p>
+	<p class="text--huge" slot="firstLine">
+		I <SelectedLayer>design</SelectedLayer> and <ActiveCode>build</ActiveCode>
+	</p>
 	<p class="text--huge signature-line" slot="secondLine">digital products.</p>
 </Sticky>
 
