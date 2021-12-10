@@ -36,6 +36,11 @@
 	</div>
 </Sticky>
 
+<Sticky gridColumnStart="2" gridColumnEnd="8" observeIntersection={true} delay={2000}>
+	<p class="text--huge" slot="firstLine">I draw and build</p>
+	<p class="text--huge signature-line" slot="secondLine">digital products.</p>
+</Sticky>
+
 <style lang="scss">
 	.signature-line {
 		display: flex;
