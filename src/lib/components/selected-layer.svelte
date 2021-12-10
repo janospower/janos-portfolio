@@ -5,41 +5,29 @@
 <style lang="scss">
 	span {
 		/* Fallback: Set a background color. */
-		background-color: #ca4246;
+		background-color: var(--color-accent--on-dark--teal--opaque);
 
 		/* Create the gradient. */
-		background-image: linear-gradient(
-			45deg,
-			#ca4246 16.666%,
-			#e16541 16.666%,
-			#e16541 33.333%,
-			#f18f43 33.333%,
-			#f18f43 50%,
-			#8b9862 50%,
-			#8b9862 66.666%,
-			#476098 66.666%,
-			#476098 83.333%,
-			#a7489b 83.333%
-		);
+		background-image: var(--gradient-on-dark--volt-teal);
 
-		background-size: 100%;
+		background-size: 200%;
 		background-repeat: repeat;
 
 		background-clip: text;
 		-webkit-text-fill-color: transparent;
 
-		animation: gradient 0.75s ease infinite;
+		animation: gradient 10s ease infinite;
 	}
 
 	@keyframes gradient {
 		0% {
-			background-size: 100%;
+			background-position-x: 0%;
 		}
-		80% {
-			background-size: 650%;
+		50% {
+			background-position-x: 100%;
 		}
 		100% {
-			background-size: 650%;
+			background-position-x: 0%;
 		}
 	}
 </style>

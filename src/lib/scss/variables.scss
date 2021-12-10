@@ -40,6 +40,13 @@
 	--color-accent--on-light--volt--opaque: #9af103;
 	--color-accent--on-light--yellow--opaque: #e5ca19;
 
+	--gradient-on-dark--volt-teal: linear-gradient(
+		to right,
+		var(--color-accent--on-dark--volt--opaque),
+		var(--color-accent--on-dark--teal--opaque),
+		var(--color-accent--on-dark--blue--opaque)
+	);
+
 	--color-neutral--100: #fcfbf7;
 	--color-neutral--200: #f0f0ec;
 	--color-neutral--300: #bec2c1;
