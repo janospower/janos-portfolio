@@ -79,6 +79,7 @@
 	$screen-size--small: 667px;
 
 	--page-width: 1024px;
+	--page-width-inner: calc(var(--page-width) - 2 * var(--spacing-03));
 
 	--squircle: polygon(
 		100% calc(100% - 8px * 3),

@@ -67,7 +67,7 @@
 	</div>
 </Sticky>
 
-<Cases />
+<Cases {verticalScroll} />
 
 <style lang="scss">
 	.signature-line {
