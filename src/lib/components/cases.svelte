@@ -19,6 +19,7 @@
 
 <IntersectionObserver {element} bind:intersecting>
 	<div class="cases-wrapper" bind:this={element}>
+		<p class="text--huge mobile-only">Cases</p>
 		<div class="cases">
 			<div class="articles" style="transform: translateX({offset}px)">
 				<article class="case"><Case /></article>
@@ -33,7 +34,20 @@
 
 <style lang="scss">
 	$case-width: calc(var(--page-width-inner) + (100vw - var(--page-width-inner)) / 3);
+
+	.cases-wrapper {
+		grid-column-start: 1;
+		grid-column-end: 9;
+	}
+
+	.case {
+		margin-bottom: var(--spacing-10);
+	}
+
 	@media (min-width: 1024px) and (pointer: fine) {
+		.mobile-only {
+			display: none;
+		}
 		.cases-wrapper {
 			height: calc(4 * $case-width + 100vh - var(--spacing-03));
 			margin: 0 calc((100vw - var(--page-width-inner)) / -2);
@@ -62,9 +76,20 @@
 			max-height: 800px;
 			min-width: var(--page-width-inner);
 			max-width: var(--page-width-inner);
+			margin-bottom: 0;
 		}
 		.case:not(:last-child) {
 			margin-right: calc((100vw - var(--page-width-inner)) / 3);
+		}
+	}
+
+	@media (max-width: 1024px) {
+		.articles {
+			transform: translateX(0px) !important;
+		}
+		.cases-wrapper {
+			grid-column-start: 1;
+			grid-column-end: 9;
 		}
 	}
 </style>

@@ -95,19 +95,34 @@
 {/if}
 
 <style lang="scss">
-	.sticky-wrapper {
-		min-height: 1500px;
-		position: relative;
+	@media (min-width: 667px) {
+		.sticky-wrapper {
+			min-height: 1500px;
+			position: relative;
+		}
+		.sticky {
+			position: sticky;
+			top: calc(50vh - var(--spacing-08));
+			padding-bottom: calc(50vh - var(--spacing-08));
+			z-index: 0;
+		}
+		.static-element {
+			bottom: calc(50vh - var(--spacing-11));
+			right: calc(100% + var(--spacing-07));
+			position: absolute;
+		}
 	}
-	.sticky {
-		position: sticky;
-		top: calc(50vh - var(--spacing-08));
-		padding-bottom: calc(50vh - var(--spacing-08));
-		z-index: 0;
-	}
-	.static-element {
-		bottom: calc(50vh - var(--spacing-11));
-		right: calc(100% + var(--spacing-07));
-		position: absolute;
+
+	@media (max-width: 667px) {
+		.wrapper {
+			grid-column-start: 1 !important;
+			grid-column-end: 3 !important;
+			margin-bottom: 50vh;
+		}
+		.static-element {
+			margin: auto;
+			width: fit-content;
+			margin-bottom: var(--spacing-08);
+		}
 	}
 </style>

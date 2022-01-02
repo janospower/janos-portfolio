@@ -42,25 +42,24 @@
 </div>
 
 <style lang="scss">
-	.case-wrapper {
-		height: 100%;
-		display: flex;
-		white-space: normal;
-	}
 	figure {
 		background-color: var(--color-neutral--800);
-		height: 100%;
+		height: calc(100vw - var(--spacing-05));
+		padding: var(--spacing-05);
 		transition: background-color 2s var(--easing--quint);
 		clip-path: var(--squircle);
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		width: 62.5%;
-		min-width: 62.5%;
+	}
+	img {
+		height: 100%;
+		width: 100%;
+		object-fit: contain;
 	}
 	.description {
-		margin: 0 var(--spacing-04);
+		margin: var(--spacing-04) var(--spacing-03);
 	}
 	.date {
 		color: var(--color-neutral--500);
@@ -79,5 +78,23 @@
 		background-color: var(--color-neutral--800);
 		margin-right: var(--spacing-02);
 		font-size: var(--font-size--small);
+	}
+
+	@media (min-width: 1024px) {
+		.case-wrapper {
+			height: 100%;
+			display: flex;
+			white-space: normal;
+		}
+		figure {
+			height: 100%;
+			max-height: 100%;
+			width: 62.5%;
+			min-width: 62.5%;
+			padding: var(--spacing-10);
+		}
+		.description {
+			margin: 0 var(--spacing-04);
+		}
 	}
 </style>

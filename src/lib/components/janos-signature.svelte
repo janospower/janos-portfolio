@@ -90,8 +90,10 @@
 	figure {
 		flex-grow: 1;
 	}
-	svg {
-		margin-top: -9%;
+	@media (min-width: 667px) {
+		svg {
+			margin-top: -9%;
+		}
 	}
 	path {
 		stroke-linecap: round;

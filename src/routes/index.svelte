@@ -70,8 +70,10 @@
 <Cases {verticalScroll} />
 
 <style lang="scss">
-	.signature-line {
-		display: flex;
+	@media (min-width: 667px) {
+		.signature-line {
+			display: flex;
+		}
 	}
 	.grid-inner {
 		display: grid;
