@@ -11,6 +11,7 @@
 		property="og:description"
 		content="Information for how to get in touch with Janos Pauer for projects."
 	/>
+	<meta property="og:image" content="https://janospauer.com/images/janos-pauer-portrait.jpg" />
 	<meta property="og:url" content="https://janospauer.com/contact" />
 </svelte:head>
 
