@@ -5,6 +5,7 @@
 	import SelectedLayer from '../lib/components/selected-layer.svelte';
 	import ActiveCode from '../lib/components/active-code.svelte';
 	import ExampleUI from '../lib/components/example-ui.svelte';
+	import Credentials from '../lib/components/credentials.svelte';
 
 	let verticalScroll;
 </script>
@@ -55,8 +56,34 @@
 	</p>
 </Sticky>
 
+<Sticky gridColumnStart="1" gridColumnEnd="9" observeIntersection={true} delay={2000}>
+	<p class="text--huge heres-how" slot="firstLine">Here’s how</p>
+	<div class="grid-inner" slot="secondLine">
+		<Credentials skillName="User Interface Design" credentialType="University degree" />
+		<Credentials skillName="User Experience Design" credentialType="University degree" />
+		<Credentials skillName="Frontend Development" credentialType="Assessed skill" />
+		<Credentials skillName="Agile Methodologies" credentialType="Assessed skill" />
+	</div>
+</Sticky>
+
 <style lang="scss">
 	.signature-line {
 		display: flex;
+	}
+	.grid-inner {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: var(--spacing-03);
+		margin-top: var(--spacing-06);
+	}
+	@media (max-width: 667px) {
+		.grid-inner {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+	@media (min-width: 667px) {
+		.heres-how {
+			margin-left: 25%;
+		}
 	}
 </style>

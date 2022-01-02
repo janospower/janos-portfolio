@@ -55,7 +55,7 @@
 />
 
 <figure
-	style="transform: perspective(500px) rotateX({$tiltX * 30}deg) rotateY({$tiltY *
+	style="transform: perspective(500px) rotateX({$tiltX * 10}deg) rotateY({$tiltY *
 		20}deg) rotateZ(-5deg);"
 	bind:this={figure}
 >
@@ -75,7 +75,6 @@
 	figure {
 		transform-style: preserve-3d;
 		position: relative;
-		// transition: transform 0.1s;
 	}
 	img {
 		filter: drop-shadow(0px 4.455283164978027px 4.759681224822998px rgba(0, 0, 0, 0.045))
@@ -89,6 +88,6 @@
 		position: absolute;
 		left: -5px;
 		top: 125px;
-		transform: translateZ(20px);
+		transform: translateZ(30px);
 	}
 </style>

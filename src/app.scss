@@ -16,8 +16,6 @@ body {
 main,
 .footer nav,
 nav.main-navigation {
-	display: grid;
-	grid-template-columns: repeat(8, 1fr);
 	max-width: var(--page-width);
 	width: 100vw;
 	margin: 0 auto;
@@ -39,6 +37,12 @@ main {
 
 h2 {
 	font-size: var(--font-size--normal);
+}
+
+h3 {
+	font-weight: bold;
+	font-size: inherit;
+	line-height: inherit;
 }
 
 html {
