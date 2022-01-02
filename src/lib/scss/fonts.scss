@@ -1,24 +1,22 @@
 @font-face {
-    font-family: 'Texta';
-    src: url('/fonts/texta/texta-heavy-webfont-webfont.woff2') format('woff2'),
-         url('/fonts/texta/texta-heavy-webfont-webfont.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
+	font-family: 'Texta';
+	src: url('/fonts/texta/texta-heavy-webfont-webfont.woff2') format('woff2'),
+		url('/fonts/texta/texta-heavy-webfont-webfont.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
 }
 
-
-
-
 @font-face {
-    font-family: 'Texta';
-    src: url('/fonts/texta/texta-regular-webfont-webfont.woff2') format('woff2'),
-         url('/fonts/texta/texta-regular-webfont-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'Texta';
+	src: url('/fonts/texta/texta-regular-webfont-webfont.woff2') format('woff2'),
+		url('/fonts/texta/texta-regular-webfont-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
 }
 
 :root {
-    --font-family: 'Texta', sans-serif;
-    --font-size--normal: 16px;
-    --font-size--huge: 64px;
+	--font-family: 'Texta', sans-serif;
+	--font-size--small: 12px;
+	--font-size--normal: 16px;
+	--font-size--huge: 64px;
 }

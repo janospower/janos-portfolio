@@ -1,15 +1,19 @@
 <script>
-	export let title = 'Title';
+	export let title = 'Title of Project';
 	export let date = '2022';
 	export let body = 'Body text';
 	export let highlightColor = '0, 0, 0';
-	export let tags = ['tag 1', 'tag 2'];
+	export let tags = [
+		{ name: 'Tag Name 1', certified: false },
+		{ name: 'Tag Name 2', certified: false }
+	];
+	export let imgURL = '/images/example-ui/example-ui.svg';
 </script>
 
 <div class="case-wrapper">
 	<figure>
 		<img
-			src="/images/example-ui/example-ui.svg"
+			src={imgURL}
 			alt="Case hero"
 			style="filter: 
             drop-shadow(0px 2.2px 3.74px rgba({highlightColor}, 0.045))
@@ -20,9 +24,14 @@
 		/>
 	</figure>
 	<div class="description">
+		<p class="date">{date}</p>
 		<h3>{title}</h3>
-		<p>{date}</p>
 		<p>{body}</p>
+		<div class="tags">
+			{#each tags as { name, certified }, i}
+				<span class="tag">{name}</span>
+			{/each}
+		</div>
 	</div>
 </div>
 
@@ -45,5 +54,23 @@
 	.description {
 		flex-grow: 1;
 		margin: 0 var(--spacing-04);
+	}
+	.date {
+		color: var(--color-neutral--500);
+		font-size: var(--font-size--small);
+	}
+	h3 {
+		margin: var(--spacing-02) 0;
+	}
+	.tags {
+		margin-top: var(--spacing-04);
+	}
+	.tag {
+		padding: var(--spacing-00) var(--spacing-01);
+		border-radius: 2px;
+		color: var(--color-neutral--300);
+		background-color: var(--color-neutral--800);
+		margin-right: var(--spacing-02);
+		font-size: var(--font-size--small);
 	}
 </style>
