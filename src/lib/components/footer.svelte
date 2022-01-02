@@ -1,5 +1,6 @@
 <footer class="footer">
 	<nav>
+		<a href="/contact">Contact</a>
 		<a href="/imprint">Imprint</a>
 		<a href="https://de.linkedin.com/in/janospauer" target="_blank">LinkedIn</a>
 		<a href="https://www.figma.com/@janos" target="_blank">Figma</a>
