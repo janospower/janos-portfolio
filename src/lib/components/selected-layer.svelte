@@ -5,10 +5,10 @@
 <style lang="scss">
 	span {
 		// display: inline-block;
-		background-color: var(--color-accent--on-dark--teal--opaque);
-		color: var(--color-accent--on-dark--teal--opaque);
+		background-color: var(--color-accent--teal--opaque);
+		color: var(--color-accent--teal--opaque);
 
-		background-image: var(--gradient-on-dark--volt-teal);
+		background-image: var(--gradient-volt-teal);
 
 		background-size: 200%;
 		background-repeat: repeat;

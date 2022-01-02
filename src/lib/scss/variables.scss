@@ -22,29 +22,22 @@
 	--border-radius--medium: 3px;
 	--border-radius--large: 6px;
 
-	--color-accent--on-dark--red--opaque: #ea475d;
-	--color-accent--on-dark--magenta--opaque: #ea47ae;
-	--color-accent--on-dark--blue--opaque: #42b0ef;
-	--color-accent--on-dark--blue--transparent: rgba(66, 176, 240, 0.2);
-	--color-accent--on-dark--blue--pseudo-transparent: #0c2b3d;
-	--color-accent--on-dark--teal--opaque: #48e9d4;
-	--color-accent--on-dark--volt--opaque: #b8f947;
-	--color-accent--on-dark--volt--transparent: rgba(184, 249, 72, 0.3);
-	--color-accent--on-dark--yellow--opaque: #f6e15a;
-	--color-accent--on-dark--red--transparent: rgba(235, 71, 93, 0.2);
-	--color-accent--on-light--red--opaque: #ce162f;
-	--color-accent--on-light--magenta--opaque: #da0b8e;
-	--color-accent--on-light--blue--opaque: #0b8eda;
-	--color-accent--on-light--blue--transparent: rgba(11, 142, 218, 0.07);
-	--color-accent--on-light--teal--opaque: #12d3b9;
-	--color-accent--on-light--volt--opaque: #9af103;
-	--color-accent--on-light--yellow--opaque: #e5ca19;
+	--color-accent--red--opaque: #ea475d;
+	--color-accent--magenta--opaque: #ea47ae;
+	--color-accent--blue--opaque: #42b0ef;
+	--color-accent--blue--transparent: rgba(66, 176, 240, 0.2);
+	--color-accent--blue--pseudo-transparent: #0c2b3d;
+	--color-accent--teal--opaque: #48e9d4;
+	--color-accent--volt--opaque: #b8f947;
+	--color-accent--volt--transparent: rgba(184, 249, 72, 0.3);
+	--color-accent--yellow--opaque: #f6e15a;
+	--color-accent--red--transparent: rgba(235, 71, 93, 0.2);
 
-	--gradient-on-dark--volt-teal: linear-gradient(
+	--gradient-volt-teal: linear-gradient(
 		to right,
-		var(--color-accent--on-dark--volt--opaque),
-		var(--color-accent--on-dark--teal--opaque),
-		var(--color-accent--on-dark--blue--opaque)
+		var(--color-accent--volt--opaque),
+		var(--color-accent--teal--opaque),
+		var(--color-accent--blue--opaque)
 	);
 
 	--color-neutral--100: #fcfbf7;
@@ -58,6 +51,9 @@
 	--color-neutral--900: #01131c;
 
 	--color-glass: hsla(0, 0%, 0%, 0.9);
+
+	--backdrop-filter: brightness(66%) saturate(50%) blur(var(--blur-radius--large));
+	--backdrop-filter-medium: brightness(66%) saturate(50%) blur(var(--blur-radius--medium));
 
 	--blur-radius--medium: 8px;
 	--blur-radius--large: 24px;
@@ -258,4 +254,29 @@
 		calc(100% - 0px * 3) calc(6.176px * 3),
 		calc(100% - 0px * 3) calc(6.944px * 3)
 	);
+}
+
+.dark {
+	--color-accent--red--opaque: #ce162f;
+	--color-accent--magenta--opaque: #da0b8e;
+	--color-accent--blue--opaque: #0b8eda;
+	--color-accent--blue--transparent: rgba(11, 142, 218, 0.07);
+	--color-accent--teal--opaque: #12d3b9;
+	--color-accent--volt--opaque: #9af103;
+	--color-accent--yellow--opaque: #e5ca19;
+
+	--color-neutral--900: #fcfbf7;
+	--color-neutral--800: #f0f0ec;
+	--color-neutral--700: #bec2c1;
+	--color-neutral--600: #9fa5a6;
+	--color-neutral--500: #80888a;
+	--color-neutral--400: #606b6f;
+	--color-neutral--300: #414e54;
+	--color-neutral--200: #051b29;
+	--color-neutral--100: #01131c;
+
+	--color-glass: hsla(0, 0%, 100%, 0.1);
+
+	--backdrop-filter: brightness(98%) saturate(50%) blur(var(--blur-radius--large));
+	--backdrop-filter-medium: brightness(98%) saturate(50%) blur(var(--blur-radius--medium));
 }

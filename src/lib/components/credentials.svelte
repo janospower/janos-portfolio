@@ -17,7 +17,7 @@
 		padding-top: var(--spacing-05);
 		padding-bottom: var(--spacing-06);
 		clip-path: var(--squircle);
-		transition: transform var(--transition--200);
+		transition: transform var(--transition--200), background-color 2s var(--easing--quint);
 		display: flex;
 		flex-direction: column;
 		align-items: center;

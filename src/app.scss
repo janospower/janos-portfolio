@@ -11,11 +11,14 @@ body {
 	font-family: var(--font-family);
 	font-weight: normal;
 	min-height: 400vh;
+	transition: background-color 2s var(--easing--quint), color 2s var(--easing--quint);
 }
 
 main,
 .footer nav,
 nav.main-navigation {
+	display: grid;
+	grid-template-columns: repeat(8, 1fr);
 	max-width: var(--page-width);
 	width: 100vw;
 	margin: 0 auto;
@@ -70,8 +73,8 @@ a {
 }
 
 ::selection {
-	background: var(--color-accent--on-dark--blue--opaque);
-	// color: var(--color-accent--on-dark--blue--opaque);
+	background: var(--color-accent--blue--opaque);
+	// color: var(--color-accent--blue--opaque);
 }
 
 .no-select {

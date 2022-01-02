@@ -6,6 +6,7 @@
 	import ActiveCode from '../lib/components/active-code.svelte';
 	import ExampleUI from '../lib/components/example-ui.svelte';
 	import Credentials from '../lib/components/credentials.svelte';
+	import Cases from '../lib/components/cases.svelte';
 
 	let verticalScroll;
 </script>
@@ -65,6 +66,8 @@
 		<Credentials skillName="Agile Methodologies" credentialType="Assessed skill" />
 	</div>
 </Sticky>
+
+<Cases />
 
 <style lang="scss">
 	.signature-line {

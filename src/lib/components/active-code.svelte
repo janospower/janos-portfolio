@@ -1,12 +1,13 @@
 <span>
 	<!-- prettier-ignore -->
-	<slot /><div class="caret" />
+	<slot />
+	<div class="caret" />
 </span>
 
 <style lang="scss">
 	span {
-		background-color: var(--color-accent--on-dark--red--transparent);
-		color: var(--color-accent--on-dark--red--opaque);
+		background-color: var(--color-accent--red--transparent);
+		color: var(--color-accent--red--opaque);
 		padding: var(--spacing-01) var(--spacing-02);
 		border-radius: 3px;
 	}

@@ -137,8 +137,8 @@
 		margin-left: var(--spacing-02);
 	}
 	.primary {
-		background-color: var(--color-accent--on-dark--blue--transparent);
-		color: var(--color-accent--on-dark--blue--opaque);
+		background-color: var(--color-accent--blue--transparent);
+		color: var(--color-accent--blue--opaque);
 	}
 	.button {
 		width: fit-content;
@@ -146,7 +146,7 @@
 	.button-link {
 		display: block;
 		width: fit-content;
-		backdrop-filter: brightness(66%) saturate(50%) blur(var(--blur-radius--large));
+		backdrop-filter: var(--backdrop-filter);
 		font-size: var(--font-size--normal);
 		white-space: nowrap;
 		border: 0px solid transparent;
@@ -161,6 +161,7 @@
 		transform: translateZ(0);
 		-webkit-font-smoothing: subpixel-antialiased;
 		font-smoothing: subpixel-antialiased;
+		transition: background-color 2s var(--easing--quint), color 2s var(--easing--quint);
 	}
 	.button__inner {
 		display: block;
