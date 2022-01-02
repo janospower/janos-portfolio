@@ -1,7 +1,8 @@
 <script>
 	export let title = 'Title of Project';
 	export let date = '2022';
-	export let body = 'Body text';
+	export let body =
+		'Lorem ipsum dolor sit amet consectetur adipisicing elit. A minima ex, dignissimos optio quaerat consequuntur tempore aut nam expedita placeat distinctio soluta tenetur blanditiis doloribus, quasi in repellat et laudantium.';
 	export let highlightColorHSLA = { h: 0, s: '50%', l: '50%', a: 0.1 };
 	let highlightColor = `${highlightColorHSLA.h}, ${highlightColorHSLA.s}, ${highlightColorHSLA.l}`;
 	let backgroundColor = `${highlightColorHSLA.h}, 100%, 50%, 0.07`;
@@ -44,6 +45,7 @@
 	.case-wrapper {
 		height: 100%;
 		display: flex;
+		white-space: normal;
 	}
 	figure {
 		background-color: var(--color-neutral--800);
@@ -55,9 +57,9 @@
 		justify-content: center;
 		align-items: center;
 		width: 62.5%;
+		min-width: 62.5%;
 	}
 	.description {
-		flex-grow: 1;
 		margin: 0 var(--spacing-04);
 	}
 	.date {

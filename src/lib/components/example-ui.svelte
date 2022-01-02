@@ -66,7 +66,7 @@
 	/>
 	<img
 		class="foreground"
-		src="/images/example-ui/example-ui__Highlight.svg"
+		src="/images/example-ui/example-ui__highlight.svg"
 		alt="Example of a mobile user interface highlight"
 	/>
 </figure>
