@@ -35,15 +35,15 @@
 		// OBJECTS
 		function Particle() {
 			this.angle = Math.random() * 2 * Math.PI;
-			this.vangle = Math.random() / angle_demul;
 			this.zangle = Math.random() * 2 * Math.PI;
-			this.zvelangle = Math.random() / z_angle_demul;
 			this.x;
 			this.y;
 			this.r = max_radius * Math.random();
 			this.color = 'white';
 
 			this.Move = function () {
+				this.vangle = Math.random() / angle_demul;
+				this.zvelangle = Math.random() / z_angle_demul;
 				// Update coordinates
 				this.y = center_y + range * Math.cos(this.angle);
 				this.x = center_x + range * Math.cos(this.zangle) * Math.sin(this.angle);
@@ -93,7 +93,14 @@
 </script>
 
 <div class="hero-wrapper">
-	<div class="hero" id="hero">
+	<div
+		class="hero"
+		id="hero"
+		on:mousemove={(e) => {
+			angle_demul = e.clientX;
+			z_angle_demul = e.clientY;
+		}}
+	>
 		<canvas id="sphere">
 			<div class="placeholder" />
 		</canvas>
