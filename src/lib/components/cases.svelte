@@ -8,10 +8,11 @@
 	let element;
 </script>
 
-<!-- <svelte:body class:dark={intersecting} /> -->
-
 <IntersectionObserver {element} bind:intersecting>
-	<div bind:this={element}>test</div>
+	<div class="caseswrapper" bind:this={element}>test</div>
 </IntersectionObserver>
 
-<style lang="scss"></style>
+<style lang="scss">
+	@media (min-width: 667px) and (pointer: fine) {
+	}
+</style>

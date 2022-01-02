@@ -1,14 +1,9 @@
 <script>
-	import { onMount } from 'svelte';
-	let canvas;
-	let wrapper;
 </script>
 
 <div class="hero-wrapper">
 	<div class="hero" id="hero">
-		<canvas bind:this={canvas}>
-			<div class="placeholder" />
-		</canvas>
+		<div class="placeholder" />
 	</div>
 </div>
 
@@ -20,9 +15,8 @@
 		flex-direction: column;
 	}
 	.hero {
-		$bloom-radius: 500px;
-		width: calc(410px + $bloom-radius * 2);
-		height: calc(410px + $bloom-radius * 2);
+		width: 100vw;
+		height: 100vw;
 		margin: 0 auto;
 		background: radial-gradient(
 			closest-side,
@@ -32,7 +26,7 @@
 			hsla(240, 100%, 50%, 7%) 280px,
 			hsla(280, 100%, 50%, 0%) 100%
 		);
-		padding: $bloom-radius;
-		margin: calc($bloom-radius * -1);
+		padding: calc(50vw - 205px);
+		margin: calc((50vw - 205px) * -1);
 	}
 </style>
