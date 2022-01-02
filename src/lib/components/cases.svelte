@@ -3,7 +3,7 @@
 	import { browser } from '$app/env';
 
 	export let intersecting;
-	$: if (browser) document.body.classList.toggle('dark', intersecting);
+	$: if (browser) document.body.classList.toggle('light', intersecting);
 
 	let element;
 </script>

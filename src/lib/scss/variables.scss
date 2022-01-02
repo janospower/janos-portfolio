@@ -40,15 +40,25 @@
 		var(--color-accent--blue--opaque)
 	);
 
-	--color-neutral--100: #fcfbf7;
-	--color-neutral--200: #f0f0ec;
-	--color-neutral--300: #bec2c1;
-	--color-neutral--400: #9fa5a6;
-	--color-neutral--500: #80888a;
-	--color-neutral--600: #606b6f;
-	--color-neutral--700: #414e54;
-	--color-neutral--800: #051b29;
-	--color-neutral--900: #01131c;
+	--src--color-neutral--100: #fcfbf7;
+	--src--color-neutral--200: #f0f0ec;
+	--src--color-neutral--300: #bec2c1;
+	--src--color-neutral--400: #9fa5a6;
+	--src--color-neutral--500: #80888a;
+	--src--color-neutral--600: #606b6f;
+	--src--color-neutral--700: #414e54;
+	--src--color-neutral--800: #051b29;
+	--src--color-neutral--900: #01131c;
+
+	--color-neutral--100: var(--src--color-neutral--100);
+	--color-neutral--200: var(--src--color-neutral--200);
+	--color-neutral--300: var(--src--color-neutral--300);
+	--color-neutral--400: var(--src--color-neutral--400);
+	--color-neutral--500: var(--src--color-neutral--500);
+	--color-neutral--600: var(--src--color-neutral--600);
+	--color-neutral--700: var(--src--color-neutral--700);
+	--color-neutral--800: var(--src--color-neutral--800);
+	--color-neutral--900: var(--src--color-neutral--900);
 
 	--color-glass: hsla(0, 0%, 0%, 0.9);
 
@@ -256,7 +266,7 @@
 	);
 }
 
-.dark {
+.light {
 	--color-accent--red--opaque: #ce162f;
 	--color-accent--magenta--opaque: #da0b8e;
 	--color-accent--blue--opaque: #0b8eda;
@@ -265,15 +275,15 @@
 	--color-accent--volt--opaque: #9af103;
 	--color-accent--yellow--opaque: #e5ca19;
 
-	--color-neutral--900: #fcfbf7;
-	--color-neutral--800: #f0f0ec;
-	--color-neutral--700: #bec2c1;
-	--color-neutral--600: #9fa5a6;
-	--color-neutral--500: #80888a;
-	--color-neutral--400: #606b6f;
-	--color-neutral--300: #414e54;
-	--color-neutral--200: #051b29;
-	--color-neutral--100: #01131c;
+	--color-neutral--100: var(--src--color-neutral--900);
+	--color-neutral--200: var(--src--color-neutral--800);
+	--color-neutral--300: var(--src--color-neutral--700);
+	--color-neutral--400: var(--src--color-neutral--600);
+	--color-neutral--500: var(--src--color-neutral--500);
+	--color-neutral--600: var(--src--color-neutral--400);
+	--color-neutral--700: var(--src--color-neutral--300);
+	--color-neutral--800: var(--src--color-neutral--200);
+	--color-neutral--900: var(--src--color-neutral--100);
 
 	--color-glass: hsla(0, 0%, 100%, 0.1);
 
