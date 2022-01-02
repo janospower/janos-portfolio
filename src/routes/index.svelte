@@ -38,11 +38,13 @@
 	</div>
 </Sticky>
 
-<Sticky gridColumnStart="2" gridColumnEnd="8" observeIntersection={true} delay={2000}>
+<Sticky gridColumnStart="4" gridColumnEnd="8" observeIntersection={true} delay={2000}>
 	<p class="text--huge" slot="firstLine">
 		I <SelectedLayer>design</SelectedLayer> and <ActiveCode>build</ActiveCode>
 	</p>
-	<p class="text--huge signature-line" slot="secondLine">digital products.</p>
+	<p class="text--huge signature-line" slot="secondLine">
+		digital products for humans and for the planet.
+	</p>
 </Sticky>
 
 <style lang="scss">

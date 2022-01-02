@@ -16,6 +16,7 @@
 		width: var(--spacing-00);
 		height: var(--spacing-06);
 		background-color: var(--color-neutral--200);
+		margin: 0 -2px -2px 0;
 
 		animation: caret 1.5s ease infinite;
 	}

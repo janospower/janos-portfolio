@@ -1,12 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
-	import { createScene } from '../js/scene';
 	let canvas;
 	let wrapper;
-
-	onMount(() => {
-		createScene(canvas);
-	});
 </script>
 
 <div class="hero-wrapper">
