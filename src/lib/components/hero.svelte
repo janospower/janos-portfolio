@@ -1,36 +1,34 @@
 <script>
 	import { onMount } from 'svelte';
 
-	var color = true;
-	var particle_number = 500;
-	var update_frequency = 60 / 500;
+	let particle_number = 300;
+	let update_frequency = 1000 / 60;
 
-	var angle_demul = 500;
-	var z_angle_demul = 150;
-	var max_radius = 1;
-	var min_radius = 0.5;
+	let angle_demul = 500;
+	let z_angle_demul = 500;
+	let max_radius = 1;
+	let min_radius = 0.5;
 
 	onMount(() => {
 		// Get canvas.
-		var canvas = document.getElementById('sphere');
+		let canvas = document.getElementById('sphere');
 
 		// Get canvas context.
-		var canvas_ctx = canvas.getContext('2d');
+		let canvas_ctx = canvas.getContext('2d');
 
-		// Set size.
 		canvas.width = 410;
 		canvas.height = 410;
 
-		var center_x = canvas.width / 2;
-		var center_y = canvas.height / 2;
+		let center_x = canvas.width / 2;
+		let center_y = canvas.height / 2;
 
-		var max_x = canvas.width / 2 - 2;
-		var max_y = canvas.width / 2 - 2;
+		let max_x = canvas.width / 2 - 2;
+		let max_y = canvas.width / 2 - 2;
 
-		var range = max_x > max_y ? max_y : max_x;
+		let range = max_x > max_y ? max_y : max_x;
 
 		// Generate particles
-		var particles = [];
+		let particles = [];
 
 		GenerateParticles(particle_number);
 
@@ -43,7 +41,7 @@
 			this.x;
 			this.y;
 			this.r = max_radius * Math.random();
-			this.color = color ? 'rgb(255,255,255)' : 'white';
+			this.color = 'white';
 
 			this.Move = function () {
 				// Update coordinates
@@ -71,7 +69,7 @@
 		}
 
 		function UpdateParticles() {
-			for (var index in particles) {
+			for (let index in particles) {
 				particles[index].Move();
 				DrawParticle(particles[index]);
 			}
@@ -85,7 +83,7 @@
 		}
 
 		function GenerateParticles(num_particles) {
-			for (var i = 0; i < num_particles; i++) {
+			for (let i = 0; i < num_particles; i++) {
 				particles.push(new Particle());
 			}
 
@@ -103,8 +101,12 @@
 </div>
 
 <style lang="scss">
+	#sphere {
+		width: 410px;
+		height: 410px;
+	}
 	.hero-wrapper {
-		margin-bottom: var(--spacing-08);
+		margin-bottom: let(--spacing-08);
 		display: flex;
 		align-items: center;
 		flex-direction: column;
