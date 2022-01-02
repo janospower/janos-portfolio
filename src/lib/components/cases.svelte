@@ -31,12 +31,10 @@
 </IntersectionObserver>
 
 <style lang="scss">
-	$case-width: calc(
-		var(--page-width-inner) + ((100vw - var(--page-width-inner)) / 2) - var(--spacing-08)
-	);
+	$case-width: calc(var(--page-width-inner) + (100vw - var(--page-width-inner)) / 3);
 	@media (min-width: 667px) and (pointer: fine) {
 		.cases-wrapper {
-			height: calc((100vw - var(--page-width)) + 5 * $case-width);
+			height: calc(4 * $case-width + 100vh - var(--spacing-03));
 			margin: 0 calc((100vw - var(--page-width-inner)) / -2);
 			width: 100vw;
 			grid-column-start: 1;
@@ -44,8 +42,6 @@
 		}
 		.cases {
 			padding-top: var(--spacing-11);
-			padding-left: calc((100vw - var(--page-width-inner)) / 2);
-			padding-right: calc((100vw - var(--page-width-inner)) / 2);
 			padding-bottom: var(--spacing-06);
 			overflow: hidden;
 			height: 100vh;
@@ -54,6 +50,7 @@
 			top: 0;
 		}
 		.articles {
+			padding: 0 calc((100vw - var(--page-width-inner)) / 2);
 			width: 100%;
 			height: 100%;
 			white-space: nowrap;
@@ -66,7 +63,7 @@
 			max-width: var(--page-width-inner);
 		}
 		.case:not(:last-child) {
-			margin-right: calc(((100vw - var(--page-width-inner)) / 2) - var(--spacing-08));
+			margin-right: calc((100vw - var(--page-width-inner)) / 3);
 		}
 	}
 </style>
