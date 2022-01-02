@@ -4,6 +4,7 @@
 	import JanosSignature from '../lib/components/janos-signature.svelte';
 	import SelectedLayer from '../lib/components/selected-layer.svelte';
 	import ActiveCode from '../lib/components/active-code.svelte';
+	import ExampleUI from '../lib/components/example-ui.svelte';
 
 	let verticalScroll;
 </script>
@@ -45,7 +46,7 @@
 	staticElement={true}
 	delay={2000}
 >
-	<p slot="staticElement">I am static</p>
+	<ExampleUI slot="staticElement" />
 	<p class="text--huge" slot="firstLine">
 		I <SelectedLayer>design</SelectedLayer> and <ActiveCode>build</ActiveCode>
 	</p>

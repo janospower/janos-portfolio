@@ -38,15 +38,15 @@
 		deviceIsMobile = event.detail.queryresult;
 	}
 
-	$: if (cta && !deviceIsMobile) {
-		setInterval(flashCTA, 10000);
-	}
-	function flashCTA() {
-		if (!hovering) {
-			scale.set(1.1);
-			setTimeout(() => scale.set(1), 300);
-		}
-	}
+	// $: if (cta && !deviceIsMobile) {
+	// 	setInterval(flashCTA, 10000);
+	// }
+	// function flashCTA() {
+	// 	if (!hovering) {
+	// 		scale.set(1.1);
+	// 		setTimeout(() => scale.set(1), 300);
+	// 	}
+	// }
 
 	const elasticButton = throttle(100, false, (event) => {
 		if (!deviceIsMobile) {

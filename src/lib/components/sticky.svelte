@@ -106,7 +106,8 @@
 		z-index: 0;
 	}
 	.static-element {
-		bottom: 50vh;
+		bottom: calc(50vh - var(--spacing-11));
+		right: calc(100% + var(--spacing-07));
 		position: absolute;
 	}
 </style>
