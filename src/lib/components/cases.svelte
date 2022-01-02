@@ -1,6 +1,7 @@
 <script>
 	import IntersectionObserver from 'svelte-intersection-observer';
 	import { browser } from '$app/env';
+	import Case from './case.svelte';
 
 	export let intersecting;
 	$: if (browser) document.body.classList.toggle('light', intersecting);
@@ -20,11 +21,11 @@
 	<div class="cases-wrapper" bind:this={element}>
 		<div class="cases">
 			<div class="articles" style="transform: translateX({offset}px)">
-				<article class="case">article</article>
-				<article class="case">article</article>
-				<article class="case">article</article>
-				<article class="case">article</article>
-				<article class="case">article</article>
+				<article class="case"><Case /></article>
+				<article class="case"><Case /></article>
+				<article class="case"><Case /></article>
+				<article class="case"><Case /></article>
+				<article class="case"><Case /></article>
 			</div>
 		</div>
 	</div>
@@ -32,7 +33,7 @@
 
 <style lang="scss">
 	$case-width: calc(var(--page-width-inner) + (100vw - var(--page-width-inner)) / 3);
-	@media (min-width: 667px) and (pointer: fine) {
+	@media (min-width: 1024px) and (pointer: fine) {
 		.cases-wrapper {
 			height: calc(4 * $case-width + 100vh - var(--spacing-03));
 			margin: 0 calc((100vw - var(--page-width-inner)) / -2);
@@ -41,7 +42,7 @@
 			grid-column-end: 9;
 		}
 		.cases {
-			padding-top: var(--spacing-11);
+			padding-top: var(--spacing-12);
 			padding-bottom: var(--spacing-06);
 			overflow: hidden;
 			height: 100vh;
@@ -57,8 +58,8 @@
 			display: flex;
 		}
 		.case {
-			border: 1px solid red;
 			height: 100%;
+			max-height: 800px;
 			min-width: var(--page-width-inner);
 			max-width: var(--page-width-inner);
 		}
