@@ -9,6 +9,7 @@
 	export let scrollTrigger = -500;
 	export let delay = 0;
 	export let observeIntersection = false;
+	export let staticElement = false;
 
 	let mounted = false;
 
@@ -50,6 +51,11 @@
 			style="grid-column-start:{gridColumnStart}; grid-column-end:{gridColumnEnd};"
 			bind:this={element}
 		>
+			{#if staticElement}
+				<div class="static-element">
+					<slot name="staticElement" />
+				</div>
+			{/if}
 			<section class:sticky>
 				<div class="fading" class:hidden={firstRowHidden}>
 					<slot name="firstLine" />
@@ -69,6 +75,11 @@
 		class:sticky-wrapper={sticky}
 		style="grid-column-start:{gridColumnStart}; grid-column-end:{gridColumnEnd};"
 	>
+		{#if staticElement}
+			<div class="static-element">
+				<slot name="staticElement" />
+			</div>
+		{/if}
 		<section class:sticky>
 			<div class="fading" class:hidden={firstRowHidden}>
 				<slot name="firstLine" />
@@ -86,11 +97,16 @@
 <style lang="scss">
 	.sticky-wrapper {
 		min-height: 1500px;
+		position: relative;
 	}
 	.sticky {
 		position: sticky;
 		top: calc(50vh - var(--spacing-08));
 		padding-bottom: calc(50vh - var(--spacing-08));
 		z-index: 0;
+	}
+	.static-element {
+		bottom: 50vh;
+		position: absolute;
 	}
 </style>

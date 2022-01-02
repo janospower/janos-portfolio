@@ -38,7 +38,14 @@
 	</div>
 </Sticky>
 
-<Sticky gridColumnStart="4" gridColumnEnd="8" observeIntersection={true} delay={2000}>
+<Sticky
+	gridColumnStart="4"
+	gridColumnEnd="8"
+	observeIntersection={true}
+	staticElement={true}
+	delay={2000}
+>
+	<p slot="staticElement">I am static</p>
 	<p class="text--huge" slot="firstLine">
 		I <SelectedLayer>design</SelectedLayer> and <ActiveCode>build</ActiveCode>
 	</p>
