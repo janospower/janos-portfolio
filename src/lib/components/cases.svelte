@@ -11,7 +11,9 @@
 	$: offset = 0;
 
 	function convertScroll() {
-		offset = element.getBoundingClientRect().top <= 0 ? element.getBoundingClientRect().top : 0;
+		if (intersecting) {
+			offset = element.getBoundingClientRect().top <= 0 ? element.getBoundingClientRect().top : 0;
+		}
 	}
 </script>
 
