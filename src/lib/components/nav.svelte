@@ -33,6 +33,7 @@
 		width: 100%;
 		height: var(--spacing-12);
 		z-index: 100;
+		pointer-events: none;
 	}
 
 	nav {

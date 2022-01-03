@@ -1,8 +1,14 @@
 <script>
 	import { onMount } from 'svelte';
 
+	let hero;
+	let boundingBox;
+
 	let particle_number = 300;
 	let update_frequency = 1000 / 60;
+
+	let offsetX = 1;
+	let offsetY = 1;
 
 	let angle_demul = 500;
 	let z_angle_demul = 500;
@@ -36,21 +42,21 @@
 		function Particle() {
 			this.angle = Math.random() * 2 * Math.PI;
 			this.zangle = Math.random() * 2 * Math.PI;
+			this.vangle = Math.random() / angle_demul;
+			this.zvelangle = Math.random() / z_angle_demul;
 			this.x;
 			this.y;
 			this.r = max_radius * Math.random();
 			this.color = 'white';
 
 			this.Move = function () {
-				this.vangle = Math.random() / angle_demul;
-				this.zvelangle = Math.random() / z_angle_demul;
 				// Update coordinates
 				this.y = center_y + range * Math.cos(this.angle);
 				this.x = center_x + range * Math.cos(this.zangle) * Math.sin(this.angle);
 
 				// Update angle
-				this.angle += this.vangle;
-				this.zangle += this.zvelangle;
+				this.angle += this.vangle * offsetX;
+				this.zangle += this.zvelangle * offsetY;
 
 				// Change radius on Z axis
 				if (Math.sin(this.zangle) > 0.5 && this.r < max_radius) this.r += 0.01;
@@ -96,9 +102,11 @@
 	<div
 		class="hero"
 		id="hero"
-		on:mousemove={(e) => {
-			angle_demul = e.clientX;
-			z_angle_demul = e.clientY;
+		bind:this={hero}
+		on:pointermove={(e) => {
+			boundingBox = hero.getBoundingClientRect();
+			offsetX = (e.clientX - boundingBox.left - boundingBox.width / 2) * 0.01;
+			offsetY = (e.clientY - boundingBox.top - boundingBox.height / 2) * 0.01;
 		}}
 	>
 		<canvas id="sphere">
