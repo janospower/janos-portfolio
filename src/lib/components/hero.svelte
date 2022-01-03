@@ -113,7 +113,7 @@
 		height: 410px;
 	}
 	.hero-wrapper {
-		margin-bottom: let(--spacing-08);
+		margin-bottom: var(--spacing-08);
 		display: flex;
 		align-items: center;
 		flex-direction: column;
