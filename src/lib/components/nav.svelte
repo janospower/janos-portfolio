@@ -1,18 +1,27 @@
 <script>
 	import Button from './button.svelte';
+	import Modal from './modal.svelte';
 	import PaperPlane from '../icons/paperplane.svelte';
+
+	let modalOpen = false;
+
+	function openContactModal() {
+		modalOpen = true;
+	}
 </script>
 
 <div class="navigation__background no-select" />
 <nav class="main-navigation" aria-label="Main">
 	<h2><a href="/">Portfolio • Janos Pauer</a></h2>
 	<div class="cta">
-		<Button cta={true}>
+		<Button cta={true} on:message={openContactModal}>
 			<PaperPlane slot="icon" size="small" circle />
 			<span slot="label">Send a message</span>
 		</Button>
 	</div>
 </nav>
+
+<Modal {modalOpen} on:closeModal={(modalOpen = false)} />
 
 <style lang="scss">
 	.navigation__background {

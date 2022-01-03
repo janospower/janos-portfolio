@@ -1,4 +1,5 @@
-:root {
+:root,
+.light .inverted {
 	--cubic-ease: cubic-bezier(0.165, 0.84, 0.44, 1);
 
 	--gutter: 16px;
@@ -25,13 +26,13 @@
 	--color-accent--red--opaque: #ea475d;
 	--color-accent--magenta--opaque: #ea47ae;
 	--color-accent--blue--opaque: #42b0ef;
-	--color-accent--blue--transparent: rgba(66, 176, 240, 0.2);
+	--color-accent--blue--transparent: hsla(202, 85%, 60%, 0.2);
 	--color-accent--blue--pseudo-transparent: #0c2b3d;
 	--color-accent--teal--opaque: #48e9d4;
 	--color-accent--volt--opaque: #b8f947;
-	--color-accent--volt--transparent: rgba(184, 249, 72, 0.3);
+	--color-accent--volt--transparent: hsla(82, 94%, 63%, 0.3);
 	--color-accent--yellow--opaque: #f6e15a;
-	--color-accent--red--transparent: rgba(235, 71, 93, 0.2);
+	--color-accent--red--transparent: hsla(352, 80%, 60%, 0.2);
 
 	--gradient-volt-teal: linear-gradient(
 		to right,
@@ -40,15 +41,15 @@
 		var(--color-accent--blue--opaque)
 	);
 
-	--src--color-neutral--100: #fcfbf7;
-	--src--color-neutral--200: #f0f0ec;
-	--src--color-neutral--300: #bec2c1;
-	--src--color-neutral--400: #9fa5a6;
-	--src--color-neutral--500: #80888a;
-	--src--color-neutral--600: #606b6f;
-	--src--color-neutral--700: #414e54;
-	--src--color-neutral--800: #051b29;
-	--src--color-neutral--900: #01131c;
+	--src--color-neutral--100: hsl(48, 45%, 98%);
+	--src--color-neutral--200: hsl(60, 12%, 93%);
+	--src--color-neutral--300: hsl(165, 3%, 75%);
+	--src--color-neutral--400: hsl(189, 4%, 64%);
+	--src--color-neutral--500: hsl(192, 4%, 52%);
+	--src--color-neutral--600: hsl(196, 7%, 41%);
+	--src--color-neutral--700: hsl(199, 13%, 29%);
+	--src--color-neutral--800: hsl(203, 78%, 9%);
+	--src--color-neutral--900: hsl(200, 93%, 6%);
 
 	--color-neutral--100: var(--src--color-neutral--100);
 	--color-neutral--200: var(--src--color-neutral--200);
@@ -61,6 +62,10 @@
 	--color-neutral--900: var(--src--color-neutral--900);
 
 	--color-glass: hsla(0, 0%, 0%, 0.9);
+
+	--color-blanket: hsla(202, 50%, 0%, 0.15);
+
+	--color-overlay: hsla(200, 93%, 6%, 0.8);
 
 	--backdrop-filter: brightness(66%) saturate(50%) blur(var(--blur-radius--large));
 	--backdrop-filter-medium: brightness(66%) saturate(50%) blur(var(--blur-radius--medium));
@@ -267,7 +272,8 @@
 	);
 }
 
-.light {
+.light,
+.inverted {
 	--color-accent--red--opaque: #ce162f;
 	--color-accent--magenta--opaque: #da0b8e;
 	--color-accent--blue--opaque: #0b8eda;
@@ -287,6 +293,8 @@
 	--color-neutral--900: var(--src--color-neutral--100);
 
 	--color-glass: hsla(0, 0%, 100%, 0.1);
+
+	--color-overlay: hsla(48, 54%, 98%, 0.8);
 
 	--backdrop-filter: brightness(98%) saturate(50%) blur(var(--blur-radius--large));
 	--backdrop-filter-medium: brightness(98%) saturate(50%) blur(var(--blur-radius--medium));

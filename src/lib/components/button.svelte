@@ -2,6 +2,13 @@
 	import { spring } from 'svelte/motion';
 	import MediaQuery from './mediaquery.svelte';
 	import { throttle } from 'throttle-debounce';
+	import { createEventDispatcher } from 'svelte';
+
+	const dispatch = createEventDispatcher();
+
+	function sendMessage() {
+		dispatch('message');
+	}
 
 	let button;
 	let buttonLink;
@@ -97,6 +104,7 @@
 		bind:this={buttonLink}
 		class="button-link {variant} no-select"
 		style="transform: translate({$translate.x}px, {$translate.y}px)"
+		on:click={sendMessage}
 	>
 		<span
 			class="button__inner"
