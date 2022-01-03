@@ -109,8 +109,8 @@
 
 <style lang="scss">
 	#sphere {
-		width: 410px;
-		height: 410px;
+		width: 100%;
+		height: 100%;
 	}
 	.hero-wrapper {
 		margin-bottom: var(--spacing-08);
@@ -135,5 +135,19 @@
 		);
 		padding: calc(50vw - 205px);
 		margin: calc((50vw - 205px) * -1);
+	}
+	@media (max-width: 667px) {
+		.hero {
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			background: radial-gradient(
+				closest-side,
+				hsla(0, 0%, 0%, 50%) 90%,
+				hsla(0, 0%, 4%, 50%) 95%,
+				hsla(0, 0%, 20%, 50%) 99%,
+				hsla(0, 0%, 40%, 50%) 100%
+			);
+		}
 	}
 </style>
