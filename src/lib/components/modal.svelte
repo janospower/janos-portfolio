@@ -60,7 +60,7 @@
 	.modal {
 		max-width: 100vw;
 		max-height: 100vh;
-		width: calc(var(--page-width-inner) / 8 * 6);
+		width: calc(var(--page-width-inner) / 8 * 4);
 		background-color: var(--color-overlay);
 		pointer-events: auto;
 		backdrop-filter: var(--backdrop-filter);

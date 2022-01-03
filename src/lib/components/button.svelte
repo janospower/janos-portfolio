@@ -20,6 +20,7 @@
 	let mouseOffsetY = 0;
 
 	export let cta = false;
+	export let fullwidth = false;
 	export let variant = 'primary';
 
 	let query = '(max-width: 667px)';
@@ -76,6 +77,7 @@
 
 <div
 	class="button"
+	class:fullwidth
 	bind:this={button}
 	on:mouseenter={() => {
 		hovering = true;
@@ -151,6 +153,9 @@
 	.button {
 		width: fit-content;
 	}
+	.button.fullwidth {
+		width: auto;
+	}
 	.button-link {
 		display: block;
 		width: fit-content;
@@ -170,6 +175,9 @@
 		-webkit-font-smoothing: subpixel-antialiased;
 		font-smoothing: subpixel-antialiased;
 		transition: background-color 2s var(--easing--quint), color 2s var(--easing--quint);
+	}
+	.fullwidth .button-link {
+		width: 100%;
 	}
 	.button__inner {
 		display: block;
