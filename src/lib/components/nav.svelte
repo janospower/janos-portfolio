@@ -1,6 +1,7 @@
 <script>
 	import Button from './button.svelte';
 	import Modal from './modal.svelte';
+	import Contact from './contact.svelte';
 	import PaperPlane from '../icons/paperplane.svelte';
 
 	let modalOpen = false;
@@ -21,7 +22,9 @@
 	</div>
 </nav>
 
-<Modal {modalOpen} on:closeModal={(modalOpen = false)} />
+<Modal {modalOpen} on:closeModal={(modalOpen = false)}>
+	<Contact />
+</Modal>
 
 <style lang="scss">
 	.navigation__background {

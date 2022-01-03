@@ -1,3 +1,7 @@
+<script>
+	import Contact from '../lib/components/contact.svelte';
+</script>
+
 <svelte:head>
 	<title>Janos Pauer • Contact</title>
 	<meta
@@ -18,6 +22,7 @@
 <article>
 	<section>
 		<h1 class="text--huge">Contact</h1>
+		<Contact />
 	</section>
 </article>
 
