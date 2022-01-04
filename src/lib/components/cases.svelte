@@ -135,8 +135,8 @@
 			margin-right: calc(var(--spacing-03) / 2);
 		}
 		.case:last-child {
-			padding-right: calc(var(--spacing-03) / 2);
-			min-width: calc((100vw - var(--spacing-03) * 2) + var(--spacing-03) / 2);
+			padding-right: var(--spacing-03);
+			min-width: calc((100vw - var(--spacing-03) * 2) + var(--spacing-03));
 		}
 	}
 </style>

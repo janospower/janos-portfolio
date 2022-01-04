@@ -107,6 +107,7 @@
 			boundingBox = hero.getBoundingClientRect();
 			offsetX = (e.clientX - boundingBox.left - boundingBox.width / 2) * 0.01;
 			offsetY = (e.clientY - boundingBox.top - boundingBox.height / 2) * 0.01;
+			e.preventDefault();
 		}}
 	>
 		<canvas id="sphere">
