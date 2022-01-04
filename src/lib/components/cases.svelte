@@ -3,6 +3,9 @@
 	import IntersectionObserver from 'svelte-intersection-observer';
 	import { browser } from '$app/env';
 	import Case from './case.svelte';
+	import Button from './button.svelte';
+	import ArrowLeft from '../icons/arrow-left.svelte';
+	import ArrowRight from '../icons/arrow-right.svelte';
 
 	export let intersecting;
 	$: if (browser) document.body.classList.toggle('light', intersecting);
@@ -23,14 +26,28 @@
 
 <IntersectionObserver element={cases} bind:intersecting>
 	<p class="text--huge">Some of my projects</p>
-	<button on:click={() => scrollToNext(-1)}> Scroll to previous </button>
-	<button on:click={() => scrollToNext(1)}> Scroll to next </button>
-	<div class="cases" bind:this={cases}>
-		<article class="case" bind:this={caseOne}><Case /></article>
-		<article class="case"><Case /></article>
-		<article class="case"><Case /></article>
-		<article class="case"><Case /></article>
-		<article class="case"><Case /></article>
+	<div class="slider">
+		<div class="cases" bind:this={cases}>
+			<article class="case" bind:this={caseOne}><Case /></article>
+			<article class="case"><Case /></article>
+			<article class="case"><Case /></article>
+			<article class="case"><Case /></article>
+			<article class="case"><Case /></article>
+		</div>
+		<div class="button-container button-container--previous">
+			<div>
+				<Button on:message={() => scrollToNext(-1)}>
+					<ArrowLeft slot="icon" size="medium" />
+				</Button>
+			</div>
+		</div>
+		<div class="button-container button-container--next">
+			<div>
+				<Button on:message={() => scrollToNext(1)}>
+					<ArrowRight slot="icon" size="medium" />
+				</Button>
+			</div>
+		</div>
 	</div>
 </IntersectionObserver>
 
@@ -43,17 +60,23 @@
 		grid-column-end: 9;
 	}
 	@media (min-width: 667px) and (pointer: fine) {
-		.cases {
-			margin: 0 calc((100vw - var(--page-width-inner)) / -2);
+		.slider {
+			position: relative;
 			width: 100vw;
+			height: 100vh;
+			max-height: min(800px, calc(100vh - var(--spacing-11)));
+			margin: 0 calc((100vw - var(--page-width-inner)) / -2);
+			margin-top: var(--spacing-05);
 			grid-column-start: 1;
 			grid-column-end: 9;
-			padding: var(--spacing-05) 0 var(--spacing-02) calc((100vw - var(--page-width-inner)) / 2);
+		}
+		.cases {
+			width: 100%;
+			height: 100%;
+			padding: 0 0 var(--spacing-02) calc((100vw - var(--page-width-inner)) / 2);
 			scroll-snap-type: x mandatory;
 			overscroll-behavior-x: contain;
 			overflow-x: scroll;
-			height: 100vh;
-			max-height: 800px;
 			white-space: nowrap;
 			display: flex;
 		}
@@ -69,6 +92,19 @@
 		.case:last-child {
 			padding-right: calc((100vw - var(--page-width-inner)) / 2);
 			min-width: calc(var(--page-width-inner) + ((100vw - var(--page-width-inner)) / 2));
+		}
+		.button-container {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			display: flex;
+			align-items: center;
+		}
+		.button-container--previous {
+			left: var(--spacing-03);
+		}
+		.button-container--next {
+			right: var(--spacing-03);
 		}
 	}
 </style>

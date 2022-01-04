@@ -105,6 +105,7 @@
 		href="/"
 		bind:this={buttonLink}
 		class="button-link {variant} no-select"
+		class:icononly={!$$slots.label}
 		style="transform: translate({$translate.x}px, {$translate.y}px)"
 		on:click={sendMessage}
 	>
@@ -175,6 +176,9 @@
 		-webkit-font-smoothing: subpixel-antialiased;
 		font-smoothing: subpixel-antialiased;
 		transition: background-color 2s var(--easing--quint), color 2s var(--easing--quint);
+	}
+	.button-link.icononly {
+		padding: var(--spacing-02-plus);
 	}
 	.fullwidth .button-link {
 		width: 100%;

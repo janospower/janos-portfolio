@@ -31,7 +31,7 @@
 		position: fixed;
 		top: 0;
 		width: 100%;
-		height: var(--spacing-12);
+		height: var(--spacing-11);
 		z-index: 100;
 		pointer-events: none;
 	}
