@@ -48,7 +48,7 @@
 	staticElement={true}
 	delay={2000}
 >
-	<ExampleUI slot="staticElement" />
+	<!-- <ExampleUI slot="staticElement" /> -->
 	<p class="text--huge" slot="firstLine">
 		I <SelectedLayer>design</SelectedLayer> and <ActiveCode>build</ActiveCode>
 	</p>
@@ -67,7 +67,7 @@
 	</div>
 </Sticky>
 
-<Cases {verticalScroll} />
+<Cases />
 
 <style lang="scss">
 	@media (min-width: 667px) {

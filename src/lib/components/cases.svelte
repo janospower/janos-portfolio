@@ -1,4 +1,5 @@
 <script>
+	import { onMount } from 'svelte';
 	import IntersectionObserver from 'svelte-intersection-observer';
 	import { browser } from '$app/env';
 	import Case from './case.svelte';
@@ -6,92 +7,68 @@
 	export let intersecting;
 	$: if (browser) document.body.classList.toggle('light', intersecting);
 
-	let element;
+	let cases;
+	let caseOne;
 
-	$: offset = 0;
-
-	function convertScroll() {
-		if (intersecting) {
-			offset = element.getBoundingClientRect().top <= 0 ? element.getBoundingClientRect().top : 0;
-		}
+	function scrollToNext(direction) {
+		let current = cases.scrollLeft;
+		let increment = caseOne.getBoundingClientRect().width * direction;
+		cases.scrollTo({
+			top: 0,
+			left: current + increment,
+			behavior: 'smooth'
+		});
 	}
 </script>
 
-<svelte:window on:scroll={() => convertScroll()} />
-
-<IntersectionObserver {element} bind:intersecting>
-	<div class="cases-wrapper" bind:this={element}>
-		<p class="text--huge mobile-only">Cases</p>
-		<div class="cases">
-			<div class="articles" style="transform: translateX({offset}px)">
-				<article class="case"><Case /></article>
-				<article class="case"><Case /></article>
-				<article class="case"><Case /></article>
-				<article class="case"><Case /></article>
-				<article class="case"><Case /></article>
-			</div>
-		</div>
+<IntersectionObserver element={cases} bind:intersecting>
+	<p class="text--huge">Some of my projects</p>
+	<button on:click={() => scrollToNext(-1)}> Scroll to previous </button>
+	<button on:click={() => scrollToNext(1)}> Scroll to next </button>
+	<div class="cases" bind:this={cases}>
+		<article class="case" bind:this={caseOne}><Case /></article>
+		<article class="case"><Case /></article>
+		<article class="case"><Case /></article>
+		<article class="case"><Case /></article>
+		<article class="case"><Case /></article>
 	</div>
 </IntersectionObserver>
 
 <style lang="scss">
 	$case-width: calc(var(--page-width-inner) + (100vw - var(--page-width-inner)) / 3);
 
-	.cases-wrapper {
+	.cases,
+	.text--huge {
 		grid-column-start: 1;
 		grid-column-end: 9;
 	}
-
-	.case {
-		margin-bottom: var(--spacing-10);
-	}
-
-	@media (min-width: 1024px) and (pointer: fine) {
-		.mobile-only {
-			display: none;
-		}
-		.cases-wrapper {
-			height: calc(4 * $case-width + 100vh - var(--spacing-03));
+	@media (min-width: 667px) and (pointer: fine) {
+		.cases {
 			margin: 0 calc((100vw - var(--page-width-inner)) / -2);
 			width: 100vw;
 			grid-column-start: 1;
 			grid-column-end: 9;
-		}
-		.cases {
-			padding-top: var(--spacing-12);
-			padding-bottom: var(--spacing-06);
-			overflow: hidden;
+			padding: var(--spacing-05) 0 var(--spacing-02) calc((100vw - var(--page-width-inner)) / 2);
+			scroll-snap-type: x mandatory;
+			overscroll-behavior-x: contain;
+			overflow-x: scroll;
 			height: 100vh;
-			width: 100%;
-			position: sticky;
-			top: 0;
-		}
-		.articles {
-			padding: 0 calc((100vw - var(--page-width-inner)) / 2);
-			width: 100%;
-			height: 100%;
+			max-height: 800px;
 			white-space: nowrap;
 			display: flex;
 		}
 		.case {
 			height: 100%;
-			max-height: 800px;
 			min-width: var(--page-width-inner);
 			max-width: var(--page-width-inner);
-			margin-bottom: 0;
+			scroll-snap-align: center;
 		}
 		.case:not(:last-child) {
 			margin-right: calc((100vw - var(--page-width-inner)) / 3);
 		}
-	}
-
-	@media (max-width: 1024px) {
-		.articles {
-			transform: translateX(0px) !important;
-		}
-		.cases-wrapper {
-			grid-column-start: 1;
-			grid-column-end: 9;
+		.case:last-child {
+			padding-right: calc((100vw - var(--page-width-inner)) / 2);
+			min-width: calc(var(--page-width-inner) + ((100vw - var(--page-width-inner)) / 2));
 		}
 	}
 </style>

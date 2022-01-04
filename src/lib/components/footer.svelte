@@ -14,13 +14,14 @@
 
 <style lang="scss">
 	footer {
+		margin-top: var(--spacing-10);
 		padding-top: var(--spacing-10);
 		padding-bottom: var(--spacing-12);
 		background-color: var(--color-neutral--800);
 	}
 	img {
 		width: 80px;
-		border-radius: 50%;
+		clip-path: var(--squircle);
 	}
 	nav {
 		align-items: center;
