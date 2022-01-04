@@ -48,9 +48,8 @@
 	.cta {
 		grid-column: 7/9;
 		z-index: 101;
-	}
-	.cta :global(.button) {
-		margin-left: auto;
+		display: flex;
+		justify-content: flex-end;
 	}
 
 	nav h2 {

@@ -26,16 +26,20 @@ nav.main-navigation {
 	padding-right: var(--spacing-03);
 }
 
+main {
+	margin-top: var(--spacing-10);
+}
+
 @media (max-width: 667px) {
 	main,
 	.footer nav,
 	nav.main-navigation {
 		grid-template-columns: repeat(2, 1fr);
 	}
-}
 
-main {
-	margin-top: var(--spacing-10);
+	main {
+		margin-top: var(--spacing-06);
+	}
 }
 
 h2 {

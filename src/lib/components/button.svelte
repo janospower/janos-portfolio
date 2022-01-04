@@ -151,9 +151,6 @@
 		background-color: var(--color-accent--blue--transparent);
 		color: var(--color-accent--blue--opaque);
 	}
-	.button {
-		width: fit-content;
-	}
 	.button.fullwidth {
 		width: auto;
 	}
