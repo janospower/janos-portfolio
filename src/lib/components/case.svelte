@@ -79,12 +79,14 @@
 		margin-right: var(--spacing-02);
 		font-size: var(--font-size--small);
 	}
+	.case-wrapper {
+		height: 100%;
+		white-space: normal;
+	}
 
-	@media (min-width: 1024px) {
+	@media (min-width: 667px) {
 		.case-wrapper {
-			height: 100%;
 			display: flex;
-			white-space: normal;
 		}
 		figure {
 			height: 100%;

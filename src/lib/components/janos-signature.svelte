@@ -90,6 +90,11 @@
 	figure {
 		flex-grow: 1;
 	}
+	@media (max-width: 667px) {
+		svg {
+			height: var(--font-size--huge);
+		}
+	}
 	@media (min-width: 667px) {
 		svg {
 			margin-top: -9%;
