@@ -6,12 +6,16 @@
 	import Button from './button.svelte';
 	import ArrowLeft from '../icons/arrow-left.svelte';
 	import ArrowRight from '../icons/arrow-right.svelte';
+	import { fly } from 'svelte/transition';
 
 	export let intersecting;
 	$: if (browser) document.body.classList.toggle('light', intersecting);
 
 	let cases;
 	let caseOne;
+
+	let first = true;
+	let last = false;
 
 	function scrollToNext(direction) {
 		let current = cases.scrollLeft;
@@ -21,7 +25,19 @@
 			left: current + increment,
 			behavior: 'smooth'
 		});
+		checkScroll();
 	}
+
+	function checkScroll() {
+		first = cases.scrollLeft > 0 ? false : true;
+		last = cases.scrollWidth - (cases.scrollLeft + cases.clientWidth) > 0 ? false : true;
+	}
+
+	onMount(() => {
+		setInterval(() => {
+			checkScroll();
+		}, 500);
+	});
 </script>
 
 <IntersectionObserver element={cases} bind:intersecting>
@@ -131,18 +147,22 @@ The actual visual artefacts as well as the identity of the client are confidenti
 			</article>
 		</div>
 		<div class="button-container button-container--previous">
-			<div>
-				<Button on:message={() => scrollToNext(-1)}>
-					<ArrowLeft slot="icon" size="medium" />
-				</Button>
-			</div>
+			{#if !first}
+				<div transition:fly={{ y: 32, duration: 500 }}>
+					<Button on:message={() => scrollToNext(-1)}>
+						<ArrowLeft slot="icon" size="medium" />
+					</Button>
+				</div>
+			{/if}
 		</div>
 		<div class="button-container button-container--next">
-			<div>
-				<Button on:message={() => scrollToNext(1)}>
-					<ArrowRight slot="icon" size="medium" />
-				</Button>
-			</div>
+			{#if !last}
+				<div transition:fly={{ y: 32, duration: 500 }}>
+					<Button on:message={() => scrollToNext(1)}>
+						<ArrowRight slot="icon" size="medium" />
+					</Button>
+				</div>
+			{/if}
 		</div>
 	</div>
 </IntersectionObserver>
