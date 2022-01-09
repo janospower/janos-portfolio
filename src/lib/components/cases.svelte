@@ -140,9 +140,14 @@ The actual visual artefacts as well as the identity of the client are confidenti
 						{ name: 'UI / UX Design', certified: false },
 						{ name: 'Voice UI', certified: false },
 						{ name: 'High Fidelity Prototype', certified: false },
-						{ name: 'User Research', certified: false }
+						{ name: 'User Research', certified: false },
+						{ name: 'Vue', certified: false },
+						{ name: 'Animation', certified: false },
+						{ name: 'Gender', certified: false }
 					]}
-					body=""
+					body="University project exploring gender-neutral, multi-modal conversational user interfaces.</br> 
+					Feature concepts were developed based on semi-structured interviews and extensive literature research as well as benchmarking of current best practivces.</br>
+					The final prototype was built using vue.js rather than existing no-code prototyping tools to implement functional voice interactions and visual details like spring animations and supperelliptical corner radii."
 				/>
 			</article>
 		</div>
