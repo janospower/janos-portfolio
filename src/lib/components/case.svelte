@@ -75,7 +75,7 @@
 	}
 	.tag {
 		padding: var(--spacing-00) var(--spacing-01);
-		border-radius: 2px;
+		border-radius: 3px;
 		color: var(--color-neutral--300);
 		background-color: var(--color-neutral--800);
 		margin-right: var(--spacing-02);
