@@ -117,7 +117,7 @@
 		.wrapper {
 			grid-column-start: 1 !important;
 			grid-column-end: 3 !important;
-			margin-bottom: 50vh;
+			margin-bottom: 20vh;
 		}
 		.static-element {
 			margin: auto;

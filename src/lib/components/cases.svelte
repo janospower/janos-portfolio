@@ -28,11 +28,38 @@
 	<p class="text--huge">Some of my projects</p>
 	<div class="slider">
 		<div class="cases" bind:this={cases}>
-			<article class="case" bind:this={caseOne}><Case /></article>
-			<article class="case"><Case /></article>
-			<article class="case"><Case /></article>
-			<article class="case"><Case /></article>
-			<article class="case"><Case /></article>
+			<article class="case" bind:this={caseOne}>
+				<Case
+					title="baupal"
+					date="2020"
+					tags={[
+						{ name: 'Property Technology', certified: false },
+						{ name: 'Property Technology', certified: false },
+						{ name: 'Property Technology', certified: false },
+						{ name: 'UI Design', certified: false },
+						{ name: 'UX Design', certified: false },
+						{ name: 'Design Sprint', certified: false },
+						{ name: 'Web', certified: false }
+					]}
+					body="baupal created a platform which empowers home-owners by simplifying otherwise overly bureaucratic and expensive processes.
+
+Together with a design strategist, I helped our client traverse the entire design process in less than a week. 
+
+My role was to assist in facilitating various workshops and generating ideas that would best serve their users, while also turning our them into a high fidelity prototype. The prototype was used for usability testing and consequently iterated, in order to reflect our learnings and insights."
+				/>
+			</article>
+			<article class="case">
+				<Case />
+			</article>
+			<article class="case">
+				<Case />
+			</article>
+			<article class="case">
+				<Case />
+			</article>
+			<article class="case">
+				<Case />
+			</article>
 		</div>
 		<div class="button-container button-container--previous">
 			<div>

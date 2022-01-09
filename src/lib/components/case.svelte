@@ -34,7 +34,7 @@
 		<div class="tags">
 			{#each tags as { name, certified }, i}
 				<span class="tag" style="color: hsl({color}); background-color: hsla({backgroundColor})"
-					>{name}</span
+					>{name.replace(' ', ' ')}</span
 				>
 			{/each}
 		</div>
@@ -70,6 +70,8 @@
 	}
 	.tags {
 		margin-top: var(--spacing-04);
+		display: flex;
+		flex-wrap: wrap;
 	}
 	.tag {
 		padding: var(--spacing-00) var(--spacing-01);
@@ -78,6 +80,7 @@
 		background-color: var(--color-neutral--800);
 		margin-right: var(--spacing-02);
 		font-size: var(--font-size--small);
+		margin-bottom: var(--spacing-02);
 	}
 	.case-wrapper {
 		height: 100%;
