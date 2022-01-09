@@ -30,7 +30,7 @@
 	<div class="description">
 		<p class="date">{date}</p>
 		<h3>{title}</h3>
-		<p class="body">{body}</p>
+		<p class="body">{@html body}</p>
 		<div class="tags">
 			{#each tags as { name, certified }, i}
 				<span class="tag" style="color: hsl({color}); background-color: hsla({backgroundColor})"

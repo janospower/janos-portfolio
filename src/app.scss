@@ -69,6 +69,17 @@ a {
 	-webkit-tap-highlight-color: transparent;
 }
 
+ul {
+	list-style-type: '→ ';
+	padding: var(--spacing-03);
+}
+ul ::marker {
+	color: var(--color-accent--blue--opaque);
+}
+li:not(:last-child) {
+	padding-bottom: var(--spacing-01);
+}
+
 *,
 *::before,
 *::after {

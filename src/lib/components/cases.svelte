@@ -34,7 +34,49 @@
 					date="2020"
 					tags={[
 						{ name: 'Property Technology', certified: false },
+						{ name: 'UI Design', certified: false },
+						{ name: 'UX Design', certified: false },
+						{ name: 'Design Sprint', certified: false },
+						{ name: 'Web', certified: false }
+					]}
+					body="baupal created a platform which empowers home-owners by simplifying otherwise overly bureaucratic and expensive processes.
+
+Together with a design strategist, I helped our client traverse the entire design process in less than a week. 
+
+My role was to assist in facilitating various workshops and generating ideas that would best serve their users, while also turning our them into a high fidelity prototype. The prototype was used for usability testing and consequently iterated, in order to reflect our learnings and insights."
+				/>
+			</article>
+			<article class="case">
+				<Case
+					title="baupal"
+					date="2020"
+					tags={[
 						{ name: 'Property Technology', certified: false },
+						{ name: 'UI Design', certified: false },
+						{ name: 'UX Design', certified: false },
+						{ name: 'Design Sprint', certified: false },
+						{ name: 'Web', certified: false }
+					]}
+					body="Over the course of a full year, I helped refactor and scale a design system used by hundreds of product designers and developers to multiple target platforms. 
+I was heavily involved in all aspects of growing and maintaining the various component and pattern libraries such as:
+<ul>
+<li>Setting up a robust architecture of interdependent libraries;</li>
+<li>Creating and maintaining semantic design tokens in line with the brand;</li>
+<li>Building and documenting complex, theme-able component variant groups;</li>
+<li>Enforcing acceptance criteria including WCAG accessibility criteria;</li>
+<li>Inspecting and reviewing implementation in close collaboration with a team of developers;</li>
+<li>Educating a large, distributed design team about features and best practices in webinars, posts and routine meetings;</li>
+<li>Building custom Figma plugins to address unique challenges;</li>
+<li>Managing additional designers who contribute to the system;</li>
+</ul>
+The actual visual artefacts as well as the identity of the client are confidential."
+				/>
+			</article>
+			<article class="case">
+				<Case
+					title="baupal"
+					date="2020"
+					tags={[
 						{ name: 'Property Technology', certified: false },
 						{ name: 'UI Design', certified: false },
 						{ name: 'UX Design', certified: false },
@@ -49,16 +91,40 @@ My role was to assist in facilitating various workshops and generating ideas tha
 				/>
 			</article>
 			<article class="case">
-				<Case />
+				<Case
+					title="baupal"
+					date="2020"
+					tags={[
+						{ name: 'Property Technology', certified: false },
+						{ name: 'UI Design', certified: false },
+						{ name: 'UX Design', certified: false },
+						{ name: 'Design Sprint', certified: false },
+						{ name: 'Web', certified: false }
+					]}
+					body="baupal created a platform which empowers home-owners by simplifying otherwise overly bureaucratic and expensive processes.
+
+Together with a design strategist, I helped our client traverse the entire design process in less than a week. 
+
+My role was to assist in facilitating various workshops and generating ideas that would best serve their users, while also turning our them into a high fidelity prototype. The prototype was used for usability testing and consequently iterated, in order to reflect our learnings and insights."
+				/>
 			</article>
 			<article class="case">
-				<Case />
-			</article>
-			<article class="case">
-				<Case />
-			</article>
-			<article class="case">
-				<Case />
+				<Case
+					title="baupal"
+					date="2020"
+					tags={[
+						{ name: 'Property Technology', certified: false },
+						{ name: 'UI Design', certified: false },
+						{ name: 'UX Design', certified: false },
+						{ name: 'Design Sprint', certified: false },
+						{ name: 'Web', certified: false }
+					]}
+					body="baupal created a platform which empowers home-owners by simplifying otherwise overly bureaucratic and expensive processes.
+
+Together with a design strategist, I helped our client traverse the entire design process in less than a week. 
+
+My role was to assist in facilitating various workshops and generating ideas that would best serve their users, while also turning our them into a high fidelity prototype. The prototype was used for usability testing and consequently iterated, in order to reflect our learnings and insights."
+				/>
 			</article>
 		</div>
 		<div class="button-container button-container--previous">
