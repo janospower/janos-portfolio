@@ -23,7 +23,8 @@
 </nav>
 
 <Modal {modalOpen} on:closeModal={(modalOpen = false)}>
-	<Contact />
+	<h2 slot="header">Message Janos</h2>
+	<Contact slot="body" />
 </Modal>
 
 <style lang="scss">

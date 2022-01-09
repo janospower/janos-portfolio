@@ -18,8 +18,11 @@
 	let buttonY = 0;
 	let mouseOffsetX = 0;
 	let mouseOffsetY = 0;
+	let translateMultiplierX = 1;
+	let translateMultiplierY = 1;
 
 	export let cta = false;
+	export let error = false;
 	export let fullwidth = false;
 	export let variant = 'primary';
 
@@ -28,6 +31,7 @@
 	let deviceIsMobile = false;
 
 	let hovering = false;
+	let zoomed = cta ? 1.15 : 1.05;
 
 	let scale = spring(1, {
 		stiffness: 0.2,
@@ -66,8 +70,14 @@
 			mouseOffsetX = event.x - buttonX - buttonWidth / 2;
 			mouseOffsetY = event.y - buttonY - buttonHeight / 2;
 
+			translateMultiplierX = cta ? 0.5 : 5 / (buttonWidth / 2);
+			translateMultiplierY = cta ? 0.5 : 0.2;
+
 			if (hovering) {
-				translate.set({ x: mouseOffsetX * 0.5, y: mouseOffsetY * 0.5 });
+				translate.set({
+					x: mouseOffsetX * translateMultiplierX,
+					y: mouseOffsetY * translateMultiplierY
+				});
 			}
 		}
 	});
@@ -82,7 +92,7 @@
 	on:mouseenter={() => {
 		hovering = true;
 		if (!deviceIsMobile) {
-			scale.set(1.15);
+			scale.set(zoomed);
 		}
 	}}
 	on:mousemove={elasticButton}
@@ -93,7 +103,7 @@
 	}}
 	on:mouseup={() => {
 		if (!deviceIsMobile) {
-			scale.set(1.15);
+			scale.set(zoomed);
 		}
 	}}
 	on:mousedown={() => scale.set(1)}
@@ -106,6 +116,7 @@
 		bind:this={buttonLink}
 		class="button-link {variant} no-select"
 		class:icononly={!$$slots.label}
+		class:error
 		style="transform: translate({$translate.x}px, {$translate.y}px)"
 		on:click={sendMessage}
 	>
@@ -150,6 +161,11 @@
 	.primary {
 		background-color: var(--color-accent--blue--transparent);
 		color: var(--color-accent--blue--opaque);
+	}
+	.error,
+	.primary.error {
+		background-color: var(--color-accent--red--transparent);
+		color: var(--color-accent--red--opaque);
 	}
 	.button.fullwidth {
 		width: auto;

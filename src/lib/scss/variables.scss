@@ -274,10 +274,11 @@
 
 .light,
 .inverted {
-	--color-accent--red--opaque: hsl(352, 81%, 45%);
+	--color-accent--red--opaque: hsl(352, 81%, 40%);
+	--color-accent--red--transparent: hsla(352, 81%, 40%, 0.1);
 	--color-accent--magenta--opaque: hsl(322, 90%, 45%);
 	--color-accent--blue--opaque: hsl(202, 90%, 45%);
-	--color-accent--blue--transparent: rgba(11, 142, 218, 0.07);
+	--color-accent--blue--transparent: hsla(202, 90%, 45%, 0.07);
 	--color-accent--blue--pseudo-transparent: hsl(207, 27%, 92%);
 	--color-accent--teal--opaque: hsl(172, 84%, 45%);
 	--color-accent--volt--opaque: hsl(82, 98%, 48%);

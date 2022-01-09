@@ -1,5 +1,6 @@
 <script>
 	import Button from './button.svelte';
+	import Clipboard from 'svelte-clipboard';
 </script>
 
 <section>
@@ -9,24 +10,22 @@
 </section>
 
 <section>
-	<Button variant="primary" fullwidth={true}>
-		<span slot="label">Copy E-Mail address</span>
-	</Button>
+	<Clipboard
+		text="me@janospauer.com"
+		let:copy
+		on:copy={() => {
+			console.log('Has Copied');
+		}}
+	>
+		<Button variant="primary" fullwidth={true} on:message={copy}>
+			<span slot="label">Copy E-Mail address</span>
+		</Button>
+	</Clipboard>
 </section>
 
 <section>
 	<Button variant="primary" fullwidth={true}>
 		<span slot="label">Message on LinkedIn</span>
-	</Button>
-</section>
-
-<section>
-	<input type="text" />
-</section>
-
-<section>
-	<Button variant="primary" fullwidth={true}>
-		<span slot="label">Send</span>
 	</Button>
 </section>
 

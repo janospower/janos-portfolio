@@ -1,5 +1,7 @@
 <script>
 	import { createEventDispatcher } from 'svelte';
+	import Button from './button.svelte';
+	import { fly } from 'svelte/transition';
 
 	export let modalOpen = false;
 
@@ -20,16 +22,18 @@
 
 {#if modalOpen}
 	<div class="modal-background" on:click={closeModal} />
-	<div class="modal-wrapper">
+	<div class="modal-wrapper" transition:fly={{ y: 32, duration: 500 }}>
 		<div class="modal inverted" role="dialog" on:keydown={keydown} tabindex={0} autofocus>
 			<header>
-				<button>Close</button>
+				<slot name="header" />
 			</header>
 			<div class="slot">
-				<slot>Some content</slot>
+				<slot name="body">Some content</slot>
 			</div>
 			<footer>
-				<button on:click={closeModal}>Close</button>
+				<Button variant="primary" fullwidth={true} error={true} on:message={closeModal}>
+					<span slot="label">Cancel</span>
+				</Button>
 			</footer>
 		</div>
 	</div>
@@ -64,7 +68,7 @@
 		background-color: var(--color-overlay);
 		pointer-events: auto;
 		backdrop-filter: var(--backdrop-filter);
-		padding: var(--spacing-06);
+		padding: var(--spacing-03);
 		clip-path: var(--squircle);
 		transition: background-color 2s var(--easing--quint), color 2s var(--easing--quint);
 		color: var(--color-neutral--100);
@@ -73,6 +77,16 @@
 	footer {
 		display: block;
 	}
-	.slot {
+	header {
+		margin-bottom: var(--spacing-03);
+	}
+	@media (max-width: 667px) {
+		.modal-wrapper {
+			align-items: flex-end;
+		}
+		.modal {
+			padding-bottom: var(--spacing-06);
+			margin-bottom: calc(-1 * var(--spacing-03));
+		}
 	}
 </style>
