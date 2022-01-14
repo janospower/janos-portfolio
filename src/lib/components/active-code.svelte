@@ -1,7 +1,6 @@
 <span>
 	<!-- prettier-ignore -->
-	<slot />
-	<div class="caret" />
+	<slot /><div class="caret" />
 </span>
 
 <style lang="scss">
