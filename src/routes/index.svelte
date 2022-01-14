@@ -29,43 +29,45 @@
 
 <svelte:window bind:scrollY={verticalScroll} />
 
-<Sticky gridColumnStart="3" gridColumnEnd="7" sticky={false} {verticalScroll}>
-	<Hero slot="firstLine" />
-</Sticky>
+<div class="grid">
+	<Sticky gridColumnStart="3" gridColumnEnd="7" sticky={false} {verticalScroll}>
+		<Hero slot="firstLine" />
+	</Sticky>
 
-<Sticky gridColumnStart="3" gridColumnEnd="7" {verticalScroll} scrollTrigger={-20} delay={2000}>
-	<p class="text--huge" slot="firstLine">Hi.</p>
-	<div class="text--huge signature-line" slot="secondLine">
-		<p>My name is&nbsp;</p>
-		<JanosSignature {verticalScroll} scrollTrigger={250} />
-	</div>
-</Sticky>
+	<Sticky gridColumnStart="3" gridColumnEnd="7" {verticalScroll} scrollTrigger={-20} delay={2000}>
+		<p class="text--huge" slot="firstLine">Hi.</p>
+		<div class="text--huge signature-line" slot="secondLine">
+			<p>My name is&nbsp;</p>
+			<JanosSignature {verticalScroll} scrollTrigger={250} />
+		</div>
+	</Sticky>
 
-<Sticky
-	gridColumnStart="4"
-	gridColumnEnd="8"
-	observeIntersection={true}
-	staticElement={true}
-	delay={2000}
->
-	<!-- <ExampleUI slot="staticElement" /> -->
-	<p class="text--huge" slot="firstLine">
-		I <SelectedLayer>design</SelectedLayer> and <ActiveCode>build</ActiveCode>
-	</p>
-	<p class="text--huge signature-line" slot="secondLine">
-		digital products for humans and for the planet.
-	</p>
-</Sticky>
+	<Sticky
+		gridColumnStart="4"
+		gridColumnEnd="8"
+		observeIntersection={true}
+		staticElement={true}
+		delay={2000}
+	>
+		<!-- <ExampleUI slot="staticElement" /> -->
+		<p class="text--huge" slot="firstLine">
+			I <SelectedLayer>design</SelectedLayer> and <ActiveCode>build</ActiveCode>
+		</p>
+		<p class="text--huge signature-line" slot="secondLine">
+			digital products for humans and for the planet.
+		</p>
+	</Sticky>
 
-<Sticky gridColumnStart="1" gridColumnEnd="9" observeIntersection={true} delay={2000}>
-	<p class="text--huge heres-how" slot="firstLine">Here’s how</p>
-	<div class="grid-inner" slot="secondLine">
-		<Credentials skillName="User Interface Design" credentialType="University degree" />
-		<Credentials skillName="User Experience Design" credentialType="University degree" />
-		<Credentials skillName="Frontend Development" credentialType="Assessed skill" />
-		<Credentials skillName="Agile Methodologies" credentialType="Assessed skill" />
-	</div>
-</Sticky>
+	<Sticky gridColumnStart="1" gridColumnEnd="9" observeIntersection={true} delay={2000}>
+		<p class="text--huge heres-how" slot="firstLine">Here’s how</p>
+		<div class="grid-inner" slot="secondLine">
+			<Credentials skillName="User Interface Design" credentialType="University degree" />
+			<Credentials skillName="User Experience Design" credentialType="University degree" />
+			<Credentials skillName="Frontend Development" credentialType="Assessed skill" />
+			<Credentials skillName="Agile Methodologies" credentialType="Assessed skill" />
+		</div>
+	</Sticky>
+</div>
 
 <Cases />
 

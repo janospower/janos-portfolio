@@ -14,7 +14,7 @@ body {
 	transition: background-color 2s var(--easing--quint), color 2s var(--easing--quint);
 }
 
-main,
+.grid,
 .footer nav,
 nav.main-navigation {
 	display: grid;
@@ -31,7 +31,7 @@ main {
 }
 
 @media (max-width: 667px) {
-	main,
+	.grid,
 	.footer nav,
 	nav.main-navigation {
 		grid-template-columns: repeat(2, 1fr);

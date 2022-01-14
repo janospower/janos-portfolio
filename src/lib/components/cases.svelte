@@ -41,7 +41,7 @@
 </script>
 
 <IntersectionObserver element={cases} bind:intersecting>
-	<p class="text--huge">Some of my projects</p>
+	<div class="grid"><h3 class="text--huge">Some of my projects</h3></div>
 	<div class="slider">
 		<div class="cases" bind:this={cases}>
 			<article class="case" bind:this={caseOne}>
@@ -175,24 +175,17 @@ The actual visual artefacts as well as the identity of the client are confidenti
 <style lang="scss">
 	$case-width: calc(var(--page-width-inner) + (100vw - var(--page-width-inner)) / 3);
 
-	.cases,
-	.text--huge {
+	h3 {
 		grid-column-start: 1;
 		grid-column-end: 9;
 	}
-	@media (min-width: 667px) {
-		.slider {
-			margin: 0 calc((100vw - var(--page-width-inner)) / -2);
-		}
-	}
+
 	.slider {
 		position: relative;
 		width: 100vw;
 		height: 100vh;
 		max-height: min(800px, calc(100vh - var(--spacing-11)));
 		margin-top: var(--spacing-05);
-		grid-column-start: 1;
-		grid-column-end: 9;
 	}
 	.cases {
 		width: 100%;
@@ -232,7 +225,6 @@ The actual visual artefacts as well as the identity of the client are confidenti
 	}
 	@media (max-width: 667px) {
 		.slider {
-			margin: 0 calc(var(--spacing-03) * -1);
 			margin-top: var(--spacing-05);
 		}
 		.button-container {
