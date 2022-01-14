@@ -23,11 +23,13 @@
 		class:hidden={!wrapperIsVisible}
 		bind:this={wrapper}
 	>
-		<section>
-			<Credential size="medium" />
-			<h3>{skillName}</h3>
-			<p>{credentialType}</p>
-		</section>
+		<a href="https://www.linkedin.com/in/janospauer/" target="_blank" alt="View certification">
+			<section>
+				<Credential size="medium" />
+				<h3>{skillName}</h3>
+				<p>{credentialType}</p>
+			</section>
+		</a>
 	</div>
 </IntersectionObserver>
 

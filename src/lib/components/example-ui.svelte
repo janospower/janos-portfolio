@@ -1,20 +1,29 @@
+<script>
+	import Parallax from './parallax.svelte';
+</script>
+
 <figure>
-	<img
-		class="background"
-		src="/images/example-ui/example-ui.svg"
-		alt="Example of a mobile user interface"
-	/>
-	<img
-		class="foreground"
-		src="/images/example-ui/example-ui__highlight.svg"
-		alt="Example of a mobile user interface highlight"
-	/>
+	<Parallax rate={96}>
+		<img
+			class="background"
+			src="/images/example-ui/example-ui.svg"
+			alt="Example of a mobile user interface"
+		/>
+	</Parallax>
+	<div class="foreground">
+		<Parallax rate={128}>
+			<img
+				src="/images/example-ui/example-ui__highlight.svg"
+				alt="Example of a mobile user interface highlight"
+			/>
+		</Parallax>
+	</div>
 </figure>
 
 <style lang="scss">
 	figure {
-		z-index: 0;
 		position: relative;
+		transform: rotate(-7deg);
 	}
 	.foreground {
 		position: absolute;
