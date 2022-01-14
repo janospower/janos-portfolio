@@ -49,7 +49,7 @@
 		staticElement={true}
 		delay={2000}
 	>
-		<!-- <ExampleUI slot="staticElement" /> -->
+		<ExampleUI slot="staticElement" />
 		<p class="text--huge" slot="firstLine">
 			I <SelectedLayer>design</SelectedLayer> and <ActiveCode>build</ActiveCode>
 		</p>
@@ -61,10 +61,7 @@
 	<Sticky gridColumnStart="1" gridColumnEnd="9" observeIntersection={true} delay={2000}>
 		<p class="text--huge heres-how" slot="firstLine">Here’s how</p>
 		<div class="grid-inner" slot="secondLine">
-			<Credentials skillName="User Interface Design" credentialType="University degree" />
-			<Credentials skillName="User Experience Design" credentialType="University degree" />
-			<Credentials skillName="Frontend Development" credentialType="Assessed skill" />
-			<Credentials skillName="Agile Methodologies" credentialType="Assessed skill" />
+			<Credentials />
 		</div>
 	</Sticky>
 </div>

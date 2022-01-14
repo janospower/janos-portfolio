@@ -1,32 +1,24 @@
 <script>
-	import Credential from '../icons/credential.svelte';
-
-	export let skillName = '';
-	export let credentialType = '';
+	import Credential from './credential.svelte';
+	const delay = 0.1;
 </script>
 
-<section>
-	<Credential size="medium" />
-	<h3>{skillName}</h3>
-	<p>{credentialType}</p>
-</section>
+<Credential skillName="User Interface Design" credentialType="University degree" />
+<Credential
+	skillName="User Experience Design"
+	credentialType="University degree"
+	entryDelay={1 * delay}
+/>
+<Credential
+	skillName="Frontend Development"
+	credentialType="Assessed skill"
+	entryDelay={2 * delay}
+/>
+<Credential
+	skillName="Agile Methodologies"
+	credentialType="Assessed skill"
+	entryDelay={3 * delay}
+/>
 
 <style lang="scss">
-	section {
-		background-color: var(--color-neutral--800);
-		padding-top: var(--spacing-05);
-		padding-bottom: var(--spacing-06);
-		clip-path: var(--squircle);
-		transition: transform var(--transition--200), background-color 2s var(--easing--quint);
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-	h3 {
-		margin-top: var(--spacing-03);
-		margin-bottom: var(--spacing-02);
-	}
-	section:hover {
-		transform: scale(1.1);
-	}
 </style>
