@@ -24,7 +24,7 @@
 
 <Modal {modalOpen} on:closeModal={(modalOpen = false)}>
 	<h2 slot="header">Message Janos</h2>
-	<Contact slot="body" />
+	<Contact on:message slot="body" />
 </Modal>
 
 <style lang="scss">

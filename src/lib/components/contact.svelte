@@ -1,10 +1,23 @@
 <script>
 	import Button from './button.svelte';
 	import Clipboard from 'svelte-clipboard';
+	import { createEventDispatcher } from 'svelte';
+
+	const dispatch = createEventDispatcher();
+
+	function sendMessage(message) {
+		dispatch('message', {
+			text: message
+		});
+	}
 </script>
 
 <section>
-	<Button variant="primary" fullwidth={true}>
+	<Button
+		variant="primary"
+		fullwidth={true}
+		link="mailto:me@janospauer.com?subject=I%20saw%20your%20website!"
+	>
 		<span slot="label">E-Mail with default client</span>
 	</Button>
 </section>
@@ -14,19 +27,13 @@
 		text="me@janospauer.com"
 		let:copy
 		on:copy={() => {
-			console.log('Has Copied');
+			sendMessage('Address copied to clipboard!');
 		}}
 	>
 		<Button variant="primary" fullwidth={true} on:message={copy}>
 			<span slot="label">Copy E-Mail address</span>
 		</Button>
 	</Clipboard>
-</section>
-
-<section>
-	<Button variant="primary" fullwidth={true}>
-		<span slot="label">Message on LinkedIn</span>
-	</Button>
 </section>
 
 <style lang="scss">

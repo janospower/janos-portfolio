@@ -77,12 +77,7 @@
 		position: relative;
 	}
 	img {
-		filter: drop-shadow(0px 4.455283164978027px 4.759681224822998px rgba(0, 0, 0, 0.045))
-			drop-shadow(0px 10.706664085388184px 11.438175201416016px rgba(0, 0, 0, 0.0646))
-			drop-shadow(0px 20.159698486328125px 21.53706932067871px rgba(0, 0, 0, 0.08))
-			drop-shadow(0px 35.961456298828125px 38.418453216552734px rgba(0, 0, 0, 0.0954))
-			drop-shadow(0px 67.26194763183594px 71.85749053955078px rgba(0, 0, 0, 0.115))
-			drop-shadow(0px 161px 172px rgba(0, 0, 0, 0.16));
+		filter: var(--drop-shadow--large);
 	}
 	.foreground {
 		position: absolute;

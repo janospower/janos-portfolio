@@ -25,6 +25,7 @@
 	export let error = false;
 	export let fullwidth = false;
 	export let variant = 'primary';
+	export let link = '/';
 
 	let query = '(max-width: 667px)';
 
@@ -112,7 +113,7 @@
 	style="transform: scale({$scale})"
 >
 	<a
-		href="/"
+		href={link}
 		bind:this={buttonLink}
 		class="button-link {variant} no-select"
 		class:icononly={!$$slots.label}
