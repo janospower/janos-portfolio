@@ -152,22 +152,18 @@ The actual visual artefacts as well as the identity of the client are confidenti
 			</article>
 		</div>
 		<div class="button-container button-container--previous">
-			{#if !first}
-				<div transition:fly={{ y: 32, duration: 500 }}>
-					<Button on:message={() => scrollToNext(-1)}>
-						<ArrowLeft slot="icon" size="medium" />
-					</Button>
-				</div>
-			{/if}
+			<div class:hidden={first}>
+				<Button on:message={() => scrollToNext(-1)}>
+					<ArrowLeft slot="icon" size="medium" />
+				</Button>
+			</div>
 		</div>
 		<div class="button-container button-container--next">
-			{#if !last}
-				<div transition:fly={{ y: 32, duration: 500 }}>
-					<Button on:message={() => scrollToNext(1)}>
-						<ArrowRight slot="icon" size="medium" />
-					</Button>
-				</div>
-			{/if}
+			<div class:hidden={last}>
+				<Button on:message={() => scrollToNext(1)}>
+					<ArrowRight slot="icon" size="medium" />
+				</Button>
+			</div>
 		</div>
 	</div>
 </IntersectionObserver>
