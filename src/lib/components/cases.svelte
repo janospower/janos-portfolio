@@ -57,6 +57,7 @@
 						'Mobility',
 						'Development'
 					]}
+					cover={true}
 					body="As a team lead, I helped refactor and scale a design system used by hundreds of product designers and developers to multiple target platforms over the course of a full year.</br> 
 					I was heavily involved in all aspects of growing and maintaining the various component and pattern libraries such as:
 					<ul>

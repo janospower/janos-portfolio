@@ -1,18 +1,14 @@
 <script>
-	export let title = 'Title of Project';
-	export let date = '2022';
-	export let body =
-		'Lorem ipsum dolor sit amet consectetur adipisicing elit. A minima ex, dignissimos optio quaerat consequuntur tempore aut nam expedita placeat distinctio soluta tenetur blanditiis doloribus, quasi in repellat et laudantium.';
-	export let highlightColorHSLA = { h: 0, s: '50%', l: '50%', a: 0.1 };
-	let highlightColor = `${highlightColorHSLA.h}, ${highlightColorHSLA.s}, ${highlightColorHSLA.l}`;
-	let backgroundColor = `${highlightColorHSLA.h}, 100%, 50%, 0.07`;
-	let color = `${highlightColorHSLA.h}, 100%, 10%`;
+	export let title = '';
+	export let date = '';
+	export let body = '';
 	export let tags = [];
 	export let imgURL = '/images/example-ui/example-ui.svg';
+	export let cover = false;
 </script>
 
 <div class="case-wrapper">
-	<figure>
+	<figure class:cover>
 		<img loading="lazy" src={imgURL} alt="Case hero" />
 	</figure>
 	<div class="description">
@@ -39,10 +35,16 @@
 		justify-content: center;
 		align-items: center;
 	}
+	figure.cover {
+		padding: 0;
+	}
 	img {
 		height: 100%;
 		width: 100%;
 		object-fit: contain;
+	}
+	.cover img {
+		object-fit: cover;
 	}
 	.description {
 		margin: var(--spacing-04) var(--spacing-03);
