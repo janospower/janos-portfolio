@@ -15,6 +15,10 @@
 			<a href="https://twitter.com/janospauer" target="_blank">twitter</a>
 			<a href="https://medium.com/@Janosp" target="_blank">Medium</a>
 		</div>
+		<div>
+			<h4>Download</h4>
+			<a href="/downloads/Janos_Pauer_Resume.pdf" download>Resume</a>
+		</div>
 	</nav>
 </footer>
 

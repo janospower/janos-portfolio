@@ -8,6 +8,7 @@
 	export let skillName = '';
 	export let credentialType = '';
 	export let entryDelay = 0;
+	export let link = '/';
 </script>
 
 <IntersectionObserver
@@ -23,7 +24,7 @@
 		class:hidden={!wrapperIsVisible}
 		bind:this={wrapper}
 	>
-		<a href="https://www.linkedin.com/in/janospauer/" target="_blank" alt="View certification">
+		<a href={link} target="_blank" alt="View certification">
 			<section>
 				<Credential size="medium" />
 				<h3>{skillName}</h3>
@@ -49,7 +50,7 @@
 		margin-bottom: var(--spacing-02);
 	}
 	section:hover {
-		transform: scale(1.1);
+		transform: scale(1.06);
 	}
 	.intersecting {
 		background-color: red;
