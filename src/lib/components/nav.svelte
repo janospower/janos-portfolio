@@ -15,7 +15,7 @@
 <nav class="main-navigation" aria-label="Main">
 	<h2><a href="/">Janos Pauer</a></h2>
 	<div class="cta">
-		<Button cta={true} on:message={openContactModal}>
+		<Button cta={true} on:message={openContactModal} link="/contact" preventDefault={true}>
 			<PaperPlane slot="icon" size="small" circle />
 			<span slot="label">Send a message</span>
 		</Button>

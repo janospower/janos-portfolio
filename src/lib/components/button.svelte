@@ -6,7 +6,10 @@
 
 	const dispatch = createEventDispatcher();
 
-	function sendMessage() {
+	function sendMessage(e) {
+		if (preventDefault) {
+			e.preventDefault();
+		}
 		dispatch('message');
 	}
 
@@ -26,6 +29,7 @@
 	export let fullwidth = false;
 	export let variant = 'primary';
 	export let link = '/';
+	export let preventDefault = false;
 
 	let query = '(max-width: 667px)';
 

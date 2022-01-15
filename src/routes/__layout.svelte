@@ -26,4 +26,7 @@
 
 <style global lang="scss">
 	@import '../app.scss';
+	main {
+		min-height: 100vh;
+	}
 </style>

@@ -30,7 +30,7 @@
 			sendMessage('Address copied to clipboard!');
 		}}
 	>
-		<Button variant="primary" fullwidth={true} on:message={copy}>
+		<Button variant="primary" fullwidth={true} on:message={copy} preventDefault={true}>
 			<span slot="label">Copy E-Mail address</span>
 		</Button>
 	</Clipboard>

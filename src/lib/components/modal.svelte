@@ -31,7 +31,13 @@
 				<slot name="body">Some content</slot>
 			</div>
 			<footer>
-				<Button variant="primary" fullwidth={true} error={true} on:message={closeModal}>
+				<Button
+					variant="primary"
+					fullwidth={true}
+					error={true}
+					on:message={closeModal}
+					preventDefault={true}
+				>
 					<span slot="label">Cancel</span>
 				</Button>
 			</footer>
@@ -64,7 +70,7 @@
 	.modal {
 		max-width: 100vw;
 		max-height: 100vh;
-		width: calc(var(--page-width-inner) / 8 * 4);
+		width: calc(var(--page-width-inner) / 8 * 2);
 		background-color: var(--color-overlay);
 		pointer-events: auto;
 		backdrop-filter: var(--backdrop-filter);

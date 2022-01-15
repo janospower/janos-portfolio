@@ -19,20 +19,24 @@
 	<meta property="og:url" content="https://janospauer.com/contact" />
 </svelte:head>
 
-<article>
+<article class="grid">
 	<section>
-		<h1 class="text--huge">Contact</h1>
+		<h2 class="text--huge">Contact</h2>
+		<p>Janos Pauer • Digital Product Designer</p>
+		<p>Silbersteinstraße 35, 12051 Berlin Germany</p>
+		<p>me@janospauer.com</p>
 		<Contact />
 	</section>
 </article>
 
 <style lang="scss">
-	article {
+	section {
 		margin-top: var(--spacing-10);
-		grid-column-start: 2;
-		grid-column-end: 7;
 	}
 	h2 {
-		margin-top: var(--spacing-05);
+		margin-bottom: var(--spacing-05);
+	}
+	p {
+		margin-bottom: var(--spacing-03);
 	}
 </style>
