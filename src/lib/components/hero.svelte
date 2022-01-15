@@ -85,6 +85,10 @@
 		margin: 0 auto;
 		background: white;
 		border-radius: 50%;
+		transition: transform var(--easing--quint) 250ms;
+	}
+	.hero:hover {
+		transform: scale(1.05);
 	}
 	@media (max-width: 667px) {
 		.hero {
