@@ -6,7 +6,7 @@
 			<a href="/contact">Contact</a>
 			<a href="/imprint">Imprint</a>
 		</div>
-		<div>
+		<div class="tall">
 			<h4>Elsewhere</h4>
 			<a href="https://de.linkedin.com/in/janospauer" target="_blank">LinkedIn</a>
 			<a href="https://www.figma.com/@janos" target="_blank">Figma</a>
@@ -31,10 +31,15 @@
 	}
 	img {
 		width: 80px;
+		height: 80px;
 		clip-path: var(--squircle);
+		grid-column: span 2;
 	}
 	nav {
-		grid-template-rows: repeat(4, 80px);
+		grid-row-gap: var(--spacing-05);
+	}
+	nav div {
+		height: fit-content;
 	}
 	h4 {
 		margin-bottom: var(--spacing-02);
@@ -50,5 +55,14 @@
 	// }
 	a:hover {
 		padding-left: var(--spacing-02);
+	}
+	.tall {
+		grid-row: span 2;
+	}
+	@media (min-width: 667px) {
+		div,
+		img {
+			grid-column: span 2;
+		}
 	}
 </style>
