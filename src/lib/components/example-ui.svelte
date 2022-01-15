@@ -3,7 +3,7 @@
 </script>
 
 <figure>
-	<Parallax rate={96}>
+	<Parallax rate={96} growBy={-0.3}>
 		<img
 			class="background"
 			src="/images/example-ui/example-ui.svg"
@@ -11,7 +11,7 @@
 		/>
 	</Parallax>
 	<div class="foreground">
-		<Parallax rate={128}>
+		<Parallax rate={128} growBy={-0.3}>
 			<img
 				src="/images/example-ui/example-ui__highlight.svg"
 				alt="Example of a mobile user interface highlight"

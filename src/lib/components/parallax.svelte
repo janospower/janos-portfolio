@@ -4,13 +4,23 @@
 	import { throttle } from 'throttle-debounce';
 
 	export let rate = 32;
+	export let growBy = 0;
 
 	let container;
 	let innerHeight;
 	let containerHeight;
 	let containerCenter;
 
-	let translateSpring = spring(0, { stiffness: 0.017, damping: 0.26 });
+	let translateSpring = spring(
+		{
+			y: 0,
+			scale: 1
+		},
+		{
+			stiffness: 0.017,
+			damping: 0.26
+		}
+	);
 
 	onMount(() => {
 		setDimensions();
@@ -20,7 +30,7 @@
 			throttleFunc();
 		});
 
-		const throttleFunc = throttle(100, false, () => adjustTranslation());
+		const throttleFunc = throttle(1000 / 60, false, () => adjustTranslation());
 	});
 
 	function setDimensions() {
@@ -31,13 +41,16 @@
 	function adjustTranslation() {
 		containerCenter = container.getBoundingClientRect().top + containerHeight / 2;
 		let offset = (containerCenter - innerHeight / 2) / innerHeight;
-		translateSpring.set(offset * rate);
+		translateSpring.set({
+			y: offset * rate,
+			scale: 1 + Math.abs(offset) * growBy
+		});
 	}
 </script>
 
 <div
 	class="parallax-container"
-	style="transform: translate(0px, {$translateSpring}px);"
+	style="transform: translate(0px, {$translateSpring.y}px) scale({$translateSpring.scale});"
 	bind:this={container}
 >
 	<slot />

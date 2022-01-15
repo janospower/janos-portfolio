@@ -40,7 +40,7 @@
 </script>
 
 <div class="hero-wrapper">
-	<Parallax rate={256}>
+	<Parallax rate={256} growBy={-0.3}>
 		<div class="hero">
 			<div class="canvas" {style} />
 		</div>
