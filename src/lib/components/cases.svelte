@@ -49,13 +49,13 @@
 					title="Mapping Design System"
 					date="2022"
 					tags={[
-						{ name: 'Design System', certified: false },
-						{ name: 'UI / UX Design', certified: false },
-						{ name: 'Project lead', certified: false },
-						{ name: 'Mobile', certified: false },
-						{ name: 'Web', certified: false },
-						{ name: 'Mobility', certified: false },
-						{ name: 'Development', certified: false }
+						'Design System',
+						'UI / UX Design',
+						'Project lead',
+						'Mobile',
+						'Web',
+						'Mobility',
+						'Development'
 					]}
 					body="As a team lead, I helped refactor and scale a design system used by hundreds of product designers and developers to multiple target platforms over the course of a full year.</br> 
 					I was heavily involved in all aspects of growing and maintaining the various component and pattern libraries such as:
@@ -76,13 +76,7 @@
 				<Case
 					title="baupal"
 					date="2020"
-					tags={[
-						{ name: 'Property Technology', certified: false },
-						{ name: 'UI / UX Design', certified: false },
-						{ name: 'Design Sprint', certified: false },
-						{ name: 'Web', certified: false },
-						{ name: 'Prototype', certified: false }
-					]}
+					tags={['Property Technology', 'UI / UX Design', 'Design Sprint', 'Web', 'Prototype']}
 					body="baupal created a platform which empowers home-owners by simplifying otherwise overly bureaucratic and expensive processes.</br>
 			
 			Together with a design strategist, I helped our client traverse the entire design process in less than aweek.</br> 
@@ -96,13 +90,7 @@
 				<Case
 					title="Figma Plugins"
 					date="2022"
-					tags={[
-						{ name: 'Development', certified: false },
-						{ name: 'JavaScript', certified: false },
-						{ name: 'Svelte', certified: false },
-						{ name: 'UI / UX Design', certified: false },
-						{ name: 'Personal Project', certified: false }
-					]}
+					tags={['Development', 'JavaScript', 'Svelte', 'UI / UX Design', 'Personal Project']}
 					body="Extending the functionality of the tool I use professionally on a daily basis has grown to become a passion of mine. I give back to the community by identifying and filling gaps in the existing ecosystem, all while learning and practicing interesting technologies.</br>
 
 My plugins address niche topics that empower their users to efficiently craft designs that are polished in every detail."
@@ -113,12 +101,12 @@ My plugins address niche topics that empower their users to efficiently craft de
 					title="Digital Anti-Depressants"
 					date="2020"
 					tags={[
-						{ name: 'UI / UX Design', certified: false },
-						{ name: 'Healthcare', certified: false },
-						{ name: 'Branding', certified: false },
-						{ name: 'Mobile', certified: false },
-						{ name: 'Data Visualization', certified: false },
-						{ name: 'Client Communication', certified: false }
+						'UI / UX Design',
+						'Healthcare',
+						'Branding',
+						'Mobile',
+						'Data Visualization',
+						'Client Communication'
 					]}
 					body="In a small, cross-disciplinary team, we created an MVP to treat mental health conditions.</br>
 
@@ -136,14 +124,14 @@ The actual visual artefacts as well as the identity of the client are confidenti
 					title="Virtual Assistant"
 					date="2020"
 					tags={[
-						{ name: 'Thesis', certified: false },
-						{ name: 'UI / UX Design', certified: false },
-						{ name: 'Voice UI', certified: false },
-						{ name: 'High Fidelity Prototype', certified: false },
-						{ name: 'User Research', certified: false },
-						{ name: 'Vue', certified: false },
-						{ name: 'Animation', certified: false },
-						{ name: 'Gender', certified: false }
+						'Thesis',
+						'UI / UX Design',
+						'Voice UI',
+						'High Fidelity Prototype',
+						'User Research',
+						'Vue',
+						'Animation',
+						'Gender'
 					]}
 					body="University project exploring gender-neutral, multi-modal conversational user interfaces.</br> 
 					Feature concepts were developed based on semi-structured interviews and extensive literature research as well as benchmarking of current best practivces.</br>

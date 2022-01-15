@@ -7,10 +7,7 @@
 	let highlightColor = `${highlightColorHSLA.h}, ${highlightColorHSLA.s}, ${highlightColorHSLA.l}`;
 	let backgroundColor = `${highlightColorHSLA.h}, 100%, 50%, 0.07`;
 	let color = `${highlightColorHSLA.h}, 100%, 10%`;
-	export let tags = [
-		{ name: 'Tag Name 1', certified: false },
-		{ name: 'Tag Name 2', certified: false }
-	];
+	export let tags = [];
 	export let imgURL = '/images/example-ui/example-ui.svg';
 </script>
 
@@ -23,10 +20,8 @@
 		<h3>{title}</h3>
 		<p class="body">{@html body}</p>
 		<div class="tags">
-			{#each tags as { name, certified }, i}
-				<span class="tag" style="color: hsl({color}); background-color: hsla({backgroundColor})"
-					>{name.replace(' ', ' ')}</span
-				>
+			{#each tags as name, i}
+				<span class="tag">{name.replace(' ', ' ')}</span>
 			{/each}
 		</div>
 	</div>
