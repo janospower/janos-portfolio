@@ -117,7 +117,7 @@ li:not(:last-child) {
 }
 .fading {
 	opacity: 1;
-	filter: blur(0px);
+	filter: none;
 	transform: none;
 	transition: opacity 800ms var(--easing--quint), transform 1200ms var(--easing--out-quint),
 		filter 1200ms var(--easing--quint);
