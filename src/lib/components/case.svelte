@@ -16,16 +16,7 @@
 
 <div class="case-wrapper">
 	<figure>
-		<img
-			src={imgURL}
-			alt="Case hero"
-			style="filter: 
-            drop-shadow(0px 2.2px 3.74px hsla({highlightColor}, 0.045))
-			drop-shadow(0px 5.56px 9.47px hsla({highlightColor}, 0.0646))
-			drop-shadow(0px 11.34px 19.32px hsla({highlightColor}, 0.08))
-			drop-shadow(0px 23.36px 39.79px hsla({highlightColor}, 0.0954))
-			drop-shadow(0px 64px 109px hsla({highlightColor}, 0.115));"
-		/>
+		<img src={imgURL} alt="Case hero" />
 	</figure>
 	<div class="description">
 		<p class="date">{date}</p>

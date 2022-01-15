@@ -1,6 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	import { spring } from 'svelte/motion';
+	import { throttle } from 'throttle-debounce';
 
 	export let rate = 32;
 
@@ -16,8 +17,10 @@
 		adjustTranslation();
 
 		window.addEventListener('scroll', () => {
-			adjustTranslation();
+			throttleFunc();
 		});
+
+		const throttleFunc = throttle(100, false, () => adjustTranslation());
 	});
 
 	function setDimensions() {
