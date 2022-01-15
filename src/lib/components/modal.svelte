@@ -93,6 +93,7 @@
 		.modal {
 			padding-bottom: var(--spacing-06);
 			margin-bottom: calc(-1 * var(--spacing-03));
+			min-width: 100vw;
 		}
 	}
 </style>

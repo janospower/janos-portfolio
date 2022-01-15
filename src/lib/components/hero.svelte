@@ -34,7 +34,7 @@
 </script>
 
 <div
-	class="hero-wrapper"
+	class="hero-wrapper .no-select"
 	on:pointerover={() => {
 		let gradientsRandom = {
 			redX: Math.random() * 100,
@@ -57,8 +57,8 @@
 	}}
 >
 	<Parallax rate={256} growBy={-0.3}>
-		<div class="hero">
-			<div class="canvas" style={gradientStyle} />
+		<div class="hero .no-select">
+			<div class="canvas .no-select" style={gradientStyle} />
 		</div>
 	</Parallax>
 </div>

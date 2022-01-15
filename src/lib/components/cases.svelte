@@ -231,7 +231,7 @@ The actual visual artefacts as well as the identity of the client are confidenti
 			display: none;
 		}
 		.cases {
-			padding: 0 0 0 var(--spacing-03);
+			padding: 0 0 0 var(--spacing-05);
 		}
 		.cases::-webkit-scrollbar {
 			display: none;
@@ -241,15 +241,15 @@ The actual visual artefacts as well as the identity of the client are confidenti
 			scrollbar-width: none; /* Firefox */
 		}
 		.case {
-			min-width: calc(100vw - var(--spacing-03) * 2);
-			min-width: calc(100vw - var(--spacing-03) * 2);
+			min-width: calc(100vw - var(--spacing-05) * 2);
+			width: calc(100vw - var(--spacing-05) * 2);
 		}
 		.case:not(:last-child) {
-			margin-right: calc(var(--spacing-03) / 2);
+			margin-right: calc(var(--spacing-05) / 2);
 		}
 		.case:last-child {
-			padding-right: var(--spacing-03);
-			min-width: calc((100vw - var(--spacing-03) * 2) + var(--spacing-03));
+			padding-right: var(--spacing-05);
+			min-width: calc((100vw - var(--spacing-05) * 2) + var(--spacing-05));
 		}
 	}
 </style>
