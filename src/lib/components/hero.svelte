@@ -1,48 +1,64 @@
 <script>
 	import Parallax from './parallax.svelte';
+	import { spring } from 'svelte/motion';
 
-	let gradients = [
-		{
-			x: 80,
-			y: 0
-		},
-		{
-			x: 0,
-			y: 50
-		},
-		{
-			x: 80,
-			y: 50
-		},
-		{
-			x: 0,
-			y: 100
-		},
-		{
-			x: 80,
-			y: 100
-		},
-		{
-			x: 0,
-			y: 0
-		}
-	];
+	let gradients = {
+		redX: 80,
+		redY: 0,
+		magentaX: 0,
+		magentaY: 50,
+		blueX: 80,
+		blueY: 50,
+		tealX: 0,
+		tealY: 100,
+		voltX: 80,
+		voltY: 100,
+		yellowX: 0,
+		yellowY: 0
+	};
 
-	let style = `
+	let gradientSpring = spring(gradients, {
+		stiffness: 0.017,
+		damping: 0.26
+	});
+
+	$: gradientStyle = `
 			background-image:
-			radial-gradient(at ${gradients[0].x}% ${gradients[0].y}%, var(--color-accent--red--opaque) 0, transparent 50%),
-			radial-gradient(at ${gradients[1].x}% ${gradients[1].y}%, var(--color-accent--magenta--opaque) 0, transparent 50%),
-			radial-gradient(at ${gradients[2].x}% ${gradients[2].y}%, var(--color-accent--blue--opaque) 0, transparent 50%),
-			radial-gradient(at ${gradients[3].x}% ${gradients[3].y}%, var(--color-accent--teal--opaque) 0, transparent 50%),
-			radial-gradient(at ${gradients[4].x}% ${gradients[4].y}%, var(--color-accent--volt--opaque) 0, transparent 50%),
-			radial-gradient(at ${gradients[5].x}% ${gradients[5].y}%, var(--color-accent--yellow--opaque) 0, transparent 50%);
+			radial-gradient(at ${$gradientSpring.redX}% ${$gradientSpring.redY}%, var(--color-accent--red--opaque) 0, transparent 50%),
+			radial-gradient(at ${$gradientSpring.magentaX}% ${$gradientSpring.magentaY}%, var(--color-accent--magenta--opaque) 0, transparent 50%),
+			radial-gradient(at ${$gradientSpring.blueX}% ${$gradientSpring.blueY}%, var(--color-accent--blue--opaque) 0, transparent 50%),
+			radial-gradient(at ${$gradientSpring.tealX}% ${$gradientSpring.tealY}%, var(--color-accent--teal--opaque) 0, transparent 50%),
+			radial-gradient(at ${$gradientSpring.voltX}% ${$gradientSpring.voltY}%, var(--color-accent--volt--opaque) 0, transparent 50%),
+			radial-gradient(at ${$gradientSpring.yellowX}% ${$gradientSpring.yellowY}%, var(--color-accent--yellow--opaque) 0, transparent 50%);
 			`;
 </script>
 
-<div class="hero-wrapper">
+<div
+	class="hero-wrapper"
+	on:pointerover={() => {
+		let gradientsRandom = {
+			redX: Math.random() * 100,
+			redY: Math.random() * 100,
+			magentaX: Math.random() * 100,
+			magentaY: Math.random() * 100,
+			blueX: Math.random() * 100,
+			blueY: Math.random() * 100,
+			tealX: Math.random() * 100,
+			tealY: Math.random() * 100,
+			voltX: Math.random() * 100,
+			voltY: Math.random() * 100,
+			yellowX: Math.random() * 100,
+			yellowY: Math.random() * 100
+		};
+		gradientSpring.set(gradientsRandom);
+	}}
+	on:pointerout={() => {
+		gradientSpring.set(gradients);
+	}}
+>
 	<Parallax rate={256} growBy={-0.3}>
 		<div class="hero">
-			<div class="canvas" {style} />
+			<div class="canvas" style={gradientStyle} />
 		</div>
 	</Parallax>
 </div>
@@ -59,7 +75,7 @@
 	.hero-wrapper {
 		margin-top: var(--spacing-03);
 		margin-bottom: var(--spacing-07);
-		display: flex;
+		y: flex;
 		align-items: center;
 		flex-direction: column;
 	}
