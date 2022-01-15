@@ -13,17 +13,22 @@
 
 	onMount(() => {
 		setDimensions();
+		adjustTranslation();
 
 		window.addEventListener('scroll', () => {
-			containerCenter = container.getBoundingClientRect().top + containerHeight / 2;
-			let offset = (containerCenter - innerHeight / 2) / innerHeight;
-			translateSpring.set(offset * rate);
+			adjustTranslation();
 		});
 	});
 
 	function setDimensions() {
 		containerHeight = container.getBoundingClientRect().height;
 		innerHeight = window.innerHeight;
+	}
+
+	function adjustTranslation() {
+		containerCenter = container.getBoundingClientRect().top + containerHeight / 2;
+		let offset = (containerCenter - innerHeight / 2) / innerHeight;
+		translateSpring.set(offset * rate);
 	}
 </script>
 

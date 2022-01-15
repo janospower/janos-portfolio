@@ -1,4 +1,6 @@
 <script>
+	import Parallax from './parallax.svelte';
+
 	let gradients = [
 		{
 			x: 80,
@@ -38,9 +40,11 @@
 </script>
 
 <div class="hero-wrapper">
-	<div class="hero">
-		<div class="canvas" {style} />
-	</div>
+	<Parallax rate={256}>
+		<div class="hero">
+			<div class="canvas" {style} />
+		</div>
+	</Parallax>
 </div>
 
 <style lang="scss">
@@ -53,7 +57,8 @@
 		background-repeat: no-repeat;
 	}
 	.hero-wrapper {
-		margin-bottom: var(--spacing-08);
+		margin-top: var(--spacing-03);
+		margin-bottom: var(--spacing-07);
 		display: flex;
 		align-items: center;
 		flex-direction: column;
