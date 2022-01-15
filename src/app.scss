@@ -122,3 +122,15 @@ li:not(:last-child) {
 	transition: opacity 800ms var(--easing--quint), transform 1200ms var(--easing--out-quint),
 		filter 1200ms var(--easing--quint);
 }
+
+.grid-inner {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: var(--spacing-03);
+	margin-top: var(--spacing-06);
+}
+@media (max-width: 667px) {
+	.grid-inner {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}

@@ -58,9 +58,15 @@
 		</p>
 	</Sticky>
 
-	<Sticky gridColumnStart="1" gridColumnEnd="9" observeIntersection={true} delay={2000}>
+	<Sticky
+		gridColumnStart="1"
+		gridColumnEnd="9"
+		observeIntersection={true}
+		delay={2000}
+		sticky={false}
+	>
 		<p class="text--huge heres-how" slot="firstLine">Here’s how</p>
-		<div class="grid-inner" slot="secondLine">
+		<div slot="secondLine">
 			<Credentials />
 		</div>
 	</Sticky>
@@ -72,17 +78,6 @@
 	@media (min-width: 667px) {
 		.signature-line {
 			display: flex;
-		}
-	}
-	.grid-inner {
-		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		gap: var(--spacing-03);
-		margin-top: var(--spacing-06);
-	}
-	@media (max-width: 667px) {
-		.grid-inner {
-			grid-template-columns: repeat(1, 1fr);
 		}
 	}
 	@media (min-width: 667px) {

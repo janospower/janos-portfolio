@@ -5,6 +5,7 @@
 <figure>
 	<Parallax rate={96} growBy={-0.3}>
 		<img
+			loading="lazy"
 			class="background"
 			src="/images/example-ui/example-ui.svg"
 			alt="Example of a mobile user interface"
@@ -13,6 +14,7 @@
 	<div class="foreground">
 		<Parallax rate={128} growBy={-0.3}>
 			<img
+				loading="lazy"
 				src="/images/example-ui/example-ui__highlight.svg"
 				alt="Example of a mobile user interface highlight"
 			/>

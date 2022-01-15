@@ -16,7 +16,7 @@
 
 <div class="case-wrapper">
 	<figure>
-		<img src={imgURL} alt="Case hero" />
+		<img loading="lazy" src={imgURL} alt="Case hero" />
 	</figure>
 	<div class="description">
 		<p class="date">{date}</p>
