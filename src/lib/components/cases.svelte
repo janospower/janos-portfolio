@@ -208,6 +208,9 @@ The actual visual artefacts as well as the identity of the client are confidenti
 	.button-container--next {
 		right: var(--spacing-03);
 	}
+	.cases::-webkit-scrollbar {
+		display: none;
+	}
 	@media (max-width: 667px) {
 		.slider {
 			margin-top: var(--spacing-05);
@@ -217,9 +220,6 @@ The actual visual artefacts as well as the identity of the client are confidenti
 		}
 		.cases {
 			padding: 0 0 0 var(--spacing-05);
-		}
-		.cases::-webkit-scrollbar {
-			display: none;
 		}
 		.cases {
 			-ms-overflow-style: none; /* IE and Edge */
