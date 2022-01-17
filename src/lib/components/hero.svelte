@@ -78,6 +78,7 @@
 		y: flex;
 		align-items: center;
 		flex-direction: column;
+		overflow: hidden;
 	}
 	.hero {
 		width: 410px;

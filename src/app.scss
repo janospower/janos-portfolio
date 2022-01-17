@@ -3,6 +3,7 @@
 
 body {
 	scroll-behavior: smooth;
+	overscroll-behavior-x: none;
 
 	/* safari viewport bug fix */
 	min-height: -webkit-fill-available;
