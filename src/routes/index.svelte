@@ -79,8 +79,6 @@
 		.signature-line {
 			display: flex;
 		}
-	}
-	@media (min-width: 667px) {
 		.heres-how {
 			margin-left: 25%;
 		}

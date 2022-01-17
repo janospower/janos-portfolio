@@ -41,9 +41,10 @@
 	function adjustTranslation() {
 		containerCenter = container.getBoundingClientRect().top + containerHeight / 2;
 		let offset = (containerCenter - innerHeight / 2) / innerHeight;
+		let scale = 1 + Math.abs(offset) * growBy;
 		translateSpring.set({
 			y: offset * rate,
-			scale: 1 + Math.abs(offset) * growBy
+			scale: scale > 0 ? scale : 1
 		});
 	}
 </script>
