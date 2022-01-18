@@ -94,6 +94,8 @@
 					title="Figma Plugins"
 					date="2022"
 					tags={['Development', 'JavaScript', 'Svelte', 'UI / UX Design', 'Personal Project']}
+					imgURL="images/cases/figma-plugins.webp"
+					cover={true}
 					body="Extending the functionality of the tool I use professionally on a daily basis has grown to become a passion of mine. I give back to the community by identifying and filling gaps in the existing ecosystem, all while learning and practicing interesting technologies.</br>
 
 My plugins address niche topics that empower their users to efficiently craft designs that are polished in every detail."
@@ -136,6 +138,9 @@ The actual visual artefacts as well as the identity of the client are confidenti
 						'Animation',
 						'Gender'
 					]}
+					imgURL="images/cases/virtual-assistant.webp"
+					top={true}
+					background="linear-gradient(to bottom right, hsla(344, 100%, 60%, 1), hsla(26, 100%, 51%, 1))"
 					body="University project exploring gender-neutral, multi-modal conversational user interfaces.</br> 
 					Feature concepts were developed based on semi-structured interviews and extensive literature research as well as benchmarking of current best practivces.</br>
 					The final prototype was built using vue.js rather than existing no-code prototyping tools to implement functional voice interactions and visual details like spring animations and supperelliptical corner radii."

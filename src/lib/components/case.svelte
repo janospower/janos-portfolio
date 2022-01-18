@@ -5,10 +5,24 @@
 	export let tags = [];
 	export let imgURL = '/images/example-ui/example-ui.svg';
 	export let cover = false;
+
+	export let background;
+
+	export let top = false;
+	export let right = false;
+	export let bottom = false;
+	export let left = false;
 </script>
 
 <div class="case-wrapper">
-	<figure class:cover>
+	<figure
+		class:cover
+		class:top
+		class:right
+		class:bottom
+		class:left
+		style="background: {background}"
+	>
 		<img loading="lazy" src={imgURL} alt="Case hero" />
 	</figure>
 	<div class="description">
@@ -37,6 +51,24 @@
 	}
 	figure.cover {
 		padding: 0;
+	}
+	figure.top {
+		padding-top: 0;
+		& img {
+			object-position: center top;
+		}
+	}
+	figure.right {
+		padding-right: 0;
+	}
+	figure.bottom {
+		padding-bottom: 0;
+		& img {
+			object-position: center bottom;
+		}
+	}
+	figure.left {
+		padding-left: 0;
 	}
 	img {
 		height: 100%;
