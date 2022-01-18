@@ -67,8 +67,8 @@
 
 	--color-overlay: hsla(200, 93%, 6%, 0.8);
 
-	--backdrop-filter: brightness(86%) saturate(50%) blur(var(--blur-radius--large));
-	--backdrop-filter-medium: brightness(86%) saturate(50%) blur(var(--blur-radius--medium));
+	--backdrop-filter: blur(var(--blur-radius--large));
+	--backdrop-filter-medium: blur(var(--blur-radius--medium));
 
 	--blur-radius--medium: 8px;
 	--blur-radius--large: 24px;
@@ -307,6 +307,6 @@
 
 	--color-overlay: hsla(48, 54%, 98%, 0.8);
 
-	--backdrop-filter: brightness(98%) saturate(50%) blur(var(--blur-radius--large));
-	--backdrop-filter-medium: brightness(98%) saturate(50%) blur(var(--blur-radius--medium));
+	--backdrop-filter: blur(var(--blur-radius--large));
+	--backdrop-filter-medium: blur(var(--blur-radius--medium));
 }
