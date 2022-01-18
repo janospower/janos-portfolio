@@ -38,6 +38,9 @@
 </div>
 
 <style lang="scss">
+	.body {
+		font-size: var(--font-size--large);
+	}
 	figure {
 		background-color: var(--color-neutral--800);
 		height: calc(100vw - var(--spacing-05));

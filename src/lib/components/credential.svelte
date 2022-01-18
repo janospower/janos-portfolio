@@ -52,7 +52,4 @@
 	section:hover {
 		transform: scale(1.06);
 	}
-	.intersecting {
-		background-color: red;
-	}
 </style>

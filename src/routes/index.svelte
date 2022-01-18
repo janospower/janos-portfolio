@@ -7,6 +7,7 @@
 	import ExampleUI from '../lib/components/example-ui.svelte';
 	import Credentials from '../lib/components/credentials.svelte';
 	import Cases from '../lib/components/cases.svelte';
+	import Disclaimer from '../lib/components/disclaimer.svelte';
 
 	let verticalScroll;
 </script>
@@ -73,6 +74,8 @@
 </div>
 
 <Cases />
+
+<Disclaimer />
 
 <style lang="scss">
 	@media (min-width: 667px) {
