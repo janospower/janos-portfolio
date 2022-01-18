@@ -76,7 +76,7 @@
 		backdrop-filter: var(--backdrop-filter);
 		padding: var(--spacing-03);
 		clip-path: var(--squircle);
-		transition: background-color 2s var(--easing--quint), color 2s var(--easing--quint);
+		transition: background-color 1.5s var(--easing--quint), color 1.5s var(--easing--quint);
 		color: var(--color-neutral--100);
 	}
 	header,

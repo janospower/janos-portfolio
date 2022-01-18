@@ -78,6 +78,7 @@
 				<Case
 					title="baupal"
 					date="2020"
+					imgURL="images/cases/baupal.webp"
 					tags={['Property Technology', 'UI / UX Design', 'Design Sprint', 'Web', 'Prototype']}
 					body="baupal created a platform which empowers home-owners by simplifying otherwise overly bureaucratic and expensive processes.</br>
 			

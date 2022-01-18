@@ -27,8 +27,8 @@
 	figure {
 		background-color: var(--color-neutral--800);
 		height: calc(100vw - var(--spacing-05));
-		padding: var(--spacing-05);
-		transition: background-color 2s var(--easing--quint);
+		padding: var(--spacing-03);
+		transition: background-color 1.5s var(--easing--quint);
 		clip-path: var(--squircle);
 		display: flex;
 		flex-direction: column;
@@ -90,7 +90,7 @@
 			max-height: 100%;
 			width: 62.5%;
 			min-width: 62.5%;
-			padding: var(--spacing-10);
+			padding: var(--spacing-05);
 		}
 		.description {
 			margin: 0 var(--spacing-04);

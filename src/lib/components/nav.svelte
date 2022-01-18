@@ -65,14 +65,15 @@
 			hsla(0, 0%, 0%, 1) 20%,
 			hsla(0, 0%, 0%, 0) 100%
 		);
-		transition: background-color 2s var(--easing--quint);
+		transition: background-color 1.5s var(--easing--quint);
 	}
 
 	@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
 		.navigation__background {
 			background-color: transparent;
 			backdrop-filter: var(--backdrop-filter-medium);
-			transition: backdrop-filter 2s var(--easing--quint), background-color 2s var(--easing--quint);
+			transition: backdrop-filter 1.5s var(--easing--quint),
+				background-color 1.5s var(--easing--quint);
 		}
 	}
 	@media (max-width: 667px) {

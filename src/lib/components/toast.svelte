@@ -29,7 +29,7 @@
 		backdrop-filter: var(--backdrop-filter);
 		padding: var(--spacing-03) var(--spacing-04);
 		clip-path: var(--squircle);
-		transition: background-color 2s var(--easing--quint), color 2s var(--easing--quint);
+		transition: background-color 1.5s var(--easing--quint), color 1.5s var(--easing--quint);
 		color: var(--color-neutral--100);
 		font-family: var(--font-family);
 		font-weight: bold;

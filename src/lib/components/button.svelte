@@ -193,7 +193,7 @@
 		transform: translateZ(0);
 		-webkit-font-smoothing: subpixel-antialiased;
 		font-smoothing: subpixel-antialiased;
-		transition: background-color 2s var(--easing--quint), color 2s var(--easing--quint);
+		transition: background-color 1.5s var(--easing--quint), color 1.5s var(--easing--quint);
 	}
 	.button-link.icononly {
 		padding: var(--spacing-02-plus);

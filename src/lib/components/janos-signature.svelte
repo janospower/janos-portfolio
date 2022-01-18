@@ -3,7 +3,7 @@
 
 	export let verticalScroll = 0;
 	export let scrollTrigger = -500;
-	let letterJ, letterA, letterN, letterO, letterS;
+	let signature, letterJ, letterA, letterN, letterO, letterS;
 	let letters = [];
 	const drawingSpeed = 0.006;
 
@@ -19,27 +19,31 @@
 	});
 
 	$: letters.forEach((letter) => {
+		setDash(letter, verticalScroll);
+	});
+
+	function setDash(path, verticalScroll) {
 		if (
-			letter.dashLength -
-				letter.dashLength * (verticalScroll - scrollTrigger - letter.letterDelay) * drawingSpeed <
+			path.dashLength -
+				path.dashLength * (verticalScroll - scrollTrigger - path.letterDelay) * drawingSpeed <
 			0
 		) {
-			letter.style.strokeDashoffset = 0;
+			path.style.strokeDashoffset = 0;
 		} else if (
-			letter.dashLength -
-				letter.dashLength * (verticalScroll - scrollTrigger - letter.letterDelay) * drawingSpeed >
-			letter.dashLength
+			path.dashLength -
+				path.dashLength * (verticalScroll - scrollTrigger - path.letterDelay) * drawingSpeed >
+			path.dashLength
 		) {
-			letter.style.strokeDashoffset = letter.dashLength;
+			path.style.strokeDashoffset = path.dashLength;
 		} else {
-			letter.style.strokeDashoffset =
-				letter.dashLength -
-				letter.dashLength * (verticalScroll - scrollTrigger - letter.letterDelay) * drawingSpeed;
+			path.style.strokeDashoffset =
+				path.dashLength -
+				path.dashLength * (verticalScroll - scrollTrigger - path.letterDelay) * drawingSpeed;
 		}
-	});
+	}
 </script>
 
-<figure>
+<figure bind:this={signature}>
 	<svg
 		viewBox="0 0 229 108"
 		fill="none"
