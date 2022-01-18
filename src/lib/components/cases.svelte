@@ -46,7 +46,7 @@
 		<div class="cases" bind:this={cases}>
 			<article class="case" bind:this={caseOne}>
 				<Case
-					title="Mapping Design System"
+					title="Scalable Design System"
 					date="2022"
 					tags={[
 						'Design System',
@@ -60,18 +60,15 @@
 					imgURL="images/cases/design-system.svg"
 					cover={true}
 					body="As a team lead, I helped refactor and scale a design system used by hundreds of product designers and developers to multiple target platforms over the course of a full year.</br> 
-					I was heavily involved in all aspects of growing and maintaining the various component and pattern libraries such as:
+					I was heavily involved in all aspects of growing and maintaining the various component and pattern libraries, including:
 					<ul>
 						<li>Setting up a robust architecture of interdependent libraries;</li>
-						<li>Creating and maintaining semantic design tokens in line with the brand;</li>
+						<li>Creating and maintaining semantic design tokens;</li>
 						<li>Building and documenting complex, theme-able component variant groups;</li>
-						<li>Enforcing acceptance criteria including WCAG accessibility criteria;</li>
-						<li>Inspecting and reviewing implementation in close collaboration with a team of developers;</li>
-						<li>Educating a large, distributed design team about features and best practices in webinars, posts and routine meetings;</li>
-						<li>Building custom Figma plugins to address unique challenges;</li>
-						<li>Managing additional designers who contribute to the system;</li>
-					</ul>
-					The actual visual artefacts as well as the identity of the client are confidential."
+						<li>Enforcing WCAG accessibility criteria;</li>
+						<li>Training and supporting a large, distributed design team about features and best practices;</li>
+						<li>Building private Figma plugins to address unique challenges;</li>
+					</ul>"
 				/>
 			</article>
 			<article class="case">
