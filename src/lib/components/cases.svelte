@@ -57,6 +57,7 @@
 						'Mobility',
 						'Development'
 					]}
+					imgURL="images/cases/design-system.svg"
 					cover={true}
 					body="As a team lead, I helped refactor and scale a design system used by hundreds of product designers and developers to multiple target platforms over the course of a full year.</br> 
 					I was heavily involved in all aspects of growing and maintaining the various component and pattern libraries such as:
@@ -158,8 +159,6 @@ The actual visual artefacts as well as the identity of the client are confidenti
 </IntersectionObserver>
 
 <style lang="scss">
-	$case-width: calc(var(--page-width-inner) + (100vw - var(--page-width-inner)) / 3);
-
 	h3 {
 		grid-column-start: 1;
 		grid-column-end: 9;
@@ -168,8 +167,8 @@ The actual visual artefacts as well as the identity of the client are confidenti
 	.slider {
 		position: relative;
 		width: 100vw;
-		height: 100vh;
-		max-height: min(800px, calc(100vh - var(--spacing-11)));
+		height: calc(var(--page-width-inner) * 0.625);
+		max-height: calc(var(--page-width-inner) * 0.625);
 		margin-top: var(--spacing-05);
 	}
 	.cases {
@@ -214,14 +213,14 @@ The actual visual artefacts as well as the identity of the client are confidenti
 	@media (max-width: 667px) {
 		.slider {
 			margin-top: var(--spacing-05);
+			height: auto;
+			max-height: auto;
 		}
 		.button-container {
 			display: none;
 		}
 		.cases {
 			padding: 0 0 0 var(--spacing-05);
-		}
-		.cases {
 			-ms-overflow-style: none; /* IE and Edge */
 			scrollbar-width: none; /* Firefox */
 		}
