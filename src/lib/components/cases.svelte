@@ -41,7 +41,11 @@
 </script>
 
 <IntersectionObserver element={cases} bind:intersecting>
-	<div class="grid"><h3 class="text--huge">Some of my projects</h3></div>
+	<div class="grid">
+		<div class="title">
+			<h3 class="text--huge">Some of my projects</h3>
+		</div>
+	</div>
 	<div class="slider">
 		<div class="cases" bind:this={cases}>
 			<article class="case" bind:this={caseOne}>
@@ -173,6 +177,10 @@ My plugins address niche topics that empower their users to efficiently craft de
 	h3 {
 		grid-column-start: 1;
 		grid-column-end: 9;
+	}
+
+	.title {
+		grid-column: span 5;
 	}
 
 	.slider {

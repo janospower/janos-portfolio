@@ -11,6 +11,7 @@ body {
 	color: var(--color-neutral--100);
 	font-family: var(--font-family);
 	font-weight: normal;
+	font-size: var(--font-size--normal);
 	min-height: 100vh;
 	transition: background-color 1.5s var(--easing--quint), color 1.5s var(--easing--quint);
 }
@@ -93,7 +94,6 @@ li:not(:last-child) {
 }
 
 .no-select {
-	user-select: none;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;

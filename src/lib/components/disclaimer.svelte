@@ -1,18 +1,9 @@
 <script>
-	import { onMount } from 'svelte';
 	import Button from './button.svelte';
 	import Leaf from '../icons/leaf.svelte';
-
-	let disclaimerIsHidden = true;
-
-	onMount(() => {
-		setTimeout(() => {
-			disclaimerIsHidden = false;
-		}, 7000);
-	});
 </script>
 
-<aside class:hidden={disclaimerIsHidden} class="disclaimer fading">
+<aside class="disclaimer">
 	<div class="content">
 		<Leaf />
 		<h4>No unnecessary data collected!</h4>
