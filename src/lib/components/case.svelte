@@ -4,6 +4,8 @@
 	export let body = '';
 	export let tags = [];
 	export let imgURL = '/images/example-ui/example-ui.svg';
+	export let imgWidth = 500;
+	export let imgHeight = 500;
 	export let cover = false;
 
 	export let background;
@@ -23,7 +25,7 @@
 		class:left
 		style="background: {background}"
 	>
-		<img loading="lazy" src={imgURL} alt="Case hero" />
+		<img loading="lazy" src={imgURL} alt="Case hero" width={imgWidth} height={imgHeight} />
 	</figure>
 	<div class="description">
 		<p class="date">{date}</p>
@@ -40,6 +42,7 @@
 <style lang="scss">
 	.body {
 		font-size: var(--font-size--large);
+		line-height: 130%;
 	}
 	figure {
 		background-color: var(--color-neutral--800);

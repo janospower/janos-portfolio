@@ -27,6 +27,7 @@
   "type": "module",
   "dependencies": {
     "eslint-plugin-svelte": "^1.1.2",
+    "loading-attribute-polyfill": "^2.0.1",
     "throttle-debounce": "^3.0.1"
   }
 }
